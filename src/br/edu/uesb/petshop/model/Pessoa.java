@@ -1,7 +1,6 @@
 package br.edu.uesb.petshop.model;
 
 import java.util.Date;
-import br.edu.uesb.petshop.dao.ClienteDAO;
 
 /*
  * To change this template, choose Tools | Templates
@@ -26,22 +25,8 @@ public abstract class Pessoa {
     private String sexo;
 
 //      Construtor de Pessoa
-    
     public Pessoa(String nome, String endereco, String bairro, String complemento, String telefone2, String cpf, String telefone1, Date dataNasc, String sexo) {
-        
-        this.nome = nome;
-        this.endereco = endereco;
-        this.bairro = bairro;
-        this.complemento = complemento;
-        this.telefone2 = telefone2;
-        this.cpf = cpf;
-        this.telefone1 = telefone1;
-        this.dataNasc = dataNasc;
-        this.sexo = sexo;
-    }
-    
-    public Pessoa( int id, String nome, String endereco, String bairro, String complemento, String telefone2, String cpf, String telefone1, Date dataNasc, String sexo) {
-        this.id = id;
+//        this.id = 
         this.nome = nome;
         this.endereco = endereco;
         this.bairro = bairro;

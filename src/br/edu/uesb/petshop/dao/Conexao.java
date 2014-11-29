@@ -11,7 +11,7 @@ import java.sql.*;
  *
  * @author matheus
  */
-public final class Conexao {
+public class Conexao {
 
     private String local;
     private String user;
@@ -135,3 +135,8 @@ public final class Conexao {
         this.driverjdbc = driverjdbc;
     }
 }
+
+//    public static String url = "jdbc:postgresql://localhost:5432/PetShop";
+//    public static String usuario = "postgres";
+//    public static String senha = "123";
+

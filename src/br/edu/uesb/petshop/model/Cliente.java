@@ -19,11 +19,7 @@ public class Cliente extends Pessoa{
         
 //      Construtor de Cliente
 
-    public Cliente(int id, String nome, String endereco, String bairro, String complemento, String telefone2, String cpf, String telefone1, Date dataNasc, String sexo) {
-        super(nome, endereco, bairro, complemento, telefone2, cpf, telefone1, dataNasc, sexo);
-    }
-    
-    public Cliente(String nome, String endereco, String bairro, String complemento, String telefone2, String cpf, String telefone1, Date dataNasc, String sexo) {
+    public Cliente( String nome, String endereco, String bairro, String complemento, String telefone2, String cpf, String telefone1, Date dataNasc, String sexo) {
         super(nome, endereco, bairro, complemento, telefone2, cpf, telefone1, dataNasc, sexo);
     }
     
