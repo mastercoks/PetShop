@@ -71,11 +71,6 @@ public class TelaFuncionario2 extends javax.swing.JPanel {
         lbSexoTelaFunc.setText("Sexo:");
 
         cbSexoTelaFunc.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione...", "Masculino", "Feminino" }));
-        cbSexoTelaFunc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbSexoTelaFuncActionPerformed(evt);
-            }
-        });
 
         lbcpfTelaFunc.setText("CPF:");
 
@@ -246,10 +241,6 @@ public class TelaFuncionario2 extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cbSexoTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSexoTelaFuncActionPerformed
-        // TODO add your handling code here:
-lbNomeTelaFunclbNomeTelaFunc//GEN-LAST:event_cbSexoTelaFuncActionPerformed
 
     private void bLimparTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparTelaFuncActionPerformed
         txtNomeTelaFunc2.setText("");

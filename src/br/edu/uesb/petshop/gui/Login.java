@@ -1053,22 +1053,22 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_bNovoClienteActionPerformed
 
     private void bSalvarCadastroAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarCadastroAddAnimalActionPerformed
-        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
-
-        //add
-        try {
-            query.executeUpdate("INSERT INTO \"Animal\"(\n"
-                    + "            nome, sexo, especie, raca, dono)\n"
-                    + "    VALUES ('" + txtNomeAddAnimal.getText() + "','" + bgSexo.getSelection().getActionCommand() + "','" + cbEspecie.getSelectedItem()
-                    + "','" + txtRacaAddAnimal.getText() + "','" + cbDono.getSelectedItem() + "');");
-
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
-            bLimparAddAnimalActionPerformed(evt);//limparcampos
-
-        } catch (Exception e) {
-            System.out.println(e);
-            JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
-        }
+//        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
+//
+//        //add
+//        try {
+//            query.executeUpdate("INSERT INTO \"Animal\"(\n"
+//                    + "            nome, sexo, especie, raca, dono)\n"
+//                    + "    VALUES ('" + txtNomeAddAnimal.getText() + "','" + bgSexo.getSelection().getActionCommand() + "','" + cbEspecie.getSelectedItem()
+//                    + "','" + txtRacaAddAnimal.getText() + "','" + cbDono.getSelectedItem() + "');");
+//
+//            JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
+//            bLimparAddAnimalActionPerformed(evt);//limparcampos
+//
+//        } catch (Exception e) {
+//            System.out.println(e);
+//            JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
+//        }
 
     }//GEN-LAST:event_bSalvarCadastroAddAnimalActionPerformed
 
@@ -1088,35 +1088,35 @@ public class Login extends javax.swing.JFrame {
         cp.formattedtextfield(txtTelefone1AddCliente);
         cp.combobox(cbSexoAddCliente);
 
-        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
-
-        //se todos os campos estiverem preenchidos ele add ao banco de dados
-        if ((cp.textfield(txtNomeAddCliente) == false) && (cp.textfield(txtEnderecoAddCliente) == false)
-            && (cp.textfield(txtBairroAddCliente) == false)
-            && (cp.formattedtextfield(txtCpfAddCliente) == false) && (cp.formattedtextfield(txtDataNascAddCliente) == false)
-            && (cp.formattedtextfield(txtTelefone1AddCliente) == false) && (cp.combobox(cbSexoAddCliente) == false)) {
-
-            //add
-            try {
-                query.executeUpdate("INSERT INTO \"Cliente\"(\n"
-                    + "            nome, endereco, bairro, complemento, sexo, cpf, datanascimento, telefone1, \n"
-                    + "            telefone2)\n"
-                    + "    VALUES ('" + txtNomeAddCliente.getText() + "','" + txtEnderecoAddCliente.getText() + "','" + txtBairroAddCliente.getText()
-                    + "','" + txtComplementoAddCliente.getText() + "','" + cbSexoAddCliente.getSelectedItem() + "','" + txtCpfAddCliente.getText()
-                    + "', '" + txtDataNascAddCliente.getText() + "', '" + txtTelefone1AddCliente.getText() + "','" + txtTelefone2AddCliente.getText() + "');");
-
-                JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
-                bLimparAddClienteActionPerformed(evt);//limparcampos
-
-            } catch (Exception e) {
-                System.out.println(e);
-                JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
-            }
-
-            lbFaltaMensagemAddCliente.setVisible(false);
-        } else {
-            lbFaltaMensagemAddCliente.setVisible(true);
-        }
+//        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
+//
+//        //se todos os campos estiverem preenchidos ele add ao banco de dados
+//        if ((cp.textfield(txtNomeAddCliente) == false) && (cp.textfield(txtEnderecoAddCliente) == false)
+//            && (cp.textfield(txtBairroAddCliente) == false)
+//            && (cp.formattedtextfield(txtCpfAddCliente) == false) && (cp.formattedtextfield(txtDataNascAddCliente) == false)
+//            && (cp.formattedtextfield(txtTelefone1AddCliente) == false) && (cp.combobox(cbSexoAddCliente) == false)) {
+//
+//            //add
+//            try {
+//                query.executeUpdate("INSERT INTO \"Cliente\"(\n"
+//                    + "            nome, endereco, bairro, complemento, sexo, cpf, datanascimento, telefone1, \n"
+//                    + "            telefone2)\n"
+//                    + "    VALUES ('" + txtNomeAddCliente.getText() + "','" + txtEnderecoAddCliente.getText() + "','" + txtBairroAddCliente.getText()
+//                    + "','" + txtComplementoAddCliente.getText() + "','" + cbSexoAddCliente.getSelectedItem() + "','" + txtCpfAddCliente.getText()
+//                    + "', '" + txtDataNascAddCliente.getText() + "', '" + txtTelefone1AddCliente.getText() + "','" + txtTelefone2AddCliente.getText() + "');");
+//
+//                JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
+//                bLimparAddClienteActionPerformed(evt);//limparcampos
+//
+//            } catch (Exception e) {
+//                System.out.println(e);
+//                JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
+//            }
+//
+//            lbFaltaMensagemAddCliente.setVisible(false);
+//        } else {
+//            lbFaltaMensagemAddCliente.setVisible(true);
+//        }
     }//GEN-LAST:event_bSalvarCadastroAddClienteActionPerformed
 
     private void bLimparAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddClienteActionPerformed
