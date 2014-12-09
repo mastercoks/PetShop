@@ -99,7 +99,7 @@ public class Login extends javax.swing.JFrame {
         lbComplementoAddCliente = new javax.swing.JLabel();
         txtComplementoAddCliente = new javax.swing.JTextField();
         lbSexoAddCliente = new javax.swing.JLabel();
-        cbSexo = new javax.swing.JComboBox();
+        cbSexoAddCliente = new javax.swing.JComboBox();
         lbcpfAddCliente = new javax.swing.JLabel();
         txtCpfAddCliente = new javax.swing.JFormattedTextField();
         lbDataNascAddCliente = new javax.swing.JLabel();
@@ -108,16 +108,9 @@ public class Login extends javax.swing.JFrame {
         txtTelefone1AddCliente = new javax.swing.JFormattedTextField();
         lbTelefone2AddCliente = new javax.swing.JLabel();
         txtTelefone2AddCliente = new javax.swing.JFormattedTextField();
-        lbFaltaNomeAddCliente = new javax.swing.JLabel();
-        lbFaltaEndAddCliente = new javax.swing.JLabel();
-        lbFaltaBairroAddCliente = new javax.swing.JLabel();
-        lbFaltaDataAddCliente = new javax.swing.JLabel();
-        lbFaltaTelAddCliente = new javax.swing.JLabel();
-        lbFaltaCpfAddCliente = new javax.swing.JLabel();
         bLimparAddCliente = new javax.swing.JButton();
         bSalvarCadastroAddCliente = new javax.swing.JButton();
         bVoltarAddCliente = new javax.swing.JButton();
-        lbFaltaSexoAddCliente = new javax.swing.JLabel();
         lbFaltaMensagemAddCliente = new javax.swing.JLabel();
         organizadorHorizontal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -142,7 +135,6 @@ public class Login extends javax.swing.JFrame {
         setTitle("PetShop");
         setBounds(new java.awt.Rectangle(0, 0, 90, 150));
         setMinimumSize(new java.awt.Dimension(300, 400));
-        setPreferredSize(new java.awt.Dimension(700, 400));
 
         pMenuLogin.setEnabled(false);
         pMenuLogin.setPreferredSize(new java.awt.Dimension(700, 350));
@@ -623,10 +615,10 @@ public class Login extends javax.swing.JFrame {
 
         lbSexoAddCliente.setText("Sexo:");
 
-        cbSexo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione...", "Masculino", "Feminino" }));
-        cbSexo.addActionListener(new java.awt.event.ActionListener() {
+        cbSexoAddCliente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione...", "Masculino", "Feminino" }));
+        cbSexoAddCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbSexoActionPerformed(evt);
+                cbSexoAddClienteActionPerformed(evt);
             }
         });
 
@@ -662,29 +654,6 @@ public class Login extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        lbFaltaNomeAddCliente.setForeground(new java.awt.Color(239, 53, 18));
-        lbFaltaNomeAddCliente.setText("*");
-
-        lbFaltaEndAddCliente.setForeground(new java.awt.Color(239, 53, 18));
-        lbFaltaEndAddCliente.setText("*");
-        lbFaltaEndAddCliente.setVisible(false);
-
-        lbFaltaBairroAddCliente.setForeground(new java.awt.Color(239, 53, 18));
-        lbFaltaBairroAddCliente.setText("*");
-        lbFaltaBairroAddCliente.setVisible(false);
-
-        lbFaltaDataAddCliente.setForeground(new java.awt.Color(239, 53, 18));
-        lbFaltaDataAddCliente.setText("*");
-        lbFaltaDataAddCliente.setVisible(false);
-
-        lbFaltaTelAddCliente.setForeground(new java.awt.Color(239, 53, 18));
-        lbFaltaTelAddCliente.setText("*");
-        lbFaltaTelAddCliente.setVisible(false);
-
-        lbFaltaCpfAddCliente.setForeground(new java.awt.Color(239, 53, 18));
-        lbFaltaCpfAddCliente.setText("*");
-        lbFaltaCpfAddCliente.setVisible(false);
-
         bLimparAddCliente.setText("LIMPAR");
         bLimparAddCliente.setPreferredSize(new java.awt.Dimension(67, 27));
         bLimparAddCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -707,10 +676,6 @@ public class Login extends javax.swing.JFrame {
                 bVoltarAddClienteActionPerformed(evt);
             }
         });
-
-        lbFaltaSexoAddCliente.setForeground(new java.awt.Color(239, 53, 18));
-        lbFaltaSexoAddCliente.setText("*");
-        lbFaltaSexoAddCliente.setVisible(false);
 
         lbFaltaMensagemAddCliente.setForeground(new java.awt.Color(239, 53, 18));
         lbFaltaMensagemAddCliente.setText("Por favor preencha os campos restantes *");
@@ -755,68 +720,55 @@ public class Login extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(lbFaltaEndAddCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(lbFaltaNomeAddCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(lbFaltaTelAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(lbFaltaSexoAddCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                                .addComponent(lbComplementoAddCliente)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(txtComplementoAddCliente))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(lbEnderecoAddCliente)
-                                                    .addComponent(lbNomeAddCdiente))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                                                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(txtNomeAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                        .addComponent(txtEnderecoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(lbFaltaBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(lbBairroAddCliente)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                        .addComponent(lbSexoAddCliente)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(cbSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(24, 24, 24)
-                                                        .addComponent(lbFaltaCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(lbcpfAddCliente))
-                                                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                        .addComponent(lbTelefone2AddCliente)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                        .addGap(12, 12, 12)
-                                                        .addComponent(txtCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(lbFaltaDataAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(lbDataNascAddCliente)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(txtDataNascAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                            .addComponent(bLimparAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(bVoltarAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(bSalvarCadastroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                .addComponent(lbTelefone1AddCliente)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
+                                            .addComponent(lbComplementoAddCliente)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(txtComplementoAddCliente))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
+                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lbEnderecoAddCliente)
+                                                .addComponent(lbNomeAddCdiente))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(txtNomeAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                                    .addComponent(txtEnderecoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(lbBairroAddCliente)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
+                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                                    .addComponent(lbSexoAddCliente)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(cbSexoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(lbcpfAddCliente))
+                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                                    .addComponent(lbTelefone2AddCliente)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                                    .addGap(12, 12, 12)
+                                                    .addComponent(txtCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(lbDataNascAddCliente)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(txtDataNascAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                        .addComponent(bLimparAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(bVoltarAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(bSalvarCadastroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                            .addComponent(lbTelefone1AddCliente)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(lbFaltaMensagemAddCliente, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -831,16 +783,13 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(pMenuAddClienteLayout.createSequentialGroup()
                         .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtNomeAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbNomeAddCdiente)
-                            .addComponent(lbFaltaNomeAddCliente))
+                            .addComponent(lbNomeAddCdiente))
                         .addGap(18, 18, 18)
                         .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtEnderecoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbEnderecoAddCliente)
                             .addComponent(lbBairroAddCliente)
-                            .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbFaltaEndAddCliente)
-                            .addComponent(lbFaltaBairroAddCliente))
+                            .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbComplementoAddCliente)
@@ -851,19 +800,15 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(txtCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbDataNascAddCliente)
                             .addComponent(txtDataNascAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbSexoAddCliente)
-                            .addComponent(lbFaltaDataAddCliente)
-                            .addComponent(lbFaltaCpfAddCliente)
-                            .addComponent(lbFaltaSexoAddCliente))
+                            .addComponent(cbSexoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbSexoAddCliente))
                         .addGap(39, 39, 39)
                         .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(pMenuAddClienteLayout.createSequentialGroup()
                                     .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(lbTelefone1AddCliente)
-                                        .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lbFaltaTelAddCliente))
+                                        .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(lbTelefone2AddCliente)
@@ -878,11 +823,8 @@ public class Login extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(organizadorHorizontal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, 0))
+                .addContainerGap())
         );
-
-        lbFaltaNomeAddCliente.setVisible(false);
-        lbFaltaNomeAddCliente.setLabelFor(txtNomeAddAnimal);
 
         mCadastro.setText("Cadastro");
         mCadastro.setEnabled(false);
@@ -957,17 +899,17 @@ public class Login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+            .addComponent(pMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pMenuAnimal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
+                .addComponent(pMenuAnimal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pMenuAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pMenuCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
+                .addComponent(pMenuCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pMenuAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
+                .addComponent(pMenuAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE))
         );
 
         pack();
@@ -1110,70 +1052,6 @@ public class Login extends javax.swing.JFrame {
         pMenuAddCliente.setVisible(true);
     }//GEN-LAST:event_bNovoClienteActionPerformed
 
-    private void cbSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSexoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbSexoActionPerformed
-
-    private void bLimparAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddClienteActionPerformed
-        txtNomeAddCliente.setText("");
-        txtEnderecoAddCliente.setText("");
-        txtComplementoAddCliente.setText("");
-        txtBairroAddCliente.setText("");
-        txtCpfAddCliente.setText("");
-        txtDataNascAddCliente.setText("");
-        txtTelefone1AddCliente.setText("");
-        txtTelefone2AddCliente.setText("");
-        cbSexo.setSelectedItem(0);
-
-    }//GEN-LAST:event_bLimparAddClienteActionPerformed
-
-    private void bSalvarCadastroAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarCadastroAddClienteActionPerformed
-
-        cp.textfield(txtNomeAddCliente, lbFaltaNomeAddCliente);
-        cp.textfield(txtEnderecoAddCliente, lbFaltaEndAddCliente);
-        cp.textfield(txtBairroAddCliente, lbFaltaBairroAddCliente);
-        cp.formattedtextfield(txtCpfAddCliente, lbFaltaCpfAddCliente);
-        cp.formattedtextfield(txtDataNascAddCliente, lbFaltaDataAddCliente);
-        cp.formattedtextfield(txtTelefone1AddCliente, lbFaltaTelAddCliente);
-        cp.combobox(cbSexo, lbFaltaSexoAddCliente);
-
-        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
-
-        //se todos os campos estiverem preenchidos ele add ao banco de dados
-        if ((cp.textfield(txtNomeAddCliente, lbFaltaNomeAddCliente) == false) && (cp.textfield(txtEnderecoAddCliente, lbFaltaEndAddCliente) == false)
-                && (cp.textfield(txtBairroAddCliente, lbFaltaBairroAddCliente) == false) 
-                && (cp.formattedtextfield(txtCpfAddCliente, lbFaltaCpfAddCliente) == false) && (cp.formattedtextfield(txtDataNascAddCliente, lbFaltaDataAddCliente) == false)
-                && (cp.formattedtextfield(txtTelefone1AddCliente, lbFaltaTelAddCliente) == false) && (cp.combobox(cbSexo, lbFaltaSexoAddCliente) == false)) {
-
-            //add
-            try {
-                query.executeUpdate("INSERT INTO \"Cliente\"(\n"
-                        + "            nome, endereco, bairro, complemento, sexo, cpf, datanascimento, telefone1, \n"
-                        + "            telefone2)\n"
-                        + "    VALUES ('" + txtNomeAddCliente.getText() + "','" + txtEnderecoAddCliente.getText() + "','" + txtBairroAddCliente.getText()
-                        + "','" + txtComplementoAddCliente.getText() + "','" + cbSexo.getSelectedItem() + "','" + txtCpfAddCliente.getText()
-                        + "', '" + txtDataNascAddCliente.getText() + "', '" + txtTelefone1AddCliente.getText() + "','" + txtTelefone2AddCliente.getText() + "');");
-
-                JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
-                bLimparAddClienteActionPerformed(evt);//limparcampos
-
-            } catch (Exception e) {
-                System.out.println(e);
-                JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
-            }
-
-            lbFaltaMensagemAddCliente.setVisible(false);
-        } else {
-            lbFaltaMensagemAddCliente.setVisible(true);
-        }
-    }//GEN-LAST:event_bSalvarCadastroAddClienteActionPerformed
-
-    private void bVoltarAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarAddClienteActionPerformed
-        pMenuAddCliente.setVisible(false);
-        pMenuCliente.setVisible(true);
-        bLimparAddClienteActionPerformed(evt);
-    }//GEN-LAST:event_bVoltarAddClienteActionPerformed
-
     private void bSalvarCadastroAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarCadastroAddAnimalActionPerformed
         Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
 
@@ -1193,6 +1071,69 @@ public class Login extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_bSalvarCadastroAddAnimalActionPerformed
+
+    private void bVoltarAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarAddClienteActionPerformed
+        pMenuAddCliente.setVisible(false);
+        pMenuCliente.setVisible(true);
+        bLimparAddClienteActionPerformed(evt);
+    }//GEN-LAST:event_bVoltarAddClienteActionPerformed
+
+    private void bSalvarCadastroAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarCadastroAddClienteActionPerformed
+
+        cp.textfield(txtNomeAddCliente);
+        cp.textfield(txtEnderecoAddCliente);
+        cp.textfield(txtBairroAddCliente);
+        cp.formattedtextfield(txtCpfAddCliente);
+        cp.formattedtextfield(txtDataNascAddCliente);
+        cp.formattedtextfield(txtTelefone1AddCliente);
+        cp.combobox(cbSexoAddCliente);
+
+        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
+
+        //se todos os campos estiverem preenchidos ele add ao banco de dados
+        if ((cp.textfield(txtNomeAddCliente) == false) && (cp.textfield(txtEnderecoAddCliente) == false)
+            && (cp.textfield(txtBairroAddCliente) == false)
+            && (cp.formattedtextfield(txtCpfAddCliente) == false) && (cp.formattedtextfield(txtDataNascAddCliente) == false)
+            && (cp.formattedtextfield(txtTelefone1AddCliente) == false) && (cp.combobox(cbSexoAddCliente) == false)) {
+
+            //add
+            try {
+                query.executeUpdate("INSERT INTO \"Cliente\"(\n"
+                    + "            nome, endereco, bairro, complemento, sexo, cpf, datanascimento, telefone1, \n"
+                    + "            telefone2)\n"
+                    + "    VALUES ('" + txtNomeAddCliente.getText() + "','" + txtEnderecoAddCliente.getText() + "','" + txtBairroAddCliente.getText()
+                    + "','" + txtComplementoAddCliente.getText() + "','" + cbSexoAddCliente.getSelectedItem() + "','" + txtCpfAddCliente.getText()
+                    + "', '" + txtDataNascAddCliente.getText() + "', '" + txtTelefone1AddCliente.getText() + "','" + txtTelefone2AddCliente.getText() + "');");
+
+                JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
+                bLimparAddClienteActionPerformed(evt);//limparcampos
+
+            } catch (Exception e) {
+                System.out.println(e);
+                JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
+            }
+
+            lbFaltaMensagemAddCliente.setVisible(false);
+        } else {
+            lbFaltaMensagemAddCliente.setVisible(true);
+        }
+    }//GEN-LAST:event_bSalvarCadastroAddClienteActionPerformed
+
+    private void bLimparAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddClienteActionPerformed
+        txtNomeAddCliente.setText("");
+        txtEnderecoAddCliente.setText("");
+        txtComplementoAddCliente.setText("");
+        txtBairroAddCliente.setText("");
+        txtCpfAddCliente.setText("");
+        txtDataNascAddCliente.setText("");
+        txtTelefone1AddCliente.setText("");
+        txtTelefone2AddCliente.setText("");
+        cbSexoAddCliente.setSelectedItem(0);
+    }//GEN-LAST:event_bLimparAddClienteActionPerformed
+
+    private void cbSexoAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSexoAddClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbSexoAddClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1255,7 +1196,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JMenuBar bmBarraMenu;
     private javax.swing.JComboBox cbDono;
     private javax.swing.JComboBox cbEspecie;
-    private javax.swing.JComboBox cbSexo;
+    private javax.swing.JComboBox cbSexoAddCliente;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbBairroAddCliente;
     private javax.swing.JLabel lbComplementoAddCliente;
@@ -1263,14 +1204,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lbDonoAddAnimal;
     private javax.swing.JLabel lbEnderecoAddCliente;
     private javax.swing.JLabel lbEspecieAddAnimal;
-    private javax.swing.JLabel lbFaltaBairroAddCliente;
-    private javax.swing.JLabel lbFaltaCpfAddCliente;
-    private javax.swing.JLabel lbFaltaDataAddCliente;
-    private javax.swing.JLabel lbFaltaEndAddCliente;
     private javax.swing.JLabel lbFaltaMensagemAddCliente;
-    private javax.swing.JLabel lbFaltaNomeAddCliente;
-    private javax.swing.JLabel lbFaltaSexoAddCliente;
-    private javax.swing.JLabel lbFaltaTelAddCliente;
     private javax.swing.JLabel lbLogin;
     private javax.swing.JLabel lbLoginIncorreto;
     private javax.swing.JLabel lbNomeAddAnimal;

@@ -5,6 +5,10 @@
  */
 package br.edu.uesb.petshop.gui;
 import br.edu.uesb.petshop.gui.Login;
+import java.awt.Color;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+import javax.swing.plaf.metal.MetalBorders;
 /**
  *
  * @author matheus
@@ -13,18 +17,21 @@ import br.edu.uesb.petshop.gui.Login;
 public class Campovazio {
 
     //metodo para controlar os labels lbFalta
-    public boolean textfield(javax.swing.JTextField txt, javax.swing.JLabel label) {
+    public boolean textfield(javax.swing.JTextField txt) {
+        boolean valor;
         if (txt.getText().length() <= 0) {
-            label.setVisible(true);
-            return true;
+            txt.setBorder(new LineBorder(Color.RED));
+            valor = true;
         } else {
-            label.setVisible(false);
-            return false;
+            txt.setBorder(new MetalBorders.TextFieldBorder()); 
+            valor = false;
         }
+        return valor;
     }
 
-    public boolean formattedtextfield(javax.swing.JFormattedTextField txt, javax.swing.JLabel label) {
+    public boolean formattedtextfield(javax.swing.JFormattedTextField txt) {
 //        int numero = Integer.parseInt(txt.getText());
+        boolean valor;
         String string = new String(txt.getText());
         string = string.replace('-', ' ');
         string = string.replace('(', ' ');
@@ -34,24 +41,27 @@ public class Campovazio {
         string = string.replaceAll(" ", " ");
 
         if (string.substring(1, 10).trim().equals("")) {
-            label.setVisible(true);
-            return true;
+            txt.setBorder(new LineBorder(Color.RED));
+            valor = true;
         } else {
-            label.setVisible(false);
-            return false;
+            txt.setBorder(new MetalBorders.TextFieldBorder()); 
+            valor = false;
         }
+        return valor;
     }
 
-    public boolean combobox(javax.swing.JComboBox txt, javax.swing.JLabel label) {
+    public boolean combobox(javax.swing.JComboBox txt) {
+        boolean valor;
         int item = new Integer(txt.getSelectedIndex());
 //        String string;
 //        string = Integer.toString(txt.getSelectedIndex());
         if (item == 0) {
-            label.setVisible(true);
-            return true;
+            txt.setForeground(Color.RED);
+            valor = true;
         } else {
-            label.setVisible(false);
-            return false;
+            txt.setForeground(Color.getHSBColor(0, 0, (float)30.2)); 
+            valor = false;
         }
+        return valor;
     }
 }
