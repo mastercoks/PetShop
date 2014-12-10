@@ -9,9 +9,9 @@ package br.edu.uesb.petshop.gui;
  *
  * @author matheus
  */
-public class TelaPrincipal extends javax.swing.JFrame {
+public class TelaPrincipalold extends javax.swing.JFrame {
 
-    public TelaPrincipal() {
+    public TelaPrincipalold() {
         initComponents();
     }
 

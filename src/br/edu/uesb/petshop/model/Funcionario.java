@@ -19,35 +19,20 @@ public class Funcionario extends Pessoa {
 	private String senha;
 
 	// Construtor de Funcionario
-	public Funcionario(String nome, String endereco, String bairro, String complemento, String telefone2, String cpf, String telefone1, Date dataNasc, String sexo, String login, String senha) {
+	public Funcionario(String login, String senha, String nome, String endereco,
+                String bairro, String complemento, String telefone2, String cpf, 
+                String telefone1, Date dataNasc, String sexo) {
         super(nome, endereco, bairro, complemento, telefone2, cpf, telefone1, dataNasc, sexo);
         this.login = login;
         this.senha = senha;
 	}
         
-        public Funcionario(int id, String nome, String endereco, String bairro, String complemento, String telefone2, String cpf, String telefone1, Date dataNasc, String sexo, String login, String senha) {
+        public Funcionario(int id, String login, String senha, String nome, 
+                String endereco, String bairro, String complemento, String telefone2, 
+                String cpf, String telefone1, Date dataNasc, String sexo) {
         super(id, nome, endereco, bairro, complemento, telefone2, cpf, telefone1, dataNasc, sexo);
         this.login = login;
         this.senha = senha;
-	}
-
-    // Metodo para buscar Cliente
-    public String[] buscarCliente(ArrayList<Cliente> clientes) {
-        String[] bCliente = new String[clientes.size()];
-        
-        for (int i = 0; i < clientes.size(); i++) {
-            bCliente[i] = clientes.get(i).getNome();
-        }
-        return bCliente;
-    }
-
-	// Metodo para buscar Animal
-	public String[] buscarAnimal(ArrayList<Animal> animais) {
-		String[] bAnimal = new String[animais.size()];
-		for (int i = 0; i < animais.size(); i++) {
-			bAnimal[i] = animais.get(i).getNomeAnimal();
-		}
-		return bAnimal;
 	}
 
 	// Metodo para Logar no sistema

@@ -84,7 +84,7 @@ public class Conta {
 		System.out.println("\n\nCliente: " + animal.getDono().getNome());
 		System.out.println("Data: " + dtHora.format(data));
 		System.out.println("Atendente: " + funcionario.getNome());
-		System.out.println("Nome do animal: " + animal.getNomeAnimal());
+		System.out.println("Nome do animal: " + animal.getNome());
 		System.out.println("-----------------------------");
 		System.out.println("Servi�os:");
 		for (int i = 0; i < servicosRealizados.size(); i++) {

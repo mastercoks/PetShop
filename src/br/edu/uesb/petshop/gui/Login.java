@@ -1,6 +1,6 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template file, choose Tools | Templates   
  * and open the template in the editor.
  */
 package br.edu.uesb.petshop.gui;
@@ -44,7 +44,6 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         bgSexo = new javax.swing.ButtonGroup();
-        lbSenhaIncorreta = new javax.swing.JLabel();
         pMenuLogin = new javax.swing.JPanel();
         lbTituloMenuLogin = new javax.swing.JLabel();
         txtLogin = new javax.swing.JTextField();
@@ -120,7 +119,17 @@ public class Login extends javax.swing.JFrame {
         lbFaltaSexoAddCliente = new javax.swing.JLabel();
         lbFaltaMensagemAddCliente = new javax.swing.JLabel();
         organizadorHorizontal = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        organizadorVertical = new javax.swing.JPanel();
+        pMenuFuncionario = new javax.swing.JPanel();
+        lbTituloMenuFuncionario = new javax.swing.JLabel();
+        bVoltarMenuFuncionario = new javax.swing.JButton();
+        bBuscarFuncionario = new javax.swing.JButton();
+        bNovoFuncionario = new javax.swing.JButton();
+        pMenuServico = new javax.swing.JPanel();
+        lbTituloMenuServico = new javax.swing.JLabel();
+        bVoltarMenuServico = new javax.swing.JButton();
+        bBuscarServico = new javax.swing.JButton();
+        bNovoServico = new javax.swing.JButton();
         bmBarraMenu = new javax.swing.JMenuBar();
         mCadastro = new javax.swing.JMenu();
         miAnimal = new javax.swing.JMenuItem();
@@ -133,10 +142,6 @@ public class Login extends javax.swing.JFrame {
         miOrcamento = new javax.swing.JMenuItem();
         miNovoAtendimento = new javax.swing.JMenuItem();
         miContultar = new javax.swing.JMenuItem();
-
-        lbSenhaIncorreta.setForeground(new java.awt.Color(255, 0, 0));
-        lbSenhaIncorreta.setText("Senha incorreta");
-        lbSenhaIncorreta.setVisible(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PetShop");
@@ -192,9 +197,9 @@ public class Login extends javax.swing.JFrame {
         pLoginIncorretoLayout.setHorizontalGroup(
             pLoginIncorretoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pLoginIncorretoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(213, Short.MAX_VALUE)
                 .addComponent(lbLoginIncorreto)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
         pLoginIncorretoLayout.setVerticalGroup(
             pLoginIncorretoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,8 +233,8 @@ public class Login extends javax.swing.JFrame {
             pMenuLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pMenuLoginLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbTituloMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbTituloMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 17, Short.MAX_VALUE)
                 .addGroup(pMenuLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbLogin))
@@ -237,13 +242,13 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(pMenuLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbSenha))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 23, Short.MAX_VALUE)
                 .addComponent(pLoginIncorreto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 23, Short.MAX_VALUE)
                 .addGroup(pMenuLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bSair, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pMenuPrincipal.setVisible(false);
@@ -277,8 +282,18 @@ public class Login extends javax.swing.JFrame {
         bFuncionario.setMaximumSize(new java.awt.Dimension(122, 26));
         bFuncionario.setMinimumSize(new java.awt.Dimension(122, 26));
         bFuncionario.setPreferredSize(new java.awt.Dimension(122, 26));
+        bFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bFuncionarioActionPerformed(evt);
+            }
+        });
 
         bServicos.setText("SERVIÇOS");
+        bServicos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bServicosActionPerformed(evt);
+            }
+        });
 
         bLogout.setText("LOGOUT");
         bLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -360,31 +375,31 @@ public class Login extends javax.swing.JFrame {
         pMenuAnimalLayout.setHorizontalGroup(
             pMenuAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pMenuAnimalLayout.createSequentialGroup()
-                .addContainerGap(106, Short.MAX_VALUE)
+                .addContainerGap(117, Short.MAX_VALUE)
                 .addGroup(pMenuAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pMenuAnimalLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lbTituloMenuAnimal)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pMenuAnimalLayout.createSequentialGroup()
-                        .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                        .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE))
+                        .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE))
                     .addGroup(pMenuAnimalLayout.createSequentialGroup()
                         .addComponent(bVoltarMenuAnimal)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         pMenuAnimalLayout.setVerticalGroup(
             pMenuAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pMenuAnimalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbTituloMenuAnimal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(pMenuAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
                     .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(bVoltarMenuAnimal)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -493,9 +508,9 @@ public class Login extends javax.swing.JFrame {
         pMenuAddAnimalLayout.setVerticalGroup(
             pMenuAddAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pMenuAddAnimalLayout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addComponent(lbTituloAddAnimal)
-                .addGap(18, 47, Short.MAX_VALUE)
+                .addGap(18, 22, Short.MAX_VALUE)
                 .addGroup(pMenuAddAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNomeAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbNomeAddAnimal))
@@ -516,14 +531,14 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(pMenuAddAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbDono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbDonoAddAnimal))
-                .addGap(18, 47, Short.MAX_VALUE)
+                .addGap(18, 22, Short.MAX_VALUE)
                 .addGroup(pMenuAddAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pMenuAddAnimalLayout.createSequentialGroup()
                         .addComponent(bLimparAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bVoltarAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(bSalvarCadastroAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
@@ -570,31 +585,31 @@ public class Login extends javax.swing.JFrame {
         pMenuClienteLayout.setHorizontalGroup(
             pMenuClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pMenuClienteLayout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
+                .addContainerGap(112, Short.MAX_VALUE)
                 .addGroup(pMenuClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pMenuClienteLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lbTituloMenuCliente)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pMenuClienteLayout.createSequentialGroup()
-                        .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
+                        .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE))
+                        .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
                     .addGroup(pMenuClienteLayout.createSequentialGroup()
                         .addComponent(bVoltarMenuCliente)
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         pMenuClienteLayout.setVerticalGroup(
             pMenuClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pMenuClienteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbTituloMenuCliente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(pMenuClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                    .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
                     .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addComponent(bVoltarMenuCliente)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -727,14 +742,14 @@ public class Login extends javax.swing.JFrame {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout organizadorVerticalLayout = new javax.swing.GroupLayout(organizadorVertical);
+        organizadorVertical.setLayout(organizadorVerticalLayout);
+        organizadorVerticalLayout.setHorizontalGroup(
+            organizadorVerticalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 3, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        organizadorVerticalLayout.setVerticalGroup(
+            organizadorVerticalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -819,7 +834,7 @@ public class Login extends javax.swing.JFrame {
                                                 .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addComponent(lbFaltaMensagemAddCliente, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(organizadorVertical, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         pMenuAddClienteLayout.setVerticalGroup(
             pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -877,12 +892,132 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(lbFaltaMensagemAddCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(organizadorHorizontal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(organizadorVertical, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
 
         lbFaltaNomeAddCliente.setVisible(false);
         lbFaltaNomeAddCliente.setLabelFor(txtNomeAddAnimal);
+
+        pMenuFuncionario.setVisible(false);
+        pMenuFuncionario.setPreferredSize(new java.awt.Dimension(700, 350));
+
+        lbTituloMenuFuncionario.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lbTituloMenuFuncionario.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lbTituloMenuFuncionario.setText("FUNCIONÁRIO");
+
+        bVoltarMenuFuncionario.setText("VOLTAR");
+        bVoltarMenuFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bVoltarMenuFuncionarioActionPerformed(evt);
+            }
+        });
+
+        bBuscarFuncionario.setText("<HTML><BODY>BUSCAR FUNCIONÁRIO</BODY></HTML>");
+
+        bNovoFuncionario.setText("<HTML><BODY>NOVO FUNCIONÁRIO</BODY></HTML>");
+        bNovoFuncionario.setMaximumSize(new java.awt.Dimension(122, 26));
+        bNovoFuncionario.setMinimumSize(new java.awt.Dimension(122, 26));
+        bNovoFuncionario.setPreferredSize(new java.awt.Dimension(122, 26));
+        bNovoFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bNovoFuncionarioActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pMenuFuncionarioLayout = new javax.swing.GroupLayout(pMenuFuncionario);
+        pMenuFuncionario.setLayout(pMenuFuncionarioLayout);
+        pMenuFuncionarioLayout.setHorizontalGroup(
+            pMenuFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pMenuFuncionarioLayout.createSequentialGroup()
+                .addContainerGap(103, Short.MAX_VALUE)
+                .addGroup(pMenuFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pMenuFuncionarioLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lbTituloMenuFuncionario)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pMenuFuncionarioLayout.createSequentialGroup()
+                        .addComponent(bNovoFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bBuscarFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))
+                    .addGroup(pMenuFuncionarioLayout.createSequentialGroup()
+                        .addComponent(bVoltarMenuFuncionario)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(102, Short.MAX_VALUE))
+        );
+        pMenuFuncionarioLayout.setVerticalGroup(
+            pMenuFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pMenuFuncionarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbTituloMenuFuncionario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addGroup(pMenuFuncionarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bNovoFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(bBuscarFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addComponent(bVoltarMenuFuncionario)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        pMenuServico.setVisible(false);
+        pMenuServico.setPreferredSize(new java.awt.Dimension(700, 350));
+
+        lbTituloMenuServico.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lbTituloMenuServico.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lbTituloMenuServico.setText("SERVIÇOS");
+
+        bVoltarMenuServico.setText("VOLTAR");
+        bVoltarMenuServico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bVoltarMenuServicoActionPerformed(evt);
+            }
+        });
+
+        bBuscarServico.setText("<HTML><BODY>BUSCAR SERVIÇO</BODY></HTML>");
+
+        bNovoServico.setText("<HTML><BODY>NOVO SERVIÇO</BODY></HTML>");
+        bNovoServico.setMaximumSize(new java.awt.Dimension(122, 26));
+        bNovoServico.setMinimumSize(new java.awt.Dimension(122, 26));
+        bNovoServico.setPreferredSize(new java.awt.Dimension(122, 26));
+        bNovoServico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bNovoServicoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pMenuServicoLayout = new javax.swing.GroupLayout(pMenuServico);
+        pMenuServico.setLayout(pMenuServicoLayout);
+        pMenuServicoLayout.setHorizontalGroup(
+            pMenuServicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pMenuServicoLayout.createSequentialGroup()
+                .addContainerGap(101, Short.MAX_VALUE)
+                .addGroup(pMenuServicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pMenuServicoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lbTituloMenuServico)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pMenuServicoLayout.createSequentialGroup()
+                        .addComponent(bNovoServico, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bBuscarServico, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))
+                    .addGroup(pMenuServicoLayout.createSequentialGroup()
+                        .addComponent(bVoltarMenuServico)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(104, Short.MAX_VALUE))
+        );
+        pMenuServicoLayout.setVerticalGroup(
+            pMenuServicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pMenuServicoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbTituloMenuServico)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addGroup(pMenuServicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bNovoServico, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                    .addComponent(bBuscarServico, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addComponent(bVoltarMenuServico)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
 
         mCadastro.setText("Cadastro");
         mCadastro.setEnabled(false);
@@ -954,20 +1089,28 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(pMenuCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pMenuAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pMenuFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pMenuServico, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+            .addComponent(pMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pMenuAnimal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
+                .addComponent(pMenuAnimal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pMenuAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pMenuCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
+                .addComponent(pMenuCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pMenuAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
+                .addComponent(pMenuAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pMenuFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pMenuServico, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
         );
 
         pack();
@@ -1020,7 +1163,6 @@ public class Login extends javax.swing.JFrame {
                         mClientes.setEnabled(true);
                         mAtendimento.setEnabled(true);
                         mCadastro.setEnabled(true);
-                        lbSenhaIncorreta.setVisible(false);
                     }
                 }
             }
@@ -1141,7 +1283,7 @@ public class Login extends javax.swing.JFrame {
 
         //se todos os campos estiverem preenchidos ele add ao banco de dados
         if ((cp.textfield(txtNomeAddCliente, lbFaltaNomeAddCliente) == false) && (cp.textfield(txtEnderecoAddCliente, lbFaltaEndAddCliente) == false)
-                && (cp.textfield(txtBairroAddCliente, lbFaltaBairroAddCliente) == false) 
+                && (cp.textfield(txtBairroAddCliente, lbFaltaBairroAddCliente) == false)
                 && (cp.formattedtextfield(txtCpfAddCliente, lbFaltaCpfAddCliente) == false) && (cp.formattedtextfield(txtDataNascAddCliente, lbFaltaDataAddCliente) == false)
                 && (cp.formattedtextfield(txtTelefone1AddCliente, lbFaltaTelAddCliente) == false) && (cp.combobox(cbSexo, lbFaltaSexoAddCliente) == false)) {
 
@@ -1194,6 +1336,34 @@ public class Login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_bSalvarCadastroAddAnimalActionPerformed
 
+    private void bServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bServicosActionPerformed
+        pMenuServico.setVisible(true);
+        pMenuPrincipal.setVisible(false);
+    }//GEN-LAST:event_bServicosActionPerformed
+
+    private void bFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bFuncionarioActionPerformed
+        pMenuPrincipal.setVisible(false);
+        pMenuFuncionario.setVisible(true);
+    }//GEN-LAST:event_bFuncionarioActionPerformed
+
+    private void bVoltarMenuFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuFuncionarioActionPerformed
+        pMenuFuncionario.setVisible(false);
+        pMenuPrincipal.setVisible(true);
+    }//GEN-LAST:event_bVoltarMenuFuncionarioActionPerformed
+
+    private void bNovoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoFuncionarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bNovoFuncionarioActionPerformed
+
+    private void bVoltarMenuServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuServicoActionPerformed
+        pMenuServico.setVisible(false);
+        pMenuPrincipal.setVisible(true);
+    }//GEN-LAST:event_bVoltarMenuServicoActionPerformed
+
+    private void bNovoServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoServicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bNovoServicoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1235,6 +1405,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton bAnimais;
     private javax.swing.JButton bBuscarAnimal;
     private javax.swing.JButton bBuscarCliente;
+    private javax.swing.JButton bBuscarFuncionario;
+    private javax.swing.JButton bBuscarFuncionario1;
+    private javax.swing.JButton bBuscarFuncionario2;
+    private javax.swing.JButton bBuscarServico;
     private javax.swing.JButton bClientes;
     private javax.swing.JButton bEntrar;
     private javax.swing.JButton bFuncionario;
@@ -1243,6 +1417,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton bLogout;
     private javax.swing.JButton bNovoAnimal;
     private javax.swing.JButton bNovoCliente;
+    private javax.swing.JButton bNovoFuncionario;
+    private javax.swing.JButton bNovoFuncionario1;
+    private javax.swing.JButton bNovoFuncionario2;
+    private javax.swing.JButton bNovoServico;
     private javax.swing.JButton bSair;
     private javax.swing.JButton bSalvarCadastroAddAnimal;
     private javax.swing.JButton bSalvarCadastroAddCliente;
@@ -1251,12 +1429,15 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton bVoltarAddCliente;
     private javax.swing.JButton bVoltarMenuAnimal;
     private javax.swing.JButton bVoltarMenuCliente;
+    private javax.swing.JButton bVoltarMenuFuncionario;
+    private javax.swing.JButton bVoltarMenuFuncionario1;
+    private javax.swing.JButton bVoltarMenuFuncionario2;
+    private javax.swing.JButton bVoltarMenuServico;
     private javax.swing.ButtonGroup bgSexo;
     private javax.swing.JMenuBar bmBarraMenu;
     private javax.swing.JComboBox cbDono;
     private javax.swing.JComboBox cbEspecie;
     private javax.swing.JComboBox cbSexo;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbBairroAddCliente;
     private javax.swing.JLabel lbComplementoAddCliente;
     private javax.swing.JLabel lbDataNascAddCliente;
@@ -1277,7 +1458,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lbNomeAddCdiente;
     private javax.swing.JLabel lbRacaAddAnimal;
     private javax.swing.JLabel lbSenha;
-    private javax.swing.JLabel lbSenhaIncorreta;
     private javax.swing.JLabel lbSexoAddAnimal;
     private javax.swing.JLabel lbSexoAddCliente;
     private javax.swing.JLabel lbTelefone1AddCliente;
@@ -1286,8 +1466,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel lbTituloAddCliente;
     private javax.swing.JLabel lbTituloMenuAnimal;
     private javax.swing.JLabel lbTituloMenuCliente;
+    private javax.swing.JLabel lbTituloMenuFuncionario;
+    private javax.swing.JLabel lbTituloMenuFuncionario1;
+    private javax.swing.JLabel lbTituloMenuFuncionario2;
     private javax.swing.JLabel lbTituloMenuLogin;
     private javax.swing.JLabel lbTituloMenuPrincipal;
+    private javax.swing.JLabel lbTituloMenuServico;
     private javax.swing.JLabel lbcpfAddCliente;
     private javax.swing.JMenu mAnimais;
     private javax.swing.JMenu mAtendimento;
@@ -1301,13 +1485,18 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JMenuItem miNovoAtendimento;
     private javax.swing.JMenuItem miOrcamento;
     private javax.swing.JPanel organizadorHorizontal;
+    private javax.swing.JPanel organizadorVertical;
     private javax.swing.JPanel pLoginIncorreto;
     private javax.swing.JPanel pMenuAddAnimal;
     private javax.swing.JPanel pMenuAddCliente;
     private javax.swing.JPanel pMenuAnimal;
     private javax.swing.JPanel pMenuCliente;
+    private javax.swing.JPanel pMenuFuncionario;
+    private javax.swing.JPanel pMenuFuncionario1;
+    private javax.swing.JPanel pMenuFuncionario2;
     private javax.swing.JPanel pMenuLogin;
     private javax.swing.JPanel pMenuPrincipal;
+    private javax.swing.JPanel pMenuServico;
     private javax.swing.JRadioButton rbFemea;
     private javax.swing.JRadioButton rbMacho;
     private javax.swing.JTextField txtBairroAddCliente;

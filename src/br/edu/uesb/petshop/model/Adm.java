@@ -18,6 +18,10 @@ public class Adm extends Funcionario {
 	public Adm(String login, String senha) {
         super(login, senha, null, null, null, null, null, null, null, null, null);
 	}
+        
+        public Adm(int id, String login, String senha) {
+            super(id, login, senha, null, null, null, null, null, null, null, null, null);
+	}
 
     // toString de Admin para imprimir os dados
     @Override

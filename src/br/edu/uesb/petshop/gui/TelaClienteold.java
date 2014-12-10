@@ -9,9 +9,9 @@ package br.edu.uesb.petshop.gui;
  *
  * @author matheus
  */
-public class TelaCliente extends javax.swing.JFrame {
+public class TelaClienteold extends javax.swing.JFrame {
 
-    public TelaCliente() {
+    public TelaClienteold() {
         initComponents();
     }
 

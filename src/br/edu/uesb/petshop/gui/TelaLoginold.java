@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  *
  * @author matheus
  */
-public class TelaLogin extends javax.swing.JFrame {
+public class TelaLoginold extends javax.swing.JFrame {
     /*
      * To change this license header, choose License Headers in Project Properties.
      * To change this template file, choose Tools | Templates
@@ -27,7 +27,7 @@ public class TelaLogin extends javax.swing.JFrame {
      *
      * @author matheus
      */
-    public TelaLogin() {
+    public TelaLoginold() {
         initComponents();
     }
 
@@ -51,8 +51,8 @@ public class TelaLogin extends javax.swing.JFrame {
         lbSenhaIncorreta = new javax.swing.JLabel();
         lbLoginIncorreto = new javax.swing.JLabel();
         nada = new javax.swing.JLabel();
-        barra = new BarraDeMenu();
-        telaPrincipal = new TelaPrincipal();
+        barra = new BarraDeMenuold();
+        telaPrincipal = new TelaPrincipalold();
 //        pMenuPrincipal = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -77,7 +77,7 @@ public class TelaLogin extends javax.swing.JFrame {
         bEntrar.setText("Entrar");
         bEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bEntrarActionPerformed(evt);
+                bEntrarActionPerformed(evt, pLogin, barra);
             }
         });
 
@@ -181,7 +181,7 @@ public class TelaLogin extends javax.swing.JFrame {
         this.fechar();
     }
 
-    private void bEntrarActionPerformed(java.awt.event.ActionEvent evt) {
+    private void bEntrarActionPerformed(java.awt.event.ActionEvent evt, javax.swing.JPanel painel, BarraDeMenuold tela) {
         Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
         int cont = 0;
 
@@ -199,7 +199,9 @@ public class TelaLogin extends javax.swing.JFrame {
                     if (rs.getString("login").equals(txtLogin.getText())) {
                         lbLoginIncorreto.setVisible(false);
                         cont++;
-                        barra.setPanel(telaPrincipal.getpMenuPrincipal());
+                        tela.setContentPane(painel);
+//                        pLogin.setVisible(false);
+//                        barra.setPanel(telaPrincipal.getpMenuPrincipal());
 //                        mAnimais.setEnabled(true);
 //                        mClientes.setEnabled(true);
 //                        mAtendimento.setEnabled(true);
@@ -227,7 +229,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify 
-    private TelaPrincipal telaPrincipal;
+    private TelaPrincipalold telaPrincipal;
     private javax.swing.JButton bEntrar;
     private javax.swing.JButton bSair;
     private javax.swing.JLabel lbLogin;
@@ -239,7 +241,7 @@ public class TelaLogin extends javax.swing.JFrame {
     public javax.swing.JPanel pLogin;
     private javax.swing.JTextField txtLogin;
     private javax.swing.JPasswordField txtSenha;
-    private BarraDeMenu barra;
+    private BarraDeMenuold barra;
     // End of variables declaration                   
 
     private void fechar() {

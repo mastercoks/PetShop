@@ -4,17 +4,6 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="bgSexo">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbSenhaIncorreta">
-      <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Senha incorreta"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbSenhaIncorreta.setVisible(false);"/>
-      </AuxValues>
-    </Component>
     <Menu class="javax.swing.JMenuBar" name="bmBarraMenu">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="mCadastro">
@@ -142,25 +131,37 @@
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
               <Component id="pMenuAddCliente" alignment="0" pref="733" max="32767" attributes="0"/>
           </Group>
+          <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
+              <Component id="pMenuFuncionario" alignment="0" pref="733" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
+              <Component id="pMenuServico" alignment="0" pref="733" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="pMenuLogin" alignment="0" pref="479" max="32767" attributes="0"/>
+          <Component id="pMenuLogin" alignment="0" pref="379" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Component id="pMenuPrincipal" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-              <Component id="pMenuAnimal" alignment="1" pref="479" max="32767" attributes="0"/>
+              <Component id="pMenuAnimal" alignment="1" pref="379" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
               <Component id="pMenuAddAnimal" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-              <Component id="pMenuCliente" alignment="0" pref="479" max="32767" attributes="0"/>
+              <Component id="pMenuCliente" alignment="0" pref="379" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-              <Component id="pMenuAddCliente" alignment="0" pref="479" max="32767" attributes="0"/>
+              <Component id="pMenuAddCliente" alignment="0" pref="379" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
+              <Component id="pMenuFuncionario" alignment="0" pref="379" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
+              <Component id="pMenuServico" alignment="0" pref="379" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -206,8 +207,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lbTituloMenuLogin" pref="123" max="32767" attributes="0"/>
-                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
+                  <Component id="lbTituloMenuLogin" pref="128" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" pref="17" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbLogin" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -217,14 +218,14 @@
                       <Component id="txtSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" pref="23" max="32767" attributes="0"/>
                   <Component id="pLoginIncorreto" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" pref="23" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="bEntrar" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="bSair" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -289,9 +290,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="213" max="32767" attributes="0"/>
                       <Component id="lbLoginIncorreto" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="213" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -430,11 +431,17 @@
               <Dimension value="[122, 26]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bFuncionarioActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bServicos">
           <Properties>
             <Property name="text" type="java.lang.String" value="SERVI&#xc7;OS"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bServicosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bLogout">
           <Properties>
@@ -461,7 +468,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="106" max="32767" attributes="0"/>
+                  <EmptySpace pref="117" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -469,16 +476,16 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="bNovoAnimal" pref="234" max="32767" attributes="0"/>
+                          <Component id="bNovoAnimal" pref="240" max="32767" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="bBuscarAnimal" pref="236" max="32767" attributes="0"/>
+                          <Component id="bBuscarAnimal" pref="241" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="bVoltarMenuAnimal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="106" max="32767" attributes="0"/>
+                  <EmptySpace pref="117" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -487,12 +494,12 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lbTituloMenuAnimal" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bNovoAnimal" alignment="0" pref="99" max="32767" attributes="0"/>
+                      <Component id="bNovoAnimal" alignment="0" pref="108" max="32767" attributes="0"/>
                       <Component id="bBuscarAnimal" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="79" max="32767" attributes="0"/>
+                  <EmptySpace pref="88" max="32767" attributes="0"/>
                   <Component id="bVoltarMenuAnimal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -591,9 +598,9 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
                   <Component id="lbTituloAddAnimal" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" pref="47" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" pref="22" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtNomeAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbNomeAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -619,7 +626,7 @@
                       <Component id="cbDono" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbDonoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" pref="47" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" pref="22" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="bLimparAddAnimal" min="-2" pref="28" max="-2" attributes="0"/>
@@ -628,7 +635,7 @@
                       </Group>
                       <Component id="bSalvarCadastroAddAnimal" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="55" max="32767" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -775,7 +782,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="105" max="32767" attributes="0"/>
+                  <EmptySpace pref="112" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -783,16 +790,16 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="bNovoCliente" pref="235" max="32767" attributes="0"/>
+                          <Component id="bNovoCliente" pref="245" max="32767" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="bBuscarCliente" pref="237" max="32767" attributes="0"/>
+                          <Component id="bBuscarCliente" pref="245" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="bVoltarMenuCliente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="105" max="32767" attributes="0"/>
+                  <EmptySpace pref="113" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -801,12 +808,12 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lbTituloMenuCliente" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bNovoCliente" alignment="0" pref="99" max="32767" attributes="0"/>
+                      <Component id="bNovoCliente" alignment="0" pref="109" max="32767" attributes="0"/>
                       <Component id="bBuscarCliente" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="79" max="32767" attributes="0"/>
+                  <EmptySpace pref="87" max="32767" attributes="0"/>
                   <Component id="bVoltarMenuCliente" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -966,7 +973,7 @@
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="32767" attributes="0"/>
-                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="organizadorVertical" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1039,7 +1046,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="organizadorHorizontal" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jPanel1" max="32767" attributes="0"/>
+                      <Component id="organizadorVertical" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               </Group>
@@ -1295,7 +1302,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="organizadorVertical">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -1310,6 +1317,196 @@
             </DimensionLayout>
           </Layout>
         </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="pMenuFuncionario">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 350]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="pMenuFuncionario.setVisible(false);"/>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Login_pClientes"/>
+      </AuxValues>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace pref="103" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="lbTituloMenuFuncionario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bNovoFuncionario" pref="238" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="bBuscarFuncionario" pref="239" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bVoltarMenuFuncionario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="102" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbTituloMenuFuncionario" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="77" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="bNovoFuncionario" alignment="0" pref="97" max="32767" attributes="0"/>
+                      <Component id="bBuscarFuncionario" alignment="0" pref="97" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="77" max="32767" attributes="0"/>
+                  <Component id="bVoltarMenuFuncionario" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbTituloMenuFuncionario">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="36" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="11"/>
+            <Property name="text" type="java.lang.String" value="FUNCION&#xc1;RIO"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="bVoltarMenuFuncionario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="VOLTAR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarMenuFuncionarioActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="bBuscarFuncionario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&lt;HTML&gt;&lt;BODY&gt;BUSCAR FUNCION&#xc1;RIO&lt;/BODY&gt;&lt;/HTML&gt;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="bNovoFuncionario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&lt;HTML&gt;&lt;BODY&gt;NOVO FUNCION&#xc1;RIO&lt;/BODY&gt;&lt;/HTML&gt;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[122, 26]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[122, 26]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[122, 26]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bNovoFuncionarioActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="pMenuServico">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 350]"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="pMenuServico.setVisible(false);"/>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Login_pClientes"/>
+      </AuxValues>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace pref="101" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="lbTituloMenuServico" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bNovoServico" pref="238" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="bBuscarServico" pref="239" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bVoltarMenuServico" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="104" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbTituloMenuServico" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="76" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="bNovoServico" alignment="0" pref="98" max="32767" attributes="0"/>
+                      <Component id="bBuscarServico" alignment="0" pref="98" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="77" max="32767" attributes="0"/>
+                  <Component id="bVoltarMenuServico" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbTituloMenuServico">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="36" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="11"/>
+            <Property name="text" type="java.lang.String" value="SERVI&#xc7;OS"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="bVoltarMenuServico">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="VOLTAR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarMenuServicoActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="bBuscarServico">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&lt;HTML&gt;&lt;BODY&gt;BUSCAR SERVI&#xc7;O&lt;/BODY&gt;&lt;/HTML&gt;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="bNovoServico">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&lt;HTML&gt;&lt;BODY&gt;NOVO SERVI&#xc7;O&lt;/BODY&gt;&lt;/HTML&gt;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[122, 26]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[122, 26]"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[122, 26]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bNovoServicoActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
