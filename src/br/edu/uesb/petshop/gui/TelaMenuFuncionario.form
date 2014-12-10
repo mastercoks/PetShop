@@ -21,16 +21,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="lbTituloMenuCliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbTituloMenuFuncionario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="bNovoCliente" pref="179" max="32767" attributes="0"/>
+                      <Component id="bNovoFuncionario" pref="179" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="bBuscarCliente" pref="179" max="32767" attributes="0"/>
+                      <Component id="bBuscarFuncionario" pref="179" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="bVoltarMenuCliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="bVoltarMenuFuncionario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -42,45 +42,45 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lbTituloMenuCliente" min="-2" max="-2" attributes="0"/>
+              <Component id="lbTituloMenuFuncionario" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="62" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="bNovoCliente" alignment="0" pref="82" max="32767" attributes="0"/>
-                  <Component id="bBuscarCliente" alignment="0" max="32767" attributes="0"/>
+                  <Component id="bNovoFuncionario" alignment="0" pref="83" max="32767" attributes="0"/>
+                  <Component id="bBuscarFuncionario" alignment="0" pref="83" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="62" max="32767" attributes="0"/>
-              <Component id="bVoltarMenuCliente" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="61" max="32767" attributes="0"/>
+              <Component id="bVoltarMenuFuncionario" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbTituloMenuCliente">
+    <Component class="javax.swing.JLabel" name="lbTituloMenuFuncionario">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="36" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="11"/>
-        <Property name="text" type="java.lang.String" value="CLIENTE"/>
+        <Property name="text" type="java.lang.String" value="FUNCION&#xc1;RIO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="bVoltarMenuCliente">
+    <Component class="javax.swing.JButton" name="bVoltarMenuFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="VOLTAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarMenuClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarMenuFuncionarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bBuscarCliente">
+    <Component class="javax.swing.JButton" name="bBuscarFuncionario">
       <Properties>
-        <Property name="text" type="java.lang.String" value="BUSCAR CLIENTE"/>
+        <Property name="text" type="java.lang.String" value="&lt;HTML&gt;&lt;BODY&gt;BUSCAR FUNCION&#xc1;RIO&lt;/BODY&gt;&lt;/HTML&gt;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="bNovoCliente">
+    <Component class="javax.swing.JButton" name="bNovoFuncionario">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NOVO CLIENTE"/>
+        <Property name="text" type="java.lang.String" value="&lt;HTML&gt;&lt;BODY&gt;NOVO FUNCION&#xc1;RIO&lt;/BODY&gt;&lt;/HTML&gt;"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[122, 26]"/>
         </Property>
@@ -92,7 +92,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bNovoClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bNovoFuncionarioActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

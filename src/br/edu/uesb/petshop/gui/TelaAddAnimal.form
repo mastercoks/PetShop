@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="45" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lbNomeAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbSexoAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbEspecieAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbRacaAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbDonoAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="cbEspecieAddAnimal" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="rbMachoAddAnimal" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="rbFemeaAddAnimal" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="bLimparAddAnimal" alignment="0" max="32767" attributes="0"/>
+                          <Component id="bVoltarAddAnimal" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="bSalvarCadastroAddAnimal" pref="159" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="txtNomeAddAnimal" alignment="0" max="32767" attributes="0"/>
+                  <Component id="cbDonoAddAnimal" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtRacaAddAnimal" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="47" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lbTituloAddAnimal" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lbTituloAddAnimal" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtNomeAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNomeAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="rbMachoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbFemeaAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbSexoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cbEspecieAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbEspecieAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbRacaAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtRacaAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cbDonoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbDonoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="bLimparAddAnimal" min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bVoltarAddAnimal" min="-2" pref="26" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="bSalvarCadastroAddAnimal" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="bVoltarAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;VOLTAR&lt;/body&gt;&lt;/html&gt;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarAddAnimalActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbTituloAddAnimal">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="36" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="11"/>
+        <Property name="text" type="java.lang.String" value="Animal"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="bLimparAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="LIMPAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bLimparAddAnimalActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bSalvarCadastroAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;SALVAR CADASTRO&lt;/body&gt;&lt;/html&gt;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSalvarCadastroAddAnimalActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbMachoAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Macho"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbMachoAddAnimalActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="rbMachoAddAnimal.setActionCommand(&quot;MACHO&quot;);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbFemeaAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="F&#xea;mea"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbFemeaAddAnimalActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="rbFemeaAddAnimal.setActionCommand(&quot;F&#xca;MEA&quot;);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNomeAddAnimal">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//capslock(txtNomeAddAnimal);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbEspecieAddAnimal">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="7">
+            <StringItem index="0" value="-"/>
+            <StringItem index="1" value="CACHORRO"/>
+            <StringItem index="2" value="GATO"/>
+            <StringItem index="3" value="CAVALO"/>
+            <StringItem index="4" value="PASSARO"/>
+            <StringItem index="5" value="VEADO(KURAS)"/>
+            <StringItem index="6" value="POK&#xc9;MON(PEDRO)"/>
+          </StringArray>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cbDonoAddAnimal">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;-&quot; })" type="code"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbDonoAddAnimalActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();&#xa;//try{&#xa;//ResultSet rs = query.executeQuery(&quot;SELECT nome FROM \&quot;Cliente\&quot;&quot;);&#xa;//&#xa;//while(rs.next()){&#xa;//cbDonoAddAnimal.addItem(rs.getString(&quot;nome&quot;));&#xa;//}&#xa;//&#xa;//}catch (SQLException ex) {&#xa;//            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);&#xa;//            lbLoginIncorretoMenuLogin.setVisible(true);&#xa;//            }"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbNomeAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NOME:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbSexoAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SEXO:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbEspecieAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ESPECIE:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbRacaAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RA&#xc7;A:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbDonoAddAnimal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DONO:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtRacaAddAnimal">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//capslock(txtRacaAddAnimal);"/>
+      </AuxValues>
+    </Component>
+  </SubComponents>
+</Form>

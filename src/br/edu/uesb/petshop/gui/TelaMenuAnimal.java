@@ -9,12 +9,12 @@ package br.edu.uesb.petshop.gui;
  *
  * @author matheus
  */
-public class TelaMenuCliente extends javax.swing.JPanel {
+public class TelaMenuAnimal extends javax.swing.JPanel {
 
     /**
-     * Creates new form TelaMenuCliente
+     * Creates new form TelaMenuAnimal
      */
-    public TelaMenuCliente() {
+    public TelaMenuAnimal() {
         initComponents();
     }
 
@@ -27,31 +27,31 @@ public class TelaMenuCliente extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbTituloMenuCliente = new javax.swing.JLabel();
-        bVoltarMenuCliente = new javax.swing.JButton();
-        bBuscarCliente = new javax.swing.JButton();
-        bNovoCliente = new javax.swing.JButton();
+        lbTituloMenuAnimal = new javax.swing.JLabel();
+        bVoltarMenuAnimal = new javax.swing.JButton();
+        bBuscarAnimal = new javax.swing.JButton();
+        bNovoAnimal = new javax.swing.JButton();
 
-        lbTituloMenuCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        lbTituloMenuCliente.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        lbTituloMenuCliente.setText("CLIENTE");
+        lbTituloMenuAnimal.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        lbTituloMenuAnimal.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lbTituloMenuAnimal.setText("ANIMAL");
 
-        bVoltarMenuCliente.setText("VOLTAR");
-        bVoltarMenuCliente.addActionListener(new java.awt.event.ActionListener() {
+        bVoltarMenuAnimal.setText("VOLTAR");
+        bVoltarMenuAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bVoltarMenuClienteActionPerformed(evt);
+                bVoltarMenuAnimalActionPerformed(evt);
             }
         });
 
-        bBuscarCliente.setText("BUSCAR CLIENTE");
+        bBuscarAnimal.setText("BUSCAR ANIMAL");
 
-        bNovoCliente.setText("NOVO CLIENTE");
-        bNovoCliente.setMaximumSize(new java.awt.Dimension(122, 26));
-        bNovoCliente.setMinimumSize(new java.awt.Dimension(122, 26));
-        bNovoCliente.setPreferredSize(new java.awt.Dimension(122, 26));
-        bNovoCliente.addActionListener(new java.awt.event.ActionListener() {
+        bNovoAnimal.setText("NOVO ANIMAL");
+        bNovoAnimal.setMaximumSize(new java.awt.Dimension(122, 26));
+        bNovoAnimal.setMinimumSize(new java.awt.Dimension(122, 26));
+        bNovoAnimal.setPreferredSize(new java.awt.Dimension(122, 26));
+        bNovoAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bNovoClienteActionPerformed(evt);
+                bNovoAnimalActionPerformed(evt);
             }
         });
 
@@ -64,14 +64,14 @@ public class TelaMenuCliente extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lbTituloMenuCliente)
+                        .addComponent(lbTituloMenuAnimal)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                        .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
+                        .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bVoltarMenuCliente)
+                        .addComponent(bVoltarMenuAnimal)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -79,32 +79,32 @@ public class TelaMenuCliente extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbTituloMenuCliente)
+                .addComponent(lbTituloMenuAnimal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                    .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                    .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addComponent(bVoltarMenuCliente)
+                .addComponent(bVoltarMenuAnimal)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bVoltarMenuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuClienteActionPerformed
-//        pMenuCliente.setVisible(false);
+    private void bVoltarMenuAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuAnimalActionPerformed
 //        pMenuPrincipal.setVisible(true);
-    }//GEN-LAST:event_bVoltarMenuClienteActionPerformed
+//        pMenuAnimal.setVisible(false);
+    }//GEN-LAST:event_bVoltarMenuAnimalActionPerformed
 
-    private void bNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoClienteActionPerformed
-//        pMenuCliente.setVisible(false);
-//        pMenuAddCliente.setVisible(true);
-    }//GEN-LAST:event_bNovoClienteActionPerformed
+    private void bNovoAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoAnimalActionPerformed
+//        pMenuAddAnimal.setVisible(true);
+//        pMenuAnimal.setVisible(false);
+    }//GEN-LAST:event_bNovoAnimalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bBuscarCliente;
-    private javax.swing.JButton bNovoCliente;
-    private javax.swing.JButton bVoltarMenuCliente;
-    private javax.swing.JLabel lbTituloMenuCliente;
+    private javax.swing.JButton bBuscarAnimal;
+    private javax.swing.JButton bNovoAnimal;
+    private javax.swing.JButton bVoltarMenuAnimal;
+    private javax.swing.JLabel lbTituloMenuAnimal;
     // End of variables declaration//GEN-END:variables
 }

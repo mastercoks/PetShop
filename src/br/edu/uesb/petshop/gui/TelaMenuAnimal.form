@@ -21,16 +21,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="lbTituloMenuCliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbTituloMenuAnimal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="bNovoCliente" pref="179" max="32767" attributes="0"/>
+                      <Component id="bNovoAnimal" pref="178" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="bBuscarCliente" pref="179" max="32767" attributes="0"/>
+                      <Component id="bBuscarAnimal" pref="180" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="bVoltarMenuCliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="bVoltarMenuAnimal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -42,45 +42,45 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lbTituloMenuCliente" min="-2" max="-2" attributes="0"/>
+              <Component id="lbTituloMenuAnimal" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="62" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="bNovoCliente" alignment="0" pref="82" max="32767" attributes="0"/>
-                  <Component id="bBuscarCliente" alignment="0" max="32767" attributes="0"/>
+                  <Component id="bNovoAnimal" alignment="0" pref="82" max="32767" attributes="0"/>
+                  <Component id="bBuscarAnimal" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="62" max="32767" attributes="0"/>
-              <Component id="bVoltarMenuCliente" min="-2" max="-2" attributes="0"/>
+              <Component id="bVoltarMenuAnimal" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbTituloMenuCliente">
+    <Component class="javax.swing.JLabel" name="lbTituloMenuAnimal">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="36" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="11"/>
-        <Property name="text" type="java.lang.String" value="CLIENTE"/>
+        <Property name="text" type="java.lang.String" value="ANIMAL"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="bVoltarMenuCliente">
+    <Component class="javax.swing.JButton" name="bVoltarMenuAnimal">
       <Properties>
         <Property name="text" type="java.lang.String" value="VOLTAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarMenuClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarMenuAnimalActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bBuscarCliente">
+    <Component class="javax.swing.JButton" name="bBuscarAnimal">
       <Properties>
-        <Property name="text" type="java.lang.String" value="BUSCAR CLIENTE"/>
+        <Property name="text" type="java.lang.String" value="BUSCAR ANIMAL"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="bNovoCliente">
+    <Component class="javax.swing.JButton" name="bNovoAnimal">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NOVO CLIENTE"/>
+        <Property name="text" type="java.lang.String" value="NOVO ANIMAL"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[122, 26]"/>
         </Property>
@@ -92,7 +92,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bNovoClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bNovoAnimalActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
