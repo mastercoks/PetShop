@@ -17,26 +17,26 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="81" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbBuscarPorCpf" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbBuscarPorNome" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtBuscarPorNome" pref="164" max="32767" attributes="0"/>
-                          <Component id="txtBuscarPorCpf" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="bBuscarPorNome" min="-2" max="-2" attributes="0"/>
-                          <Component id="bBuscarPorCpf" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="lbTituloBuscar" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbBuscarPorCpfFuncionario" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbBuscarPorNomeFuncionario" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="txtBuscarPorNomeFuncionario" pref="164" max="32767" attributes="0"/>
+                  <Component id="txtBuscarPorCpfFuncionario" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="bBuscarPorNomeFuncionario" min="-2" max="-2" attributes="0"/>
+                  <Component id="bBuscarPorCpfFuncionario" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="169" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <Component id="lbTituloBuscarFuncionario" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -44,19 +44,19 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="lbTituloBuscar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="lbTituloBuscarFuncionario" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbBuscarPorNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBuscarPorNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="bBuscarPorNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbBuscarPorNomeFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBuscarPorNomeFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bBuscarPorNomeFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbBuscarPorCpf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBuscarPorCpf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="bBuscarPorCpf" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbBuscarPorCpfFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBuscarPorCpfFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bBuscarPorCpfFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="132" max="32767" attributes="0"/>
           </Group>
@@ -64,36 +64,36 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbTituloBuscar">
+    <Component class="javax.swing.JLabel" name="lbTituloBuscarFuncionario">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="BUSCAR #######"/>
+        <Property name="text" type="java.lang.String" value="BUSCAR FUNCION&#xc1;RIO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbBuscarPorNome">
+    <Component class="javax.swing.JLabel" name="lbBuscarPorNomeFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="BUSCAR POR NOME:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbBuscarPorCpf">
+    <Component class="javax.swing.JLabel" name="lbBuscarPorCpfFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="BUSCAR POR CPF:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBuscarPorNome">
+    <Component class="javax.swing.JTextField" name="txtBuscarPorNomeFuncionario">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBuscarPorCpf">
+    <Component class="javax.swing.JTextField" name="txtBuscarPorCpfFuncionario">
     </Component>
-    <Component class="javax.swing.JButton" name="bBuscarPorNome">
+    <Component class="javax.swing.JButton" name="bBuscarPorNomeFuncionario">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/7.png"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="bBuscarPorCpf">
+    <Component class="javax.swing.JButton" name="bBuscarPorCpfFuncionario">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/7.png"/>
