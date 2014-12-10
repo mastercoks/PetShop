@@ -10,18 +10,22 @@ import br.edu.uesb.petshop.gui.*;
  *
  * @author Matheus
  */
-public class PetShop extends javax.swing.JPanel{
+public class PetShop{
 
+    
+    public static BarraDeMenu tela;
     /**
      * @param args the command line arguments
      */
     @SuppressWarnings("deprecation")
     public static void main(String[] args) {
         
-        BarraDeMenu tela = new BarraDeMenu();
+        PetShop.tela = new BarraDeMenu();
         tela.setVisible(true);
-        TelaMenuServico telaServ = new TelaMenuServico();
-        tela.setPanel(telaServ);
+        TelaMenuServico telaLoginold = new TelaMenuServico();
+        tela.setPanel(telaLoginold);
+//        TelaMenuServico telaServ = new TelaMenuServico();
+//        tela.setPanel(telaServ);
         
 
     }

@@ -5,6 +5,9 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.model.PetShop;
+import enumerado.EnumView;
+
 /**
  *
  * @author matheus
@@ -96,6 +99,7 @@ public class TelaMenuServico extends javax.swing.JPanel {
     private void bVoltarMenuServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuServicoActionPerformed
 //        pMenuCliente.setVisible(false);
 //        pMenuPrincipal.setVisible(true);
+        PetShop.tela.showView(EnumView.SERVICO);
     }//GEN-LAST:event_bVoltarMenuServicoActionPerformed
 
     private void bNovoServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoServicoActionPerformed

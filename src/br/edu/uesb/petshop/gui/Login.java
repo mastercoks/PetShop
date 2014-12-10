@@ -723,60 +723,40 @@ public class Login extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                            .addComponent(lbComplementoAddCliente)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(txtComplementoAddCliente))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(lbEnderecoAddCliente)
-                                                .addComponent(lbNomeAddCdiente))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(txtNomeAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                    .addComponent(txtEnderecoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(lbBairroAddCliente)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                    .addComponent(lbSexoAddCliente)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(cbSexoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(lbcpfAddCliente))
-                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                    .addComponent(lbTelefone2AddCliente)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                                    .addGap(12, 12, 12)
-                                                    .addComponent(txtCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(lbDataNascAddCliente)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(txtDataNascAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMenuAddClienteLayout.createSequentialGroup()
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                        .addComponent(bLimparAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(bVoltarAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(bSalvarCadastroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                            .addComponent(lbTelefone1AddCliente)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(lbFaltaMensagemAddCliente, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(lbFaltaMensagemAddCliente)
+                                .addGap(6, 6, 6))))
+                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                .addComponent(lbSexoAddCliente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbSexoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbcpfAddCliente))
+                            .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                .addComponent(lbTelefone2AddCliente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(txtCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbDataNascAddCliente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtDataNascAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(bLimparAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bVoltarAddCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(bSalvarCadastroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                        .addComponent(lbTelefone1AddCliente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15))
         );
         pMenuAddClienteLayout.setVerticalGroup(
             pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -784,51 +764,46 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lbTituloAddCliente)
                 .addGap(18, 18, 18)
-                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNomeAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbNomeAddCdiente))
-                        .addGap(18, 18, 18)
-                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtEnderecoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbEnderecoAddCliente)
-                            .addComponent(lbBairroAddCliente)
-                            .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbComplementoAddCliente)
-                            .addComponent(txtComplementoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbcpfAddCliente)
-                            .addComponent(txtCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbDataNascAddCliente)
-                            .addComponent(txtDataNascAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbSexoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbSexoAddCliente))
-                        .addGap(39, 39, 39)
-                        .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNomeAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbNomeAddCdiente))
+                .addGap(18, 18, 18)
+                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEnderecoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbEnderecoAddCliente)
+                    .addComponent(lbBairroAddCliente)
+                    .addComponent(txtBairroAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbComplementoAddCliente)
+                    .addComponent(txtComplementoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbcpfAddCliente)
+                    .addComponent(txtCpfAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbDataNascAddCliente)
+                    .addComponent(txtDataNascAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbSexoAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbSexoAddCliente))
+                .addGap(39, 39, 39)
+                .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                            .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lbTelefone1AddCliente)
+                                .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                    .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lbTelefone1AddCliente)
-                                        .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addGroup(pMenuAddClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lbTelefone2AddCliente)
-                                        .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(bSalvarCadastroAddCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pMenuAddClienteLayout.createSequentialGroup()
-                                .addComponent(bLimparAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(bVoltarAddCliente)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbFaltaMensagemAddCliente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(organizadorHorizontal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                                .addComponent(lbTelefone2AddCliente)
+                                .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(bSalvarCadastroAddCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pMenuAddClienteLayout.createSequentialGroup()
+                        .addComponent(bLimparAddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bVoltarAddCliente)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(lbFaltaMensagemAddCliente)
+                .addGap(0, 0, 0))
         );
 
         pMenuFuncionario.setVisible(false);
@@ -1267,6 +1242,34 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbSexoAddClienteActionPerformed
 
+    private void bNovoServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoServicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bNovoServicoActionPerformed
+
+    private void bVoltarMenuServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuServicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bVoltarMenuServicoActionPerformed
+
+    private void bNovoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoFuncionarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bNovoFuncionarioActionPerformed
+
+    private void bVoltarMenuFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuFuncionarioActionPerformed
+        pMenuPrincipal.setVisible(true);
+        pMenuFuncionario.setVisible(false);
+        
+    }//GEN-LAST:event_bVoltarMenuFuncionarioActionPerformed
+
+    private void bFuncionarioMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bFuncionarioMenuPrincipalActionPerformed
+        pMenuPrincipal.setVisible(false);
+        pMenuFuncionario.setVisible(true);
+    }//GEN-LAST:event_bFuncionarioMenuPrincipalActionPerformed
+
+    private void bServicosMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bServicosMenuPrincipalActionPerformed
+        pMenuPrincipal.setVisible(false);
+        pMenuServico.setVisible(true);
+    }//GEN-LAST:event_bServicosMenuPrincipalActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1332,10 +1335,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton bVoltarMenuServico;
     private javax.swing.ButtonGroup bgSexo;
     private javax.swing.JMenuBar bmBarraMenu;
-    private javax.swing.JComboBox cbDono;
-    private javax.swing.JComboBox cbEspecie;
+    private javax.swing.JComboBox cbDonoAddAnimal;
+    private javax.swing.JComboBox cbEspecieAddAnimal;
     private javax.swing.JComboBox cbSexoAddCliente;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbBairroAddCliente;
     private javax.swing.JLabel lbComplementoAddCliente;
     private javax.swing.JLabel lbDataNascAddCliente;

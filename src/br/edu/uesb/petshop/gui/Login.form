@@ -911,7 +911,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lbSexoAddCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cbSexo" min="-2" pref="118" max="-2" attributes="0"/>
+                                  <Component id="cbSexoAddCliente" min="-2" pref="118" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="lbcpfAddCliente" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -979,7 +979,7 @@
                       <Component id="txtCpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cbSexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbSexoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbSexoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>

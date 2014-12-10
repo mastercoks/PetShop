@@ -18,31 +18,35 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jComboBox1" max="32767" attributes="0"/>
-                  </Group>
-                  <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton4" max="32767" attributes="0"/>
-                          <Component id="jButton5" pref="100" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jComboBox1" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jButton5" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="jButton4" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButton6" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton6" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" pref="329" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="0" pref="95" max="32767" attributes="0"/>
+                      <Component id="lbTituloMenuNovoServico" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="94" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" pref="284" max="32767" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="lbTituloMenuNovoServico" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -68,11 +72,11 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jButton6" max="32767" attributes="0"/>
+                          <Component id="jButton6" alignment="1" min="-2" pref="62" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="jScrollPane1" max="32767" attributes="0"/>
@@ -88,7 +92,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="NOVO SERVI&#xc7;O"/>
+        <Property name="text" type="java.lang.String" value="NOVO ATENDIMENTO"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="jComboBox1">
@@ -133,7 +137,6 @@
       <SubComponents>
         <Component class="javax.swing.JTextPane" name="jTextPane1">
           <Properties>
-            <Property name="editable" type="boolean" value="false"/>
             <Property name="text" type="java.lang.String" value="Cliente: animal.getDono().getNome());&#xa;Data: dtHora.format(data));&#xa;Atendente:  funcionario.getNome());&#xa;Nome do animal:  animal.getNome());&#xa;----------------------------------------------------&#xa;Servi&#xe7;os:&quot;);&#xa;&#xa;Exames:&#xa;&#xa;Cirurgias:&#xa;----------------------------------------------------&#xa;Total RS:  custo);"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
