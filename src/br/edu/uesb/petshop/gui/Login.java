@@ -138,7 +138,6 @@ public class Login extends javax.swing.JFrame {
         setTitle("PetShop");
         setBounds(new java.awt.Rectangle(0, 0, 90, 150));
         setMinimumSize(new java.awt.Dimension(300, 400));
-        setPreferredSize(new java.awt.Dimension(700, 400));
 
         pMenuLogin.setEnabled(false);
         pMenuLogin.setPreferredSize(new java.awt.Dimension(700, 350));
@@ -756,8 +755,7 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(pMenuAddClienteLayout.createSequentialGroup()
                         .addComponent(lbTelefone1AddCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(txtTelefone1AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(15, 15, 15))
         );
         pMenuAddClienteLayout.setVerticalGroup(
