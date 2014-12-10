@@ -115,27 +115,27 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="pMenuLogin" alignment="0" pref="733" max="32767" attributes="0"/>
+          <Component id="pMenuLogin" alignment="0" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Component id="pMenuPrincipal" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-              <Component id="pMenuAnimal" alignment="0" pref="733" max="32767" attributes="0"/>
+              <Component id="pMenuAnimal" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
               <Component id="pMenuAddAnimal" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
-              <Component id="pMenuCliente" alignment="0" pref="733" max="32767" attributes="0"/>
+              <Component id="pMenuCliente" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
-              <Component id="pMenuAddCliente" alignment="0" pref="733" max="32767" attributes="0"/>
+              <Component id="pMenuAddCliente" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
-              <Component id="pMenuFuncionario" alignment="0" pref="733" max="32767" attributes="0"/>
+              <Component id="pMenuFuncionario" alignment="0" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
-              <Component id="pMenuServico" alignment="0" pref="733" max="32767" attributes="0"/>
+              <Component id="pMenuServico" alignment="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -178,24 +178,24 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="pLoginIncorreto" alignment="0" max="32767" attributes="0"/>
+              <Component id="pLoginIncorretoMenuLogin" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="2" attributes="0">
                       <Group type="102" alignment="2" attributes="0">
-                          <Component id="bSair" max="32767" attributes="0"/>
+                          <Component id="bSairMenuLogin" max="32767" attributes="0"/>
                           <EmptySpace type="separate" max="32767" attributes="0"/>
-                          <Component id="bEntrar" max="32767" attributes="0"/>
+                          <Component id="bEntrarMenuLogin" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="2" attributes="0">
-                          <Component id="lbLogin" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbLoginMenuLogin" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="18" pref="18" max="18" attributes="0"/>
-                          <Component id="txtLogin" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="txtLoginMenuLogin" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="2" attributes="0">
-                          <Component id="lbSenha" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbSenhaMenuLogin" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="12" pref="12" max="12" attributes="0"/>
-                          <Component id="txtSenha" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="txtSenhaMenuLogin" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                       <Component id="lbTituloMenuLogin" alignment="2" min="-2" pref="212" max="-2" attributes="0"/>
                   </Group>
@@ -210,20 +210,20 @@
                   <Component id="lbTituloMenuLogin" pref="128" max="32767" attributes="0"/>
                   <EmptySpace type="unrelated" pref="17" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtLogin" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtLoginMenuLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbLoginMenuLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSenhaMenuLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbSenhaMenuLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" pref="23" max="32767" attributes="0"/>
-                  <Component id="pLoginIncorreto" min="-2" max="-2" attributes="0"/>
+                  <Component id="pLoginIncorretoMenuLogin" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" pref="23" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="bEntrar" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                      <Component id="bSair" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="bEntrarMenuLogin" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="bSairMenuLogin" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
@@ -240,70 +240,70 @@
             <Property name="text" type="java.lang.String" value="PET SHOP"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtLogin">
+        <Component class="javax.swing.JTextField" name="txtLoginMenuLogin">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLoginActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLoginMenuLoginActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbLogin">
+        <Component class="javax.swing.JLabel" name="lbLoginMenuLogin">
           <Properties>
             <Property name="text" type="java.lang.String" value="Login:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbSenha">
+        <Component class="javax.swing.JLabel" name="lbSenhaMenuLogin">
           <Properties>
             <Property name="text" type="java.lang.String" value="Senha:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="bEntrar">
+        <Component class="javax.swing.JButton" name="bEntrarMenuLogin">
           <Properties>
             <Property name="text" type="java.lang.String" value="Entrar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bEntrarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bEntrarMenuLoginActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bSair">
+        <Component class="javax.swing.JButton" name="bSairMenuLogin">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSairActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSairMenuLoginActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="txtSenha">
+        <Component class="javax.swing.JPasswordField" name="txtSenhaMenuLogin">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSenhaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSenhaMenuLoginActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JPanel" name="pLoginIncorreto">
+        <Container class="javax.swing.JPanel" name="pLoginIncorretoMenuLogin">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="pLoginIncorreto.setVisible(false);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="pLoginIncorretoMenuLogin.setVisible(false);"/>
           </AuxValues>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="213" max="32767" attributes="0"/>
-                      <Component id="lbLoginIncorreto" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="213" max="32767" attributes="0"/>
+                      <EmptySpace pref="197" max="32767" attributes="0"/>
+                      <Component id="lbLoginIncorretoMenuLogin" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="196" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbLoginIncorreto" alignment="1" pref="60" max="32767" attributes="0"/>
+                  <Component id="lbLoginIncorretoMenuLogin" alignment="1" pref="60" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lbLoginIncorreto">
+            <Component class="javax.swing.JLabel" name="lbLoginIncorretoMenuLogin">
               <Properties>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="ff" type="rgb"/>
@@ -333,17 +333,17 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="bClientes" max="32767" attributes="0"/>
-                              <Component id="bFuncionario" max="32767" attributes="0"/>
+                              <Component id="bClientesMenuPrincipal" max="32767" attributes="0"/>
+                              <Component id="bFuncionarioMenuPrincipal" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="bAnimais" max="32767" attributes="0"/>
-                              <Component id="bServicos" max="32767" attributes="0"/>
+                              <Component id="bAnimaisMenuPrincipal" max="32767" attributes="0"/>
+                              <Component id="bServicosMenuPrincipal" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="bLogout" min="-2" max="-2" attributes="0"/>
+                          <Component id="bLogoutMenuPrincipal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -358,16 +358,16 @@
                   <Component id="lbTituloMenuPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bClientes" alignment="0" max="32767" attributes="0"/>
-                      <Component id="bAnimais" alignment="0" max="32767" attributes="0"/>
+                      <Component id="bClientesMenuPrincipal" alignment="0" max="32767" attributes="0"/>
+                      <Component id="bAnimaisMenuPrincipal" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bFuncionario" max="32767" attributes="0"/>
-                      <Component id="bServicos" max="32767" attributes="0"/>
+                      <Component id="bFuncionarioMenuPrincipal" max="32767" attributes="0"/>
+                      <Component id="bServicosMenuPrincipal" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="bLogout" min="-2" max="-2" attributes="0"/>
+                  <Component id="bLogoutMenuPrincipal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -383,7 +383,7 @@
             <Property name="text" type="java.lang.String" value="ADMIN"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="bAnimais">
+        <Component class="javax.swing.JButton" name="bAnimaisMenuPrincipal">
           <Properties>
             <Property name="text" type="java.lang.String" value="ANIMAIS"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -397,10 +397,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAnimaisActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAnimaisMenuPrincipalActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bClientes">
+        <Component class="javax.swing.JButton" name="bClientesMenuPrincipal">
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="label" type="java.lang.String" value="CLIENTES"/>
@@ -415,10 +415,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bClientesActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bClientesMenuPrincipalActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bFuncionario">
+        <Component class="javax.swing.JButton" name="bFuncionarioMenuPrincipal">
           <Properties>
             <Property name="text" type="java.lang.String" value="FUNCION&#xc1;RIOS"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -432,23 +432,23 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bFuncionarioActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bFuncionarioMenuPrincipalActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bServicos">
+        <Component class="javax.swing.JButton" name="bServicosMenuPrincipal">
           <Properties>
             <Property name="text" type="java.lang.String" value="SERVI&#xc7;OS"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bServicosActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bServicosMenuPrincipalActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bLogout">
+        <Component class="javax.swing.JButton" name="bLogoutMenuPrincipal">
           <Properties>
             <Property name="text" type="java.lang.String" value="LOGOUT"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bLogoutActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bLogoutMenuPrincipalActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -468,7 +468,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="117" max="32767" attributes="0"/>
+                  <EmptySpace pref="106" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -476,16 +476,16 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="bNovoAnimal" pref="240" max="32767" attributes="0"/>
+                          <Component id="bNovoAnimal" pref="234" max="32767" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="bBuscarAnimal" pref="241" max="32767" attributes="0"/>
+                          <Component id="bBuscarAnimal" pref="236" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="bVoltarMenuAnimal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="117" max="32767" attributes="0"/>
+                  <EmptySpace pref="106" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -557,7 +557,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="144" max="32767" attributes="0"/>
+                  <EmptySpace pref="133" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="lbNomeAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="lbSexoAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -567,11 +567,11 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="cbEspecie" alignment="1" max="32767" attributes="0"/>
+                      <Component id="cbEspecieAddAnimal" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="rbMacho" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbMachoAddAnimal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="rbFemea" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbFemeaAddAnimal" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -580,13 +580,13 @@
                               <Component id="bVoltarAddAnimal" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="bSalvarCadastroAddAnimal" pref="259" max="32767" attributes="0"/>
+                          <Component id="bSalvarCadastroAddAnimal" pref="248" max="32767" attributes="0"/>
                       </Group>
                       <Component id="txtNomeAddAnimal" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cbDono" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cbDonoAddAnimal" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtRacaAddAnimal" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="146" max="32767" attributes="0"/>
+                  <EmptySpace pref="135" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -607,13 +607,13 @@
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="rbMacho" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbFemea" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbMachoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbFemeaAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbSexoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cbEspecie" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbEspecieAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbEspecieAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
@@ -623,7 +623,7 @@
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cbDono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbDonoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lbDonoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" pref="22" max="32767" attributes="0"/>
@@ -674,7 +674,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSalvarCadastroAddAnimalActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbMacho">
+        <Component class="javax.swing.JRadioButton" name="rbMachoAddAnimal">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="bgSexo"/>
@@ -682,13 +682,13 @@
             <Property name="text" type="java.lang.String" value="Macho"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbMachoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbMachoAddAnimalActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="rbMacho.setActionCommand(&quot;MACHO&quot;);"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="rbMachoAddAnimal.setActionCommand(&quot;MACHO&quot;);"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbFemea">
+        <Component class="javax.swing.JRadioButton" name="rbFemeaAddAnimal">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="bgSexo"/>
@@ -696,10 +696,10 @@
             <Property name="text" type="java.lang.String" value="F&#xea;mea"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbFemeaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbFemeaAddAnimalActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="rbFemea.setActionCommand(&quot;F&#xca;MEA&quot;);"/>
+            <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="rbFemeaAddAnimal.setActionCommand(&quot;F&#xca;MEA&quot;);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNomeAddAnimal">
@@ -707,7 +707,7 @@
             <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="capslock(txtNomeAddAnimal);"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbEspecie">
+        <Component class="javax.swing.JComboBox" name="cbEspecieAddAnimal">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="7">
@@ -722,17 +722,17 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbDono">
+        <Component class="javax.swing.JComboBox" name="cbDonoAddAnimal">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;-&quot; })" type="code"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbDonoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbDonoAddAnimalActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();&#xa;try{&#xa;ResultSet rs = query.executeQuery(&quot;SELECT nome FROM \&quot;Cliente\&quot;&quot;);&#xa;&#xa;while(rs.next()){&#xa;cbDono.addItem(rs.getString(&quot;nome&quot;));&#xa;}&#xa;&#xa;}catch (SQLException ex) {&#xa;            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);&#xa;            lbLoginIncorreto.setVisible(true);&#xa;            }"/>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();&#xa;try{&#xa;ResultSet rs = query.executeQuery(&quot;SELECT nome FROM \&quot;Cliente\&quot;&quot;);&#xa;&#xa;while(rs.next()){&#xa;cbDonoAddAnimal.addItem(rs.getString(&quot;nome&quot;));&#xa;}&#xa;&#xa;}catch (SQLException ex) {&#xa;            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);&#xa;            lbLoginIncorretoMenuLogin.setVisible(true);&#xa;            }"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lbNomeAddAnimal">
@@ -782,7 +782,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="112" max="32767" attributes="0"/>
+                  <EmptySpace pref="101" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -790,16 +790,16 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="bNovoCliente" pref="245" max="32767" attributes="0"/>
+                          <Component id="bNovoCliente" pref="239" max="32767" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="bBuscarCliente" pref="245" max="32767" attributes="0"/>
+                          <Component id="bBuscarCliente" pref="240" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="bVoltarMenuCliente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="113" max="32767" attributes="0"/>
+                  <EmptySpace pref="102" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -875,107 +875,83 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="lbTituloAddCliente" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="lbTituloAddCliente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lbComplementoAddCliente" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="txtComplementoAddCliente" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lbEnderecoAddCliente" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbNomeAddCdiente" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="67" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtNomeAddCliente" alignment="1" min="-2" pref="535" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="txtEnderecoAddCliente" min="-2" pref="288" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="lbBairroAddCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtBairroAddCliente" min="-2" pref="158" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="lbFaltaMensagemAddCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="organizadorHorizontal" max="32767" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="lbFaltaEndAddCliente" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="lbFaltaNomeAddCliente" alignment="1" max="32767" attributes="0"/>
-                                              <Component id="lbFaltaTelAddCliente" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="lbFaltaSexoAddCliente" alignment="1" max="32767" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="lbComplementoAddCliente" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="txtComplementoAddCliente" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="lbEnderecoAddCliente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="lbNomeAddCdiente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace pref="79" max="32767" attributes="0"/>
-                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="txtNomeAddCliente" alignment="1" min="-2" pref="535" max="-2" attributes="0"/>
-                                                      <Group type="102" alignment="1" attributes="0">
-                                                          <Component id="txtEnderecoAddCliente" min="-2" pref="288" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="lbFaltaBairroAddCliente" min="-2" pref="14" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="lbBairroAddCliente" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="txtBairroAddCliente" min="-2" pref="158" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="lbSexoAddCliente" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="cbSexo" min="-2" pref="118" max="-2" attributes="0"/>
-                                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                                          <Component id="lbFaltaCpfAddCliente" min="-2" pref="6" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="lbcpfAddCliente" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="lbTelefone2AddCliente" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="txtTelefone2AddCliente" min="-2" pref="137" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                                          <Component id="txtCpfAddCliente" min="-2" pref="141" max="-2" attributes="0"/>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="lbFaltaDataAddCliente" min="-2" pref="8" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="lbDataNascAddCliente" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="txtDataNascAddCliente" min="-2" pref="112" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="1" attributes="0">
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                              <Component id="bLimparAddCliente" alignment="1" max="32767" attributes="0"/>
-                                                              <Component id="bVoltarAddCliente" alignment="1" max="32767" attributes="0"/>
-                                                          </Group>
-                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="bSalvarCadastroAddCliente" min="-2" pref="192" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lbTelefone1AddCliente" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtTelefone1AddCliente" min="-2" pref="137" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <Component id="lbFaltaMensagemAddCliente" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbSexoAddCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cbSexo" min="-2" pref="118" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="lbcpfAddCliente" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lbTelefone2AddCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtTelefone2AddCliente" min="-2" pref="137" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace type="unrelated" max="32767" attributes="0"/>
-                          <Component id="organizadorVertical" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <Component id="txtCpfAddCliente" min="-2" pref="141" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="lbDataNascAddCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtDataNascAddCliente" min="-2" pref="112" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="bLimparAddCliente" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="bVoltarAddCliente" alignment="1" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="bSalvarCadastroAddCliente" min="-2" pref="192" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lbTelefone1AddCliente" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txtTelefone1AddCliente" min="-2" pref="137" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -985,69 +961,55 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lbTituloAddCliente" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtNomeAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbNomeAddCdiente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbFaltaNomeAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtEnderecoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbEnderecoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbBairroAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtBairroAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbFaltaEndAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbFaltaBairroAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbComplementoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtComplementoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbcpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="cbSexo" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbSexoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbFaltaDataAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbFaltaCpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbFaltaSexoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="lbTelefone1AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtTelefone1AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lbFaltaTelAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lbTelefone2AddCliente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtTelefone2AddCliente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="bSalvarCadastroAddCliente" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="bLimparAddCliente" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="bVoltarAddCliente" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="lbFaltaMensagemAddCliente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="organizadorHorizontal" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="organizadorVertical" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtNomeAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbNomeAddCdiente" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtEnderecoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbEnderecoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbBairroAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtBairroAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbComplementoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtComplementoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbcpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtCpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbSexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbSexoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lbTelefone1AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTelefone1AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lbTelefone2AddCliente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTelefone2AddCliente" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="bSalvarCadastroAddCliente" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="bLimparAddCliente" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="bVoltarAddCliente" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <Component id="lbFaltaMensagemAddCliente" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -1169,72 +1131,6 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbFaltaNomeAddCliente">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="12" green="35" red="ef" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="*"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="lbFaltaNomeAddCliente.setVisible(false);&#xa;lbFaltaNomeAddCliente.setLabelFor(txtNomeAddAnimal);"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbFaltaEndAddCliente">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="12" green="35" red="ef" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="*"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbFaltaEndAddCliente.setVisible(false);"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbFaltaBairroAddCliente">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="12" green="35" red="ef" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="*"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbFaltaBairroAddCliente.setVisible(false);"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbFaltaDataAddCliente">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="12" green="35" red="ef" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="*"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbFaltaDataAddCliente.setVisible(false);"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbFaltaTelAddCliente">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="12" green="35" red="ef" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="*"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbFaltaTelAddCliente.setVisible(false);"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbFaltaCpfAddCliente">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="12" green="35" red="ef" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="*"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbFaltaCpfAddCliente.setVisible(false);"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JButton" name="bLimparAddCliente">
           <Properties>
             <Property name="text" type="java.lang.String" value="LIMPAR"/>
@@ -1265,17 +1161,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarAddClienteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbFaltaSexoAddCliente">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="12" green="35" red="ef" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="*"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbFaltaSexoAddCliente.setVisible(false);"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JLabel" name="lbFaltaMensagemAddCliente">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1287,36 +1172,6 @@
             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="lbFaltaMensagemAddCliente.setVisible(false);"/>
           </AuxValues>
         </Component>
-        <Container class="javax.swing.JPanel" name="organizadorHorizontal">
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
-        <Container class="javax.swing.JPanel" name="organizadorVertical">
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="pMenuFuncionario">
