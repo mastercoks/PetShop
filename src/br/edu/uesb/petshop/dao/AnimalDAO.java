@@ -6,7 +6,6 @@
 package br.edu.uesb.petshop.dao;
 
 import br.edu.uesb.petshop.model.Animal;
-import java.sql.Date;
 import java.sql.ResultSet;
 
 /**
