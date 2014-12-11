@@ -9,12 +9,12 @@ package br.edu.uesb.petshop.gui;
  *
  * @author matheus
  */
-public class TelaAddServico extends javax.swing.JPanel {
+public class TelaNovoAtendimento extends javax.swing.JPanel {
 
     /**
      * Creates new form TelaServicos
      */
-    public TelaAddServico() {
+    public TelaNovoAtendimento() {
         initComponents();
     }
 

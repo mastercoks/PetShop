@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  */
 public class BarraDeMenu extends javax.swing.JFrame {
 
-    TelaAddServico telaadd;
+    TelaNovoAtendimento telaadd;
  
     
     /**
