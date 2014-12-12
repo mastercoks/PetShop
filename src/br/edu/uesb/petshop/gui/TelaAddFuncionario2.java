@@ -5,6 +5,9 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+
 /**
  *
  * @author matheus
@@ -54,8 +57,6 @@ public class TelaAddFuncionario2 extends javax.swing.JPanel {
         lbTituloTelaFunc2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         lbTituloTelaFunc2.setText("ADICIONAR FUNCIONÁRIO");
 
-        txtNomeTelaFunc2.setText("MATHEUS COQUEIRO ANDRADE");
-        txtNomeTelaFunc2.setEnabled(false);
         txtNomeTelaFunc2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeTelaFunc2ActionPerformed(evt);
@@ -261,7 +262,7 @@ public class TelaAddFuncionario2 extends javax.swing.JPanel {
     }//GEN-LAST:event_bSalvarCadastroTelaFuncActionPerformed
 
     private void bVoltarTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarTelaFuncActionPerformed
-
+        PetShop.tela.showView(EnumView.TELAADDFUNCIONARIO);
     }//GEN-LAST:event_bVoltarTelaFuncActionPerformed
 
     private void txtNomeTelaFunc2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeTelaFunc2ActionPerformed

@@ -19,16 +19,17 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaMenuCliente tMenuCliente;
     TelaMenuAnimal tMenuAnimal;
     TelaMenuFuncionario tMenuFuncionario;
-    TelaMenuServico tMenuServico;
+    TelaMenuAtendimento tMenuServico;
     TelaAddCliente tAddCliente;
     TelaBuscarCliente tBuscarCliente;
     TelaAddAnimal tAddAnimal;
     TelaBuscarAnimal tBuscarAnimal;
     TelaAddFuncionario tAddFuncionario;
     TelaBuscarFuncionario tBuscarFuncionario;
-    TelaAddServico tAddAtendimento;
+    TelaAddAtendimento tAddAtendimento;
     TelaBuscarAtendimento tBuscarAtendimento;
     TelaBuscaResultado1 tBuscaResultado;
+    TelaAddFuncionario2 tAddFuncionario2;
 
     /**
      * Creates new form BarraDeMenu
@@ -40,9 +41,9 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tMenuCliente = new TelaMenuCliente();
         tMenuAnimal = new TelaMenuAnimal();
         tMenuFuncionario = new TelaMenuFuncionario();
-        tMenuServico = new TelaMenuServico();
+        tMenuServico = new TelaMenuAtendimento();
         tAddAnimal = new TelaAddAnimal();
-        tAddAtendimento = new TelaAddServico();
+        tAddAtendimento = new TelaAddAtendimento();
         tAddCliente = new TelaAddCliente();
         tAddFuncionario = new TelaAddFuncionario();
         tBuscarAnimal = new TelaBuscarAnimal();
@@ -50,6 +51,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tBuscarCliente = new TelaBuscarCliente();
         tAddFuncionario = new TelaAddFuncionario();
         tBuscaResultado = new TelaBuscaResultado1();
+        tAddFuncionario2 = new TelaAddFuncionario2();
     }
 
     public void showView(EnumView view) {
@@ -95,6 +97,9 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 break;
             case TELABUSCARFUNCIONARIO:
                 setPanel(tBuscarFuncionario);
+                break;
+            case TELAADDFUNCIONARIO2:
+                setPanel(tAddFuncionario2);
                 break;
            
         }

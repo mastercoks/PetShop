@@ -12,12 +12,12 @@ import br.edu.uesb.petshop.enumerado.EnumView;
  *
  * @author matheus
  */
-public class TelaMenuServico extends javax.swing.JPanel {
+public class TelaMenuAtendimento extends javax.swing.JPanel {
 
     /**
      * Creates new form TelaMenuServico
      */
-    public TelaMenuServico() {
+    public TelaMenuAtendimento() {
         initComponents();
     }
 

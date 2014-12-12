@@ -5,6 +5,9 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+
 /**
  *
  * @author matheus
@@ -190,9 +193,9 @@ public class TelaAddAnimal extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bVoltarAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarAddAnimalActionPerformed
-//        pMenuAddAnimal.setVisible(false);
-//        pMenuAnimal.setVisible(true);
-//        bLimparAddAnimalActionPerformed(evt);
+        
+        PetShop.tela.showView(EnumView.TELAADDANIMAL);
+        bLimparAddAnimalActionPerformed(evt);
     }//GEN-LAST:event_bVoltarAddAnimalActionPerformed
 
     private void bLimparAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddAnimalActionPerformed
