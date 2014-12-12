@@ -50,7 +50,9 @@ public class ClienteDAO extends AbstractDAO {
     }
 
     public ResultSet getByCpf(String cpf) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Cliente\" WHERE nome = " + cpf);
+        ResultSet rs = executeQuery("SELECT *\n"
+                + "  FROM \"Cliente\"\n"
+                + "  WHERE \"cpf\" = \'"+cpf+"\';");
         return rs;
     }
 
@@ -68,10 +70,10 @@ public class ClienteDAO extends AbstractDAO {
         String sql = "INSERT INTO \"Cliente\"(\n"
                 + "            nome, endereco, bairro, complemento, sexo, cpf, datanascimento, telefone1, \n"
                 + "            telefone2)\n"
-                + "    VALUES ('" + cliente.getNome() + "','" + cliente.getEndereco() 
-                + "','" + cliente.getBairro() + "','" + cliente.getComplemento() 
+                + "    VALUES ('" + cliente.getNome() + "','" + cliente.getEndereco()
+                + "','" + cliente.getBairro() + "','" + cliente.getComplemento()
                 + "','" + cliente.getSexo() + "','" + cliente.getCpf()
-                + "', '" + cliente.getDataNasc() + "', '" + cliente.getTelefone1() 
+                + "', '" + cliente.getDataNasc() + "', '" + cliente.getTelefone1()
                 + "','" + cliente.getTelefone2() + "');";
         executeUpdate(sql);
     }
@@ -86,7 +88,7 @@ public class ClienteDAO extends AbstractDAO {
                 + "   SET nome=" + cliente.getNome() + ", datanascimento="
                 + cliente.getDataNasc() + ", sexo=" + cliente.getSexo()
                 + ", endereco=" + cliente.getEndereco() + ", bairro="
-                + cliente.getBairro() + ", " + "complemento=" + cliente.getComplemento() 
+                + cliente.getBairro() + ", " + "complemento=" + cliente.getComplemento()
                 + ", cpf=" + cliente.getCpf() + ", telefone1=" + cliente.getTelefone1()
                 + ", telefone2=" + cliente.getTelefone2() + " WHERE id = " + cliente.getId() + ";";
         executeUpdate(sql);

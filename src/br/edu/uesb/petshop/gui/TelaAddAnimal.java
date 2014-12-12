@@ -43,6 +43,8 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         lbDonoAddAnimal = new javax.swing.JLabel();
         txtRacaAddAnimal = new javax.swing.JTextField();
 
+        setPreferredSize(new java.awt.Dimension(700, 400));
+
         bVoltarAddAnimal.setText("<html><body>VOLTAR</body></html>");
         bVoltarAddAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,11 +91,6 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         cbEspecieAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-", "CACHORRO", "GATO", "CAVALO", "PASSARO", "VEADO(KURAS)", "POKÉMON(PEDRO)" }));
 
         cbDonoAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-" }));
-        cbDonoAddAnimal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbDonoAddAnimalActionPerformed(evt);
-            }
-        });
 
         lbNomeAddAnimal.setText("NOME:");
 
@@ -112,7 +109,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
+                .addGap(142, 142, 142)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lbNomeAddAnimal)
                     .addComponent(lbSexoAddAnimal)
@@ -132,11 +129,11 @@ public class TelaAddAnimal extends javax.swing.JPanel {
                             .addComponent(bLimparAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(bVoltarAddAnimal))
                         .addGap(18, 18, 18)
-                        .addComponent(bSalvarCadastroAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
+                        .addComponent(bSalvarCadastroAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE))
                     .addComponent(txtNomeAddAnimal)
                     .addComponent(cbDonoAddAnimal, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtRacaAddAnimal))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(142, 142, 142))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbTituloAddAnimal)
@@ -145,9 +142,9 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addComponent(lbTituloAddAnimal)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNomeAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbNomeAddAnimal))
@@ -168,14 +165,14 @@ public class TelaAddAnimal extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbDonoAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbDonoAddAnimal))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(bLimparAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bVoltarAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(bSalvarCadastroAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
 
         //Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
@@ -232,10 +229,6 @@ public class TelaAddAnimal extends javax.swing.JPanel {
     private void rbFemeaAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbFemeaAddAnimalActionPerformed
 
     }//GEN-LAST:event_rbFemeaAddAnimalActionPerformed
-
-    private void cbDonoAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDonoAddAnimalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbDonoAddAnimalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

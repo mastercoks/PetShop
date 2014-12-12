@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[700, 400]"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -17,18 +22,22 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace pref="125" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="lbTituloBuscarCliente" pref="327" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                      <Component id="bVoltarBuscarCliente" min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbBuscarPorCpfCliente" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbBuscarPorNomeCliente" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbCpfBuscarCliente" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbNomeBuscarCliente" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtBuscarPorNomeCliente" pref="164" max="32767" attributes="0"/>
-                          <Component id="txtBuscarPorCpfCliente" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtNomeBuscarCliente" min="-2" pref="164" max="-2" attributes="0"/>
+                          <Component id="txtCpfBuscarCliente" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -37,7 +46,12 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="125" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="lbTituloBuscarCliente" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -46,19 +60,21 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="lbTituloBuscarCliente" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace pref="96" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbBuscarPorNomeCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBuscarPorNomeCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNomeBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNomeBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="bBuscarPorNomeCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbBuscarPorCpfCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBuscarPorCpfCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbCpfBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="bBuscarPorCpfCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCpfBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="132" max="32767" attributes="0"/>
+              <EmptySpace pref="105" max="32767" attributes="0"/>
+              <Component id="bVoltarBuscarCliente" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -72,19 +88,17 @@
         <Property name="text" type="java.lang.String" value="BUSCAR CLIENTE"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbBuscarPorNomeCliente">
+    <Component class="javax.swing.JLabel" name="lbNomeBuscarCliente">
       <Properties>
         <Property name="text" type="java.lang.String" value="BUSCAR POR NOME:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbBuscarPorCpfCliente">
+    <Component class="javax.swing.JLabel" name="lbCpfBuscarCliente">
       <Properties>
         <Property name="text" type="java.lang.String" value="BUSCAR POR CPF:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBuscarPorNomeCliente">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtBuscarPorCpfCliente">
+    <Component class="javax.swing.JTextField" name="txtNomeBuscarCliente">
     </Component>
     <Component class="javax.swing.JButton" name="bBuscarPorNomeCliente">
       <Properties>
@@ -92,11 +106,32 @@
           <Image iconType="3" name="/resources/7.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bBuscarPorNomeClienteActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bBuscarPorCpfCliente">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/7.png"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bBuscarPorCpfClienteActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bVoltarBuscarCliente">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/15.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="VOLTAR"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="txtCpfBuscarCliente">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+          <Format format="###.###.###-##" subtype="-1" type="5"/>
         </Property>
       </Properties>
     </Component>

@@ -5,7 +5,7 @@
  */
 package br.edu.uesb.petshop.gui;
 
-import enumerado.EnumView;
+import br.edu.uesb.petshop.enumerado.EnumView;
 import javax.swing.JPanel;
 
 /**
@@ -14,28 +14,92 @@ import javax.swing.JPanel;
  */
 public class BarraDeMenu extends javax.swing.JFrame {
 
-    TelaAddServico telaadd;
- 
-    
+    TelaLogin tLogin;
+    TelaPrincipal tPrincipal;
+    TelaMenuCliente tMenuCliente;
+    TelaMenuAnimal tMenuAnimal;
+    TelaMenuFuncionario tMenuFuncionario;
+    TelaMenuServico tMenuServico;
+    TelaAddCliente tAddCliente;
+    TelaBuscarCliente tBuscarCliente;
+    TelaAddAnimal tAddAnimal;
+    TelaBuscarAnimal tBuscarAnimal;
+    TelaAddFuncionario tAddFuncionario;
+    TelaBuscarFuncionario tBuscarFuncionario;
+    TelaAddServico tAddAtendimento;
+    TelaBuscarAtendimento tBuscarAtendimento;
+    TelaBuscaResultado1 tBuscaResultado;
+
     /**
      * Creates new form BarraDeMenu
      */
     public BarraDeMenu() {
         initComponents();
-        
+        tLogin = new TelaLogin();
+        tPrincipal = new TelaPrincipal();
+        tMenuCliente = new TelaMenuCliente();
+        tMenuAnimal = new TelaMenuAnimal();
+        tMenuFuncionario = new TelaMenuFuncionario();
+        tMenuServico = new TelaMenuServico();
+        tAddAnimal = new TelaAddAnimal();
+        tAddAtendimento = new TelaAddServico();
+        tAddCliente = new TelaAddCliente();
+        tAddFuncionario = new TelaAddFuncionario();
+        tBuscarAnimal = new TelaBuscarAnimal();
+        tBuscarAtendimento = new TelaBuscarAtendimento();
+        tBuscarCliente = new TelaBuscarCliente();
+        tAddFuncionario = new TelaAddFuncionario();
+        tBuscaResultado = new TelaBuscaResultado1();
     }
 
-    
-    public void showView(EnumView view){
+    public void showView(EnumView view) {
         switch (view) {
-            case LOGIN:
-                
+            case TELALOGIN:
+                setPanel(tLogin);
                 break;
-            case SERVICO: 
-                setPanel(telaadd);
+            case TELAPRINCIPAL:
+                setPanel(tPrincipal);
                 break;
+            case TELACLIENTE:
+                setPanel(tMenuCliente);
+                break;
+            case TELAFUNCIONARIO:
+                setPanel(tMenuFuncionario);
+                break;
+            case TELAANIMAL:
+                setPanel(tMenuAnimal);
+                break;
+            case TELASERVICO:
+                setPanel(tMenuServico);
+                break;
+            case TELAADDANIMAL:
+                setPanel(tAddAnimal);
+                break;
+            case TELAADDATENDIMENTO:
+                setPanel(tAddAtendimento);
+                break;
+            case TELAADDCLIENTE:
+                setPanel(tAddCliente);
+                break;
+            case TELAADDFUNCIONARIO:
+                setPanel(tAddFuncionario);
+                break;
+            case TELABUSCARANIMAL:
+                setPanel(tBuscarAnimal);
+                break;
+            case TELABUSCARATENDIMENTO:
+                setPanel(tBuscarAtendimento);
+                break;
+            case TELABUSCARCLIENTE:
+                setPanel(tBuscarCliente);
+                break;
+            case TELABUSCARFUNCIONARIO:
+                setPanel(tBuscarFuncionario);
+                break;
+           
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -126,6 +190,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void miAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAnimalActionPerformed
@@ -136,47 +201,12 @@ public class BarraDeMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_miContultarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BarraDeMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BarraDeMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BarraDeMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BarraDeMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BarraDeMenu().setVisible(true);
-            }
-        });
-    }
-    
     public void setPanel(javax.swing.JPanel panel) {
         setContentPane(panel);
         pack();
     }
-    
-    
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar bmBarraMenu;
     private javax.swing.JMenu mAnimais;

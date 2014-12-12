@@ -5,6 +5,15 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.dao.ConexaoPostgreSQL;
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author matheus
@@ -37,6 +46,8 @@ public class TelaLogin extends javax.swing.JPanel {
         pLoginIncorretoMenuLogin = new javax.swing.JPanel();
         lbLoginIncorretoMenuLogin = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(700, 400));
+
         lbTituloMenuLogin.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloMenuLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTituloMenuLogin.setText("PET SHOP");
@@ -51,6 +62,7 @@ public class TelaLogin extends javax.swing.JPanel {
 
         lbSenhaMenuLogin.setText("Senha:");
 
+        bEntrarMenuLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/54.png"))); // NOI18N
         bEntrarMenuLogin.setText("Entrar");
         bEntrarMenuLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +70,7 @@ public class TelaLogin extends javax.swing.JPanel {
             }
         });
 
+        bSairMenuLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/52.png"))); // NOI18N
         bSairMenuLogin.setText("Sair");
         bSairMenuLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,9 +95,9 @@ public class TelaLogin extends javax.swing.JPanel {
         pLoginIncorretoMenuLoginLayout.setHorizontalGroup(
             pLoginIncorretoMenuLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pLoginIncorretoMenuLoginLayout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbLoginIncorretoMenuLogin)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pLoginIncorretoMenuLoginLayout.setVerticalGroup(
             pLoginIncorretoMenuLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,8 +130,8 @@ public class TelaLogin extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbTituloMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
+                .addComponent(lbTituloMenuLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtLoginMenuLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -142,56 +155,55 @@ public class TelaLogin extends javax.swing.JPanel {
     }//GEN-LAST:event_txtLoginMenuLoginActionPerformed
 
     private void bEntrarMenuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEntrarMenuLoginActionPerformed
-//        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
-//        int cont = 0;
-//
-//        try {
-//
-//            ResultSet rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
-//                + "WHERE login = '" + txtLoginMenuLogin.getText() + "' ");
-//
-//            while (rs.next()) {
-//                cont++;
-//                rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
-//                    + "WHERE senha = '" + txtSenhaMenuLogin.getText() + "' ");
-//
-//                while (rs.next()) {
-//                    if (rs.getString("login").equals(txtLoginMenuLogin.getText())) {
-//                        if (rs.getInt("nivel") == 1) {
+        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
+        int cont = 0;
+
+        try {
+
+            ResultSet rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
+                    + "WHERE login = '" + txtLoginMenuLogin.getText() + "' ");
+
+            while (rs.next()) {
+                cont++;
+                rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
+                        + "WHERE senha = '" + txtSenhaMenuLogin.getText() + "' ");
+
+                while (rs.next()) {
+                    if (rs.getString("login").equals(txtLoginMenuLogin.getText())) {
+                        if (rs.getInt("nivel") == 1) {
 //                            lbTituloMenuPrincipal.setText("FUNCIONARIO");
 //                            bFuncionarioMenuPrincipal.setEnabled(false);
-//                        } else {
+                        } else {
 //                            lbTituloMenuPrincipal.setText("ADMIN");
 //                            bFuncionarioMenuPrincipal.setEnabled(true);
-//                        }
-//                        pLoginIncorretoMenuLogin.setVisible(false);
-//                        cont++;
-//                        pMenuLogin.setVisible(false);
-//                        pMenuPrincipal.setVisible(true);
+                        }
+                        pLoginIncorretoMenuLogin.setVisible(false);
+                        cont++;
+                        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
 //                        mAnimais.setEnabled(true);
 //                        mClientes.setEnabled(true);
 //                        mAtendimento.setEnabled(true);
 //                        mCadastro.setEnabled(true);
-//                    }
-//                }
-//            }
-//
-//            if (cont == 0) {
-//                pLoginIncorretoMenuLogin.setVisible(true);
-//                lbLoginIncorretoMenuLogin.setText("Login invalido, por favor tente novamente");
-//            } else if (cont == 1) {
-//                pLoginIncorretoMenuLogin.setVisible(true);
-//                lbLoginIncorretoMenuLogin.setText("Senha invalida, por favor tente novamente");
-//            }
-//
-//        } catch (SQLException ex) {
-//            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-//            lbLoginIncorretoMenuLogin.setVisible(true);
-//        }
+                    }
+                }
+            }
+
+            if (cont == 0) {
+                pLoginIncorretoMenuLogin.setVisible(true);
+                lbLoginIncorretoMenuLogin.setText("Login invalido, por favor tente novamente");
+            } else if (cont == 1) {
+                pLoginIncorretoMenuLogin.setVisible(true);
+                lbLoginIncorretoMenuLogin.setText("Senha invalida, por favor tente novamente");
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            lbLoginIncorretoMenuLogin.setVisible(true);
+        }
     }//GEN-LAST:event_bEntrarMenuLoginActionPerformed
 
     private void bSairMenuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSairMenuLoginActionPerformed
-//        this.fechar();
+        this.fechar();
     }//GEN-LAST:event_bSairMenuLoginActionPerformed
 
     private void txtSenhaMenuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaMenuLoginActionPerformed
@@ -210,4 +222,11 @@ public class TelaLogin extends javax.swing.JPanel {
     private javax.swing.JTextField txtLoginMenuLogin;
     private javax.swing.JPasswordField txtSenhaMenuLogin;
     // End of variables declaration//GEN-END:variables
+
+    private void fechar() {
+        if (javax.swing.JOptionPane.showConfirmDialog(null, "Deseja sair do programa?", "ATENÇÃO ", javax.swing.JOptionPane.YES_NO_OPTION) == 0) {
+            PetShop.tela.dispose();
+
+        }
+    }
 }

@@ -5,6 +5,9 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+
 /**
  *
  * @author matheus
@@ -32,10 +35,13 @@ public class TelaMenuFuncionario extends javax.swing.JPanel {
         bBuscarFuncionario = new javax.swing.JButton();
         bNovoFuncionario = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(700, 400));
+
         lbTituloMenuFuncionario.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloMenuFuncionario.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbTituloMenuFuncionario.setText("FUNCIONÁRIO");
 
+        bVoltarMenuFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
         bVoltarMenuFuncionario.setText("VOLTAR");
         bVoltarMenuFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,8 +49,15 @@ public class TelaMenuFuncionario extends javax.swing.JPanel {
             }
         });
 
+        bBuscarFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
         bBuscarFuncionario.setText("<HTML><BODY>BUSCAR FUNCIONÁRIO</BODY></HTML>");
+        bBuscarFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarFuncionarioActionPerformed(evt);
+            }
+        });
 
+        bNovoFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/14.png"))); // NOI18N
         bNovoFuncionario.setText("<HTML><BODY>NOVO FUNCIONÁRIO</BODY></HTML>");
         bNovoFuncionario.setMaximumSize(new java.awt.Dimension(122, 26));
         bNovoFuncionario.setMinimumSize(new java.awt.Dimension(122, 26));
@@ -60,45 +73,52 @@ public class TelaMenuFuncionario extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(142, 142, 142)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lbTituloMenuFuncionario)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(lbTituloMenuFuncionario)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bNovoFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(bBuscarFuncionario)))
+                        .addGap(135, 135, 135))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bNovoFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(bBuscarFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bVoltarMenuFuncionario)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(bVoltarMenuFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(lbTituloMenuFuncionario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bNovoFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                    .addComponent(bBuscarFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGap(83, 83, 83)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(bBuscarFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                    .addComponent(bNovoFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(85, 85, 85)
                 .addComponent(bVoltarMenuFuncionario)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void bVoltarMenuFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuFuncionarioActionPerformed
-//        pMenuPrincipal.setVisible(true);
-//        pMenuFuncionario.setVisible(false);
+        
+        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
 
     }//GEN-LAST:event_bVoltarMenuFuncionarioActionPerformed
 
     private void bNovoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoFuncionarioActionPerformed
-        // TODO add your handling code here:
+       
+        PetShop.tela.showView(EnumView.TELAADDFUNCIONARIO);
+        
     }//GEN-LAST:event_bNovoFuncionarioActionPerformed
+
+    private void bBuscarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarFuncionarioActionPerformed
+
+        PetShop.tela.showView(EnumView.TELABUSCARFUNCIONARIO);
+        
+    }//GEN-LAST:event_bBuscarFuncionarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

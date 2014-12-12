@@ -5,6 +5,9 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+
 /**
  *
  * @author matheus
@@ -34,10 +37,13 @@ public class TelaPrincipal extends javax.swing.JPanel {
         bServicosMenuPrincipal = new javax.swing.JButton();
         bLogoutMenuPrincipal = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(700, 400));
+
         lbTituloMenuPrincipal.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloMenuPrincipal.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbTituloMenuPrincipal.setText("ADMIN");
 
+        bAnimaisMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/77.png"))); // NOI18N
         bAnimaisMenuPrincipal.setText("ANIMAIS");
         bAnimaisMenuPrincipal.setMaximumSize(new java.awt.Dimension(122, 26));
         bAnimaisMenuPrincipal.setMinimumSize(new java.awt.Dimension(122, 26));
@@ -48,6 +54,7 @@ public class TelaPrincipal extends javax.swing.JPanel {
             }
         });
 
+        bClientesMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/13.png"))); // NOI18N
         bClientesMenuPrincipal.setToolTipText("");
         bClientesMenuPrincipal.setLabel("CLIENTES");
         bClientesMenuPrincipal.setMaximumSize(new java.awt.Dimension(122, 26));
@@ -59,6 +66,7 @@ public class TelaPrincipal extends javax.swing.JPanel {
             }
         });
 
+        bFuncionarioMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/14.png"))); // NOI18N
         bFuncionarioMenuPrincipal.setText("FUNCIONÁRIOS");
         bFuncionarioMenuPrincipal.setMaximumSize(new java.awt.Dimension(122, 26));
         bFuncionarioMenuPrincipal.setMinimumSize(new java.awt.Dimension(122, 26));
@@ -69,6 +77,7 @@ public class TelaPrincipal extends javax.swing.JPanel {
             }
         });
 
+        bServicosMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/9.png"))); // NOI18N
         bServicosMenuPrincipal.setText("SERVIÇOS");
         bServicosMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +85,7 @@ public class TelaPrincipal extends javax.swing.JPanel {
             }
         });
 
+        bLogoutMenuPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/52.png"))); // NOI18N
         bLogoutMenuPrincipal.setText("LOGOUT");
         bLogoutMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,69 +102,68 @@ public class TelaPrincipal extends javax.swing.JPanel {
                 .addComponent(lbTituloMenuPrincipal)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(142, 142, 142)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(bLogoutMenuPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bClientesMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bClientesMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
                             .addComponent(bFuncionarioMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bAnimaisMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bServicosMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bLogoutMenuPrincipal)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(bAnimaisMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                            .addComponent(bServicosMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(142, 142, 142))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(lbTituloMenuPrincipal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bClientesMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bAnimaisMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(bAnimaisMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(bClientesMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bFuncionarioMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bServicosMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bServicosMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(bFuncionarioMenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
                 .addComponent(bLogoutMenuPrincipal)
-                .addContainerGap())
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void bAnimaisMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnimaisMenuPrincipalActionPerformed
-//        pMenuAnimal.setVisible(true);
-//        pMenuPrincipal.setVisible(false);
+
+        PetShop.tela.showView(EnumView.TELAANIMAL);
+        
     }//GEN-LAST:event_bAnimaisMenuPrincipalActionPerformed
 
     private void bClientesMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClientesMenuPrincipalActionPerformed
 //        pMenuPrincipal.setVisible(false);
 //        pMenuCliente.setVisible(true);
+        PetShop.tela.showView(EnumView.TELACLIENTE);
     }//GEN-LAST:event_bClientesMenuPrincipalActionPerformed
 
     private void bFuncionarioMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bFuncionarioMenuPrincipalActionPerformed
-//        pMenuPrincipal.setVisible(false);
-//        pMenuFuncionario.setVisible(true);
+
+        PetShop.tela.showView(EnumView.TELAFUNCIONARIO);
+        
     }//GEN-LAST:event_bFuncionarioMenuPrincipalActionPerformed
 
     private void bServicosMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bServicosMenuPrincipalActionPerformed
-//        pMenuPrincipal.setVisible(false);
-//        pMenuServico.setVisible(true);
+
+        PetShop.tela.showView(EnumView.TELASERVICO);
+        
     }//GEN-LAST:event_bServicosMenuPrincipalActionPerformed
 
     private void bLogoutMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutMenuPrincipalActionPerformed
-//        pMenuPrincipal.setVisible(false);
-//        pMenuLogin.setVisible(true);
-//        txtLoginMenuLogin.setText("");
-//        txtSenhaMenuLogin.setText("");
-//        mAnimais.setEnabled(false);
-//        mClientes.setEnabled(false);
-//        mAtendimento.setEnabled(false);
-//        mCadastro.setEnabled(false);
+        
+        PetShop.tela.showView(EnumView.TELALOGIN);
+        
     }//GEN-LAST:event_bLogoutMenuPrincipalActionPerformed
 
 

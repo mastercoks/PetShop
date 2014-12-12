@@ -9,12 +9,12 @@ package br.edu.uesb.petshop.gui;
  *
  * @author matheus
  */
-public class TelaBuscar2 extends javax.swing.JPanel {
+public class TelaBuscaResultado1 extends javax.swing.JPanel {
 
     /**
      * Creates new form TelaBuscar2
      */
-    public TelaBuscar2() {
+    public TelaBuscaResultado1() {
         initComponents();
     }
 
@@ -27,18 +27,20 @@ public class TelaBuscar2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        lbTituloBuscaResultado = new javax.swing.JLabel();
+        cbResultadoBusca = new javax.swing.JComboBox();
         bSelecionar = new javax.swing.JButton();
         bCancelar = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 21)); // NOI18N
-        jLabel1.setText("RESULTADOS ENCONTRADOS");
+        lbTituloBuscaResultado.setFont(new java.awt.Font("Arial", 1, 21)); // NOI18N
+        lbTituloBuscaResultado.setText("RESULTADOS ENCONTRADOS");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbResultadoBusca.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        bSelecionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/54.png"))); // NOI18N
         bSelecionar.setText("Selecionar");
 
+        bCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/52.png"))); // NOI18N
         bCancelar.setText("Cancelar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -46,29 +48,29 @@ public class TelaBuscar2 extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bCancelar)
                         .addGap(18, 18, 18)
-                        .addComponent(bSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bSelecionar))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addComponent(lbTituloBuscaResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbResultadoBusca, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lbTituloBuscaResultado)
                 .addGap(28, 28, 28)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cbResultadoBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bSelecionar)
                     .addComponent(bCancelar))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -76,7 +78,7 @@ public class TelaBuscar2 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCancelar;
     private javax.swing.JButton bSelecionar;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox cbResultadoBusca;
+    private javax.swing.JLabel lbTituloBuscaResultado;
     // End of variables declaration//GEN-END:variables
 }

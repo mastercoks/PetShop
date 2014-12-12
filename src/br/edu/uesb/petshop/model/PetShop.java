@@ -22,10 +22,9 @@ public class PetShop{
         
         PetShop.tela = new BarraDeMenu();
         tela.setVisible(true);
-        TelaMenuServico telaLoginold = new TelaMenuServico();
-        tela.setPanel(telaLoginold);
-//        TelaMenuServico telaServ = new TelaMenuServico();
-//        tela.setPanel(telaServ);
+        
+        TelaLogin telaServ = new TelaLogin();
+        tela.setPanel(telaServ);
         
 
     }

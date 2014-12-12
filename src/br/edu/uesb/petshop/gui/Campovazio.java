@@ -4,16 +4,17 @@
  * and open the template in the editor.
  */
 package br.edu.uesb.petshop.gui;
+
 import br.edu.uesb.petshop.gui.Login;
 import java.awt.Color;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.metal.MetalBorders;
+
 /**
  *
  * @author matheus
  */
-
 public class Campovazio {
 
     //metodo para controlar os labels lbFalta
@@ -23,7 +24,7 @@ public class Campovazio {
             txt.setBorder(new LineBorder(Color.RED));
             valor = true;
         } else {
-            txt.setBorder(new MetalBorders.TextFieldBorder()); 
+            txt.setBorder(new MetalBorders.TextFieldBorder());
             valor = false;
         }
         return valor;
@@ -44,9 +45,23 @@ public class Campovazio {
             txt.setBorder(new LineBorder(Color.RED));
             valor = true;
         } else {
-            txt.setBorder(new MetalBorders.TextFieldBorder()); 
+            txt.setBorder(new MetalBorders.TextFieldBorder());
             valor = false;
         }
+        return valor;
+    }
+
+    public boolean limparFormattedtextfield(javax.swing.JFormattedTextField txt) {
+        boolean valor;
+        txt.setBorder(new MetalBorders.TextFieldBorder());
+        valor = false;
+        return valor;
+    }
+
+    public boolean limparTextfield(javax.swing.JTextField txt) {
+        boolean valor;
+        txt.setBorder(new MetalBorders.TextFieldBorder());
+        valor = false;
         return valor;
     }
 
@@ -59,9 +74,16 @@ public class Campovazio {
             txt.setForeground(Color.RED);
             valor = true;
         } else {
-            txt.setForeground(Color.getHSBColor(0, 0, (float)30.2)); 
+            txt.setForeground(Color.getHSBColor(0, 0, (float) 30.2));
             valor = false;
         }
+        return valor;
+    }
+
+    public boolean limparCombobox(javax.swing.JComboBox txt) {
+        boolean valor;
+        txt.setForeground(Color.getHSBColor(0, 0, (float) 30.2));
+        valor = false;
         return valor;
     }
 }

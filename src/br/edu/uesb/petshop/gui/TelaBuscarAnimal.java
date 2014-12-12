@@ -9,12 +9,12 @@ package br.edu.uesb.petshop.gui;
  *
  * @author matheus
  */
-public class TelaBuscar extends javax.swing.JPanel {
+public class TelaBuscarAnimal extends javax.swing.JPanel {
 
     /**
      * Creates new form Buscar
      */
-    public TelaBuscar() {
+    public TelaBuscarAnimal() {
         initComponents();
     }
 

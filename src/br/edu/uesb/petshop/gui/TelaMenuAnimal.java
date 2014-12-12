@@ -5,6 +5,9 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+
 /**
  *
  * @author matheus
@@ -32,10 +35,13 @@ public class TelaMenuAnimal extends javax.swing.JPanel {
         bBuscarAnimal = new javax.swing.JButton();
         bNovoAnimal = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(700, 400));
+
         lbTituloMenuAnimal.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloMenuAnimal.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbTituloMenuAnimal.setText("ANIMAL");
 
+        bVoltarMenuAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
         bVoltarMenuAnimal.setText("VOLTAR");
         bVoltarMenuAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,8 +49,15 @@ public class TelaMenuAnimal extends javax.swing.JPanel {
             }
         });
 
+        bBuscarAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
         bBuscarAnimal.setText("BUSCAR ANIMAL");
+        bBuscarAnimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarAnimalActionPerformed(evt);
+            }
+        });
 
+        bNovoAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/77.png"))); // NOI18N
         bNovoAnimal.setText("NOVO ANIMAL");
         bNovoAnimal.setMaximumSize(new java.awt.Dimension(122, 26));
         bNovoAnimal.setMinimumSize(new java.awt.Dimension(122, 26));
@@ -60,45 +73,49 @@ public class TelaMenuAnimal extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(142, 142, 142)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lbTituloMenuAnimal)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bVoltarMenuAnimal)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                            .addGap(18, 18, 18)
+                            .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
+                        .addComponent(lbTituloMenuAnimal))
+                    .addComponent(bVoltarMenuAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(146, 146, 146))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(lbTituloMenuAnimal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addGap(83, 83, 83)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                    .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                    .addComponent(bBuscarAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bNovoAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
+                .addGap(85, 85, 85)
                 .addComponent(bVoltarMenuAnimal)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void bVoltarMenuAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuAnimalActionPerformed
-//        pMenuPrincipal.setVisible(true);
-//        pMenuAnimal.setVisible(false);
+
+        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
+        
     }//GEN-LAST:event_bVoltarMenuAnimalActionPerformed
 
     private void bNovoAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoAnimalActionPerformed
-//        pMenuAddAnimal.setVisible(true);
-//        pMenuAnimal.setVisible(false);
+
+        
+        PetShop.tela.showView(EnumView.TELAADDANIMAL);
     }//GEN-LAST:event_bNovoAnimalActionPerformed
+
+    private void bBuscarAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarAnimalActionPerformed
+
+        PetShop.tela.showView(EnumView.TELABUSCARANIMAL);
+        
+    }//GEN-LAST:event_bBuscarAnimalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

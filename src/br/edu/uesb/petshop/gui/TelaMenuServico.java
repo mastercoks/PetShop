@@ -6,7 +6,7 @@
 package br.edu.uesb.petshop.gui;
 
 import br.edu.uesb.petshop.model.PetShop;
-import enumerado.EnumView;
+import br.edu.uesb.petshop.enumerado.EnumView;
 
 /**
  *
@@ -39,8 +39,9 @@ public class TelaMenuServico extends javax.swing.JPanel {
 
         lbTituloMenuServico.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloMenuServico.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        lbTituloMenuServico.setText("SERVIÇOS");
+        lbTituloMenuServico.setText("ATENDIMENTO");
 
+        bVoltarMenuServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
         bVoltarMenuServico.setText("VOLTAR");
         bVoltarMenuServico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,10 +49,17 @@ public class TelaMenuServico extends javax.swing.JPanel {
             }
         });
 
-        bBuscarServico.setText("BUSCAR SERVIÇO");
+        bBuscarServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        bBuscarServico.setText("BUSCAR ATENDIMENTO");
         bBuscarServico.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        bBuscarServico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarServicoActionPerformed(evt);
+            }
+        });
 
-        bNovoServico.setText("NOVO SERVIÇO");
+        bNovoServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/10.png"))); // NOI18N
+        bNovoServico.setText("NOVO ATENDIMENTO");
         bNovoServico.setMaximumSize(new java.awt.Dimension(122, 26));
         bNovoServico.setMinimumSize(new java.awt.Dimension(122, 26));
         bNovoServico.setPreferredSize(new java.awt.Dimension(122, 26));
@@ -66,46 +74,52 @@ public class TelaMenuServico extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addGap(142, 142, 142)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lbTituloMenuServico)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(bVoltarMenuServico, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bNovoServico, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(bBuscarServico, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bVoltarMenuServico)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bNovoServico, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(bBuscarServico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lbTituloMenuServico))
+                        .addGap(132, 132, 132))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(30, 30, 30)
                 .addComponent(lbTituloMenuServico)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bNovoServico, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                    .addComponent(bNovoServico, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
                     .addComponent(bBuscarServico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(bVoltarMenuServico)
-                .addGap(25, 25, 25))
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void bVoltarMenuServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuServicoActionPerformed
-//        pMenuCliente.setVisible(false);
-//        pMenuPrincipal.setVisible(true);
-        PetShop.tela.showView(EnumView.SERVICO);
+
+        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
+        
     }//GEN-LAST:event_bVoltarMenuServicoActionPerformed
 
     private void bNovoServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoServicoActionPerformed
-//        pMenuCliente.setVisible(false);
-//        pMenuAddCliente.setVisible(true);
+
+        PetShop.tela.showView(EnumView.TELAADDATENDIMENTO);
+        
     }//GEN-LAST:event_bNovoServicoActionPerformed
+
+    private void bBuscarServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarServicoActionPerformed
+      
+        PetShop.tela.showView(EnumView.TELABUSCARATENDIMENTO);
+        
+    }//GEN-LAST:event_bBuscarServicoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

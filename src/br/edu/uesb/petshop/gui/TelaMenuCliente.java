@@ -5,6 +5,9 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+
 /**
  *
  * @author matheus
@@ -32,10 +35,13 @@ public class TelaMenuCliente extends javax.swing.JPanel {
         bBuscarCliente = new javax.swing.JButton();
         bNovoCliente = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(700, 400));
+
         lbTituloMenuCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloMenuCliente.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbTituloMenuCliente.setText("CLIENTE");
 
+        bVoltarMenuCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
         bVoltarMenuCliente.setText("VOLTAR");
         bVoltarMenuCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,8 +49,15 @@ public class TelaMenuCliente extends javax.swing.JPanel {
             }
         });
 
+        bBuscarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
         bBuscarCliente.setText("BUSCAR CLIENTE");
+        bBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarClienteActionPerformed(evt);
+            }
+        });
 
+        bNovoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/13.png"))); // NOI18N
         bNovoCliente.setText("NOVO CLIENTE");
         bNovoCliente.setMaximumSize(new java.awt.Dimension(122, 26));
         bNovoCliente.setMinimumSize(new java.awt.Dimension(122, 26));
@@ -60,45 +73,49 @@ public class TelaMenuCliente extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(142, 142, 142)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                         .addComponent(lbTituloMenuCliente)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(bVoltarMenuCliente)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                            .addGap(18, 18, 18)
+                            .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)))
+                    .addComponent(bVoltarMenuCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(142, 142, 142))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(lbTituloMenuCliente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                    .addComponent(bNovoCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                     .addComponent(bBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                 .addComponent(bVoltarMenuCliente)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void bVoltarMenuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarMenuClienteActionPerformed
-//        pMenuCliente.setVisible(false);
-//        pMenuPrincipal.setVisible(true);
+
+        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
+        
     }//GEN-LAST:event_bVoltarMenuClienteActionPerformed
 
     private void bNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNovoClienteActionPerformed
-//        pMenuCliente.setVisible(false);
-//        pMenuAddCliente.setVisible(true);
+
+        PetShop.tela.showView(EnumView.TELAADDCLIENTE);
+        
     }//GEN-LAST:event_bNovoClienteActionPerformed
+
+    private void bBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarClienteActionPerformed
+
+        PetShop.tela.showView(EnumView.TELABUSCARCLIENTE);
+        
+    }//GEN-LAST:event_bBuscarClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
