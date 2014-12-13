@@ -30,7 +30,10 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaBuscarAtendimento tBuscarAtendimento;
     TelaBuscaResultado1 tBuscaResultado;
     TelaAddFuncionario2 tAddFuncionario2;
-
+    TelaAddServiço tAddServiço;
+    TelaAddCirurgia tAddCirurgia;
+    TelaAddExame tAddExame;
+    
     /**
      * Creates new form BarraDeMenu
      */
@@ -52,6 +55,9 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tAddFuncionario = new TelaAddFuncionario();
         tBuscaResultado = new TelaBuscaResultado1();
         tAddFuncionario2 = new TelaAddFuncionario2();
+        tAddServiço = new TelaAddServiço();
+        tAddCirurgia = new TelaAddCirurgia();
+        tAddExame = new TelaAddExame();
     }
 
     public void showView(EnumView view) {
@@ -101,7 +107,15 @@ public class BarraDeMenu extends javax.swing.JFrame {
             case TELAADDFUNCIONARIO2:
                 setPanel(tAddFuncionario2);
                 break;
-           
+            case TELAADDSERVIÇO:
+                setPanel(tAddServiço);
+                break;
+            case TELAADDCIRURGIA:
+                setPanel(tAddCirurgia);
+                break;
+            case TELAADDEXAME:
+                setPanel(tAddExame);
+                break;
         }
     }
 

@@ -5,6 +5,8 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.model.PetShop;
+
 /**
  *
  * @author matheus
@@ -59,6 +61,11 @@ public class TelaAddAtendimento extends javax.swing.JPanel {
         });
 
         jButton3.setText("<HTML><BODY>ADICIONAR CIRURGIA</BODY></HTML>");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jTextPane1.setText("Cliente: animal.getDono().getNome());\nData: dtHora.format(data));\nAtendente:  funcionario.getNome());\nNome do animal:  animal.getNome());\n----------------------------------------------------\nServiços:\");\n\nExames:\n\nCirurgias:\n----------------------------------------------------\nTotal RS:  custo);");
         jTextPane1.setToolTipText("");
@@ -67,6 +74,11 @@ public class TelaAddAtendimento extends javax.swing.JPanel {
         jLabel1.setText("Animal");
 
         jButton4.setText("Voltar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Limpar");
 
@@ -137,16 +149,33 @@ public class TelaAddAtendimento extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jTextPane1.setText(jTextPane1.getText()+"\ncouto é gay");
+        TelaAddServiço telaserv = new TelaAddServiço();
+            telaserv.setVisible(true);
+            PetShop.tela.setEnabled(false);
+         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jTextPane1.setText(jTextPane1.getText()+"\nnylo é gay");
+        TelaAddExame telaexam = new TelaAddExame();
+        telaexam.setVisible(true);
+        PetShop.tela.setEnabled(false);
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        TelaAddCirurgia telacir = new TelaAddCirurgia();
+        telacir.setVisible(true);
+        PetShop.tela.setEnabled(false);
+
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

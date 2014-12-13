@@ -5,20 +5,22 @@
  */
 package br.edu.uesb.petshop.gui;
 
+import br.edu.uesb.petshop.model.PetShop;
+import java.awt.Window;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
 /**
  *
  * @author Laherce Gomes
  */
-public class TelaAddCirurgia extends javax.swing.JPanel {
+public class TelaAddServiço extends javax.swing.JPanel {
 
     /**
      * Creates new form TelaAddExame
      */
     ArrayList<JCheckBox> checkboxes;
  
-    public TelaAddCirurgia() {
+    public TelaAddServiço() {
         initComponents();
         checkboxes = new ArrayList<>();
     }
@@ -33,7 +35,7 @@ public class TelaAddCirurgia extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelcirurgia = new javax.swing.JLabel();
+        jLabelServiços = new javax.swing.JLabel();
         jButtonOk = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
         bRemover = new javax.swing.JButton();
@@ -41,8 +43,8 @@ public class TelaAddCirurgia extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
 
-        jLabelcirurgia.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabelcirurgia.setText("CIRURGIAS");
+        jLabelServiços.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabelServiços.setText("SERVIÇOS");
 
         jButtonOk.setText("OK");
         jButtonOk.setPreferredSize(new java.awt.Dimension(96, 51));
@@ -85,7 +87,7 @@ public class TelaAddCirurgia extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1)
-                    .addComponent(jLabelcirurgia, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelServiços, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bRemover, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.CENTER, layout.createSequentialGroup()
                         .addGap(2, 2, 2)
@@ -99,7 +101,7 @@ public class TelaAddCirurgia extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(30, Short.MAX_VALUE)
-                .addComponent(jLabelcirurgia, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelServiços, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -115,7 +117,8 @@ public class TelaAddCirurgia extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-
+    PetShop.tela.setEnabled(true);
+    
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButtonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOkActionPerformed
@@ -145,7 +148,7 @@ public class TelaAddCirurgia extends javax.swing.JPanel {
     private javax.swing.JButton bRemover;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonOk;
-    private javax.swing.JLabel jLabelcirurgia;
+    private javax.swing.JLabel jLabelServiços;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
