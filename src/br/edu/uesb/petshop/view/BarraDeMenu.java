@@ -30,7 +30,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaBuscarAtendimento tBuscarAtendimento;
     TelaBuscaResultado1 tBuscaResultado;
     TelaAddFuncionario2 tAddFuncionario2;
-
+    
     /**
      * Creates new form BarraDeMenu
      */
@@ -123,7 +123,6 @@ public class BarraDeMenu extends javax.swing.JFrame {
             case TELAADDFUNCIONARIO2:
                 setPanel(tAddFuncionario2);
                 break;
-
         }
     }
 

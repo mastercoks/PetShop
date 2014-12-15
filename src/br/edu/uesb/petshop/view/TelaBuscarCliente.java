@@ -175,7 +175,9 @@ public class TelaBuscarCliente extends javax.swing.JPanel {
     }//GEN-LAST:event_bBuscarPorCpfClienteActionPerformed
 
     private void bVoltarBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarBuscarClienteActionPerformed
-        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
+
+        PetShop.tela.showView(EnumView.TELACLIENTE);
+        
     }//GEN-LAST:event_bVoltarBuscarClienteActionPerformed
 
 

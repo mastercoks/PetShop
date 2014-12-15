@@ -199,6 +199,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         
         PetShop.tela.showView(EnumView.TELAANIMAL);
         bLimparAddAnimalActionPerformed(evt);
+        
     }//GEN-LAST:event_bVoltarAddAnimalActionPerformed
 
     private void bLimparAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddAnimalActionPerformed

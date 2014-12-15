@@ -8,7 +8,6 @@ package br.edu.uesb.petshop.view;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.metal.MetalBorders;
-
 /**
  *
  * @author matheus
@@ -79,7 +78,7 @@ public class Campovazio {
         }
         return valor;
     }
-
+    
     public boolean limparCombobox(javax.swing.JComboBox txt) {
         boolean valor;
         txt.setForeground(Color.getHSBColor(0, 0, (float) 30.2));
