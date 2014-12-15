@@ -23,20 +23,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="pServicos" min="-2" max="-2" attributes="0"/>
+          <Component id="pExame" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="pServicos" min="-2" max="-2" attributes="0"/>
+              <Component id="pExame" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="pServicos">
+    <Container class="javax.swing.JPanel" name="pExame">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -45,13 +45,13 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jLabelServiços" alignment="2" max="32767" attributes="0"/>
+                      <Component id="jLabelExames" alignment="2" pref="180" max="32767" attributes="0"/>
                       <Component id="bRemover" alignment="2" max="32767" attributes="0"/>
                       <Group type="102" alignment="2" attributes="0">
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jButtonCancelar" pref="0" max="32767" attributes="0"/>
+                          <Component id="jButtonCancelarExames" pref="0" max="32767" attributes="0"/>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="jButtonOk" pref="0" max="32767" attributes="0"/>
+                          <Component id="jButtonOkExames" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="bAdicionar" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -63,7 +63,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace pref="30" max="32767" attributes="0"/>
-                  <Component id="jLabelServiços" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="jLabelExames" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" pref="144" max="32767" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -72,8 +72,8 @@
                   <Component id="bRemover" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButtonOk" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
-                      <Component id="jButtonCancelar" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="jButtonOkExames" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="jButtonCancelarExames" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
@@ -81,15 +81,15 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabelServi&#xe7;os">
+        <Component class="javax.swing.JLabel" name="jLabelExames">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="36" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="SERVI&#xc7;OS"/>
+            <Property name="text" type="java.lang.String" value="EXAMES"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonOk">
+        <Component class="javax.swing.JButton" name="jButtonOkExames">
           <Properties>
             <Property name="text" type="java.lang.String" value="OK"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -97,10 +97,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonOkActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonOkExamesActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButtonCancelar">
+        <Component class="javax.swing.JButton" name="jButtonCancelarExames">
           <Properties>
             <Property name="text" type="java.lang.String" value="CANCELAR"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -108,7 +108,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCancelarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCancelarExamesActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bRemover">
@@ -147,7 +147,7 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="pServicos.setLayout(new javax.swing.BoxLayout(pServicos, javax.swing.BoxLayout.Y_AXIS));"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="pExame.setLayout(new javax.swing.BoxLayout(pExame, javax.swing.BoxLayout.Y_AXIS));"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>

@@ -7,7 +7,6 @@ package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.control.TelaLoginControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
-import javax.swing.JPanel;
 
 /**
  *
@@ -20,16 +19,17 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaMenuCliente tMenuCliente;
     TelaMenuAnimal tMenuAnimal;
     TelaMenuFuncionario tMenuFuncionario;
-    TelaMenuAtendimento tMenuServico;
+    TelaMenuAtendimento tMenuAtendimento;
     TelaAddCliente tAddCliente;
     TelaBuscarCliente tBuscarCliente;
     TelaAddAnimal tAddAnimal;
     TelaBuscarAnimal tBuscarAnimal;
     TelaAddFuncionario tAddFuncionario;
     TelaBuscarFuncionario tBuscarFuncionario;
-    TelaAddServico tAddAtendimento;
+    TelaAddAtendimento tAddAtendimento;
     TelaBuscarAtendimento tBuscarAtendimento;
     TelaBuscaResultado1 tBuscaResultado;
+    TelaAddFuncionario2 tAddFuncionario2;
 
     /**
      * Creates new form BarraDeMenu
@@ -41,9 +41,9 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tMenuCliente = new TelaMenuCliente();
         tMenuAnimal = new TelaMenuAnimal();
         tMenuFuncionario = new TelaMenuFuncionario();
-        tMenuServico = new TelaMenuAtendimento();
+        tMenuAtendimento = new TelaMenuAtendimento();
         tAddAnimal = new TelaAddAnimal();
-        tAddAtendimento = new TelaAddServico();
+        tAddAtendimento = new TelaAddAtendimento();
         tAddCliente = new TelaAddCliente();
         tAddFuncionario = new TelaAddFuncionario();
         tBuscarAnimal = new TelaBuscarAnimal();
@@ -51,21 +51,23 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tBuscarCliente = new TelaBuscarCliente();
         tAddFuncionario = new TelaAddFuncionario();
         tBuscaResultado = new TelaBuscaResultado1();
+        tAddFuncionario2 = new TelaAddFuncionario2();
+        tBuscarFuncionario = new TelaBuscarFuncionario();
     }
 
     public void setTipoMenu(TelaLoginControl.EnumLogin tipo) {
         tPrincipal.setTipoMenu(tipo);
-        
+
     }
-    
-    public void habilitaBarra(){
+
+    public void habilitaBarra() {
         mAnimais.setEnabled(true);
         mClientes.setEnabled(true);
         mAtendimento.setEnabled(true);
         mCadastro.setEnabled(true);
     }
-    
-    public void desabilitaBarra(){
+
+    public void desabilitaBarra() {
         mAnimais.setEnabled(false);
         mClientes.setEnabled(false);
         mAtendimento.setEnabled(false);
@@ -91,8 +93,8 @@ public class BarraDeMenu extends javax.swing.JFrame {
             case TELAANIMAL:
                 setPanel(tMenuAnimal);
                 break;
-            case TELASERVICO:
-                setPanel(tMenuServico);
+            case TELAATENDIMENTO:
+                setPanel(tMenuAtendimento);
                 break;
             case TELAADDANIMAL:
                 setPanel(tAddAnimal);
@@ -117,6 +119,9 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 break;
             case TELABUSCARFUNCIONARIO:
                 setPanel(tBuscarFuncionario);
+                break;
+            case TELAADDFUNCIONARIO2:
+                setPanel(tAddFuncionario2);
                 break;
 
         }

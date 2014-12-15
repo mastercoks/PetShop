@@ -23,20 +23,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="pServicos" min="-2" max="-2" attributes="0"/>
+          <Component id="pCirurgias" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="pServicos" min="-2" max="-2" attributes="0"/>
+              <Component id="pCirurgias" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="pServicos">
+    <Container class="javax.swing.JPanel" name="pCirurgias">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -45,7 +45,7 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jLabelServiços" alignment="2" max="32767" attributes="0"/>
+                      <Component id="jLabelcirurgia" alignment="2" max="32767" attributes="0"/>
                       <Component id="bRemover" alignment="2" max="32767" attributes="0"/>
                       <Group type="102" alignment="2" attributes="0">
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
@@ -63,7 +63,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace pref="30" max="32767" attributes="0"/>
-                  <Component id="jLabelServiços" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="jLabelcirurgia" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" pref="144" max="32767" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -81,12 +81,12 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabelServi&#xe7;os">
+        <Component class="javax.swing.JLabel" name="jLabelcirurgia">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="36" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="SERVI&#xc7;OS"/>
+            <Property name="text" type="java.lang.String" value="CIRURGIAS"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonOk">
@@ -147,7 +147,7 @@
                 </Property>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="pServicos.setLayout(new javax.swing.BoxLayout(pServicos, javax.swing.BoxLayout.Y_AXIS));"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="pCirurgias.setLayout(new javax.swing.BoxLayout(pCirurgias, javax.swing.BoxLayout.Y_AXIS));"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>

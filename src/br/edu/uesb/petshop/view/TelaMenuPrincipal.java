@@ -168,7 +168,7 @@ public class TelaMenuPrincipal extends javax.swing.JPanel {
 
     private void bServicosMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bServicosMenuPrincipalActionPerformed
 
-        PetShop.tela.showView(EnumView.TELASERVICO);
+        PetShop.tela.showView(EnumView.TELAATENDIMENTO);
 
     }//GEN-LAST:event_bServicosMenuPrincipalActionPerformed
 

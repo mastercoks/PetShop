@@ -16,18 +16,13 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="lbTituloTelaFunc2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="lbSexoTelaFunc" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cbSexoTelaFunc" min="-2" pref="118" max="-2" attributes="0"/>
@@ -36,9 +31,9 @@
                                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                   <Component id="txtCpfTelaFunc" min="-2" pref="106" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="lbComplementoTelaFunc" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="txtComplementoTelaFunc" min="-2" pref="255" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -57,11 +52,11 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="lbEnderecoTelaFunc" min="-2" max="-2" attributes="0"/>
                               <Component id="lbNomeTelaFunc" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="txtEnderecoTelaFunc" max="32767" attributes="0"/>
                               <Component id="txtNomeTelaFunc2" pref="531" max="32767" attributes="0"/>
@@ -94,16 +89,21 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="136" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lbTituloTelaFunc2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="lbTituloTelaFunc2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtNomeTelaFunc2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbNomeTelaFunc" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -136,7 +136,7 @@
                   <Component id="txtTelefone2TelaFunc" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbTelefone2TelaFunc" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="bSalvarCadastroTelaFunc" alignment="1" min="-2" pref="66" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
@@ -162,10 +162,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNomeTelaFunc2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="MATHEUS COQUEIRO ANDRADE"/>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeTelaFunc2ActionPerformed"/>
       </Events>

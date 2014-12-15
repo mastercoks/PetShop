@@ -5,9 +5,7 @@
  */
 package br.edu.uesb.petshop.view;
 
-import br.edu.uesb.petshop.view.Login;
 import java.awt.Color;
-import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.metal.MetalBorders;
 
@@ -33,7 +31,7 @@ public class Campovazio {
     public boolean formattedtextfield(javax.swing.JFormattedTextField txt) {
 //        int numero = Integer.parseInt(txt.getText());
         boolean valor;
-        String string = new String(txt.getText());
+        String string = txt.getText();
         string = string.replace('-', ' ');
         string = string.replace('(', ' ');
         string = string.replace(')', ' ');
@@ -54,6 +52,7 @@ public class Campovazio {
     public boolean limparFormattedtextfield(javax.swing.JFormattedTextField txt) {
         boolean valor;
         txt.setBorder(new MetalBorders.TextFieldBorder());
+        txt.setText("");
         valor = false;
         return valor;
     }
@@ -61,13 +60,14 @@ public class Campovazio {
     public boolean limparTextfield(javax.swing.JTextField txt) {
         boolean valor;
         txt.setBorder(new MetalBorders.TextFieldBorder());
+        txt.setText("");
         valor = false;
         return valor;
     }
 
     public boolean combobox(javax.swing.JComboBox txt) {
         boolean valor;
-        int item = new Integer(txt.getSelectedIndex());
+        int item = txt.getSelectedIndex();
 //        String string;
 //        string = Integer.toString(txt.getSelectedIndex());
         if (item == 0) {
@@ -83,7 +83,17 @@ public class Campovazio {
     public boolean limparCombobox(javax.swing.JComboBox txt) {
         boolean valor;
         txt.setForeground(Color.getHSBColor(0, 0, (float) 30.2));
+        txt.setSelectedItem(0);
         valor = false;
         return valor;
+    }
+
+    public void capslock(final javax.swing.JTextField txt) {
+        txt.addFocusListener(new java.awt.event.FocusAdapter() {
+            @Override
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt.setText(txt.getText().toUpperCase());
+            }
+        });
     }
 }

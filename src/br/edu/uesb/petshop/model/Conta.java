@@ -12,7 +12,7 @@ public class Conta {
 	private Funcionario funcionario;
 	private float custo;
 	private Date data = new Date();
-	private ArrayList<Servico> servicosRealizados;
+	private ArrayList<Servicoold> servicosRealizados;
 
 	// Construtor
 
@@ -22,7 +22,7 @@ public class Conta {
 		
 		if (funcionario != null)
 			this.custo = this.getCusto();
-		this.servicosRealizados = new ArrayList<Servico>();
+		this.servicosRealizados = new ArrayList<Servicoold>();
 
 	}
 
@@ -67,15 +67,15 @@ public class Conta {
 	}
 
 
-	public ArrayList<Servico> getServicosRealizados() {
+	public ArrayList<Servicoold> getServicosRealizados() {
 		return servicosRealizados;
 	}
 	
-	public void addServicosRealizados(Servico servico) {
+	public void addServicosRealizados(Servicoold servico) {
 		this.servicosRealizados.add(servico);
 	}
 	
-	public void remServicosRealizados(Servico servico) {
+	public void remServicosRealizados(Servicoold servico) {
 		this.servicosRealizados.remove(servico);
 	}
 
@@ -86,7 +86,7 @@ public class Conta {
 		System.out.println("Atendente: " + funcionario.getNome());
 		System.out.println("Nome do animal: " + animal.getNome());
 		System.out.println("-----------------------------");
-		System.out.println("Servi�os:");
+		System.out.println("Serviços:");
 		for (int i = 0; i < servicosRealizados.size(); i++) {
 				System.out.println(servicosRealizados.get(i
 						));
