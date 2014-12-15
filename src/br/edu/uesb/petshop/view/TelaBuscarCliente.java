@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.dao.ClienteDAO;
 import br.edu.uesb.petshop.enumerado.EnumView;
@@ -69,6 +69,11 @@ public class TelaBuscarCliente extends javax.swing.JPanel {
 
         bVoltarBuscarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
         bVoltarBuscarCliente.setText("VOLTAR");
+        bVoltarBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bVoltarBuscarClienteActionPerformed(evt);
+            }
+        });
 
         try {
             txtCpfBuscarCliente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -168,6 +173,10 @@ public class TelaBuscarCliente extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Nenhum Cliente encontrado!", "Atenção", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_bBuscarPorCpfClienteActionPerformed
+
+    private void bVoltarBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarBuscarClienteActionPerformed
+        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
+    }//GEN-LAST:event_bVoltarBuscarClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

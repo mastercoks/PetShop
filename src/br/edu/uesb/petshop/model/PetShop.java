@@ -4,7 +4,8 @@
  */
 package br.edu.uesb.petshop.model;
 
-import br.edu.uesb.petshop.gui.*;
+import br.edu.uesb.petshop.view.TelaLogin;
+import br.edu.uesb.petshop.view.BarraDeMenu;
 
 /**
  *

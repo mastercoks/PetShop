@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.model.PetShop;
 import br.edu.uesb.petshop.enumerado.EnumView;
@@ -12,12 +12,12 @@ import br.edu.uesb.petshop.enumerado.EnumView;
  *
  * @author matheus
  */
-public class TelaMenuServico extends javax.swing.JPanel {
+public class TelaMenuAtendimento extends javax.swing.JPanel {
 
     /**
      * Creates new form TelaMenuServico
      */
-    public TelaMenuServico() {
+    public TelaMenuAtendimento() {
         initComponents();
     }
 

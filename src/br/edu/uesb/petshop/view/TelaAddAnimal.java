@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
+
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
 
 /**
  *
@@ -27,6 +30,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgSexo = new javax.swing.ButtonGroup();
         bVoltarAddAnimal = new javax.swing.JButton();
         lbTituloAddAnimal = new javax.swing.JLabel();
         bLimparAddAnimal = new javax.swing.JButton();
@@ -70,6 +74,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
             }
         });
 
+        bgSexo.add(rbMachoAddAnimal);
         rbMachoAddAnimal.setText("Macho");
         rbMachoAddAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +83,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         });
         rbMachoAddAnimal.setActionCommand("MACHO");
 
+        bgSexo.add(rbFemeaAddAnimal);
         rbFemeaAddAnimal.setText("Fêmea");
         rbFemeaAddAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,17 +196,17 @@ public class TelaAddAnimal extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bVoltarAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarAddAnimalActionPerformed
-//        pMenuAddAnimal.setVisible(false);
-//        pMenuAnimal.setVisible(true);
-//        bLimparAddAnimalActionPerformed(evt);
+        
+        PetShop.tela.showView(EnumView.TELAANIMAL);
+        bLimparAddAnimalActionPerformed(evt);
     }//GEN-LAST:event_bVoltarAddAnimalActionPerformed
 
     private void bLimparAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddAnimalActionPerformed
-//        txtNomeAddAnimal.setText("");
-//        txtRacaAddAnimal.setText("");
-//        cbEspecieAddAnimal.setSelectedItem("-");
-//        cbDonoAddAnimal.setSelectedItem("-");
-//        bgSexo.clearSelection();
+        txtNomeAddAnimal.setText("");
+        txtRacaAddAnimal.setText("");
+        cbEspecieAddAnimal.setSelectedItem("-");
+        cbDonoAddAnimal.setSelectedItem("-");
+        bgSexo.clearSelection();
     }//GEN-LAST:event_bLimparAddAnimalActionPerformed
 
     private void bSalvarCadastroAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarCadastroAddAnimalActionPerformed
@@ -235,6 +241,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
     private javax.swing.JButton bLimparAddAnimal;
     private javax.swing.JButton bSalvarCadastroAddAnimal;
     private javax.swing.JButton bVoltarAddAnimal;
+    private javax.swing.ButtonGroup bgSexo;
     private javax.swing.JComboBox cbDonoAddAnimal;
     private javax.swing.JComboBox cbEspecieAddAnimal;
     private javax.swing.JLabel lbDonoAddAnimal;

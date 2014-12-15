@@ -21,7 +21,7 @@ public class FuncionarioDAO extends AbstractDAO{
     }
     
     public ResultSet getByLogin(String login){
-        ResultSet rs = executeQuery("SELECY * FROM \"Funcionario\" WHERE login LIKE '%" + login + "%'");
+        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE login LIKE '%" + login + "%'");
         return rs;
     }
 

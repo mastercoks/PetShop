@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.dao.ClienteDAO;
 import br.edu.uesb.petshop.enumerado.EnumView;
@@ -45,7 +45,6 @@ public class TelaBuscaResultado extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(365, 161, 161, 161));
         setMaximizedBounds(new java.awt.Rectangle(577, 161, 577, 161));
-        setMaximumSize(new java.awt.Dimension(577, 161));
         setMinimumSize(new java.awt.Dimension(577, 161));
 
         pTelaBuscaResultado.setMaximumSize(new java.awt.Dimension(577, 161));

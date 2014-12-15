@@ -5,61 +5,53 @@
  */
 package br.edu.uesb.petshop.control;
 
+import br.edu.uesb.petshop.dao.AdmDAO;
+import br.edu.uesb.petshop.dao.FuncionarioDAO;
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.view.Login;
+import br.edu.uesb.petshop.model.PetShop;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author matheus
  */
 public class TelaLoginControl {
-    
-    public void EntrarActionPerformed(javax.swing.JTextField txtLoginMenuLogin, javax.swing.JTextField txtSenhaMenuLogin){
 
-//        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
-//        int cont = 0;
-//
-//        try {
-//
-//            ResultSet rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
-//                + "WHERE login = '" + txtLoginMenuLogin.getText() + "' ");
-//
-//            while (rs.next()) {
-//                cont++;
-//                rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
-//                    + "WHERE senha = '" + txtSenhaMenuLogin.getText() + "' ");
-//
-//                while (rs.next()) {
-//                    if (rs.getString("login").equals(txtLoginMenuLogin.getText())) {
-//                        if (rs.getInt("nivel") == 1) {
-//                            lbTituloMenuPrincipal.setText("FUNCIONARIO");
-//                            bFuncionarioMenuPrincipal.setEnabled(false);
-//                        } else {
-//                            lbTituloMenuPrincipal.setText("ADMIN");
-//                            bFuncionarioMenuPrincipal.setEnabled(true);
-//                        }
-//                        pLoginIncorretoMenuLogin.setVisible(false);
-//                        cont++;
-//                        pMenuLogin.setVisible(false);
-//                        pMenuPrincipal.setVisible(true);
-//                        mAnimais.setEnabled(true);
-//                        mClientes.setEnabled(true);
-//                        mAtendimento.setEnabled(true);
-//                        mCadastro.setEnabled(true);
-//                    }
-//                }
-//            }
-//
-//            if (cont == 0) {
-//                pLoginIncorretoMenuLogin.setVisible(true);
-//                lbLoginIncorretoMenuLogin.setText("Login invalido, por favor tente novamente");
-//            } else if (cont == 1) {
-//                pLoginIncorretoMenuLogin.setVisible(true);
-//                lbLoginIncorretoMenuLogin.setText("Senha invalida, por favor tente novamente");
-//            }
-//
-//        } catch (SQLException ex) {
-//            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-//            lbLoginIncorretoMenuLogin.setVisible(true);
-//        }
-        
+    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+
+    public enum EnumLogin {
+
+        SENHA_ERRADA, LOGIN_ERRADO, LOGIN_ADMIN, LOGIN_FUNCIONARIO
+    };
+
+    public EnumLogin EntrarActionPerformed(javax.swing.JTextField txtLoginMenuLogin, javax.swing.JTextField txtSenhaMenuLogin) {
+
+        try {
+
+            ResultSet rs = funcionarioDAO.getByLogin(txtLoginMenuLogin.getText());
+
+            if (rs.next()) {
+                if (rs.getString("senha").equals(txtSenhaMenuLogin.getText())) {
+                    PetShop.tela.showView(EnumView.TELAPRINCIPAL);
+                    if (rs.getInt("nivel") == 1) {
+                        return EnumLogin.LOGIN_FUNCIONARIO;
+                    } else {
+                        return EnumLogin.LOGIN_ADMIN;
+                    }
+                } else {
+                    return EnumLogin.SENHA_ERRADA;
+                }
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+        return EnumLogin.LOGIN_ERRADO;
     }
-    
+
 }

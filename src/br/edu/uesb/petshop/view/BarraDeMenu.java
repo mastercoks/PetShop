@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaLoginControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
 import javax.swing.JPanel;
 
@@ -15,11 +16,11 @@ import javax.swing.JPanel;
 public class BarraDeMenu extends javax.swing.JFrame {
 
     TelaLogin tLogin;
-    TelaPrincipal tPrincipal;
+    TelaMenuPrincipal tPrincipal;
     TelaMenuCliente tMenuCliente;
     TelaMenuAnimal tMenuAnimal;
     TelaMenuFuncionario tMenuFuncionario;
-    TelaMenuServico tMenuServico;
+    TelaMenuAtendimento tMenuServico;
     TelaAddCliente tAddCliente;
     TelaBuscarCliente tBuscarCliente;
     TelaAddAnimal tAddAnimal;
@@ -36,11 +37,11 @@ public class BarraDeMenu extends javax.swing.JFrame {
     public BarraDeMenu() {
         initComponents();
         tLogin = new TelaLogin();
-        tPrincipal = new TelaPrincipal();
+        tPrincipal = new TelaMenuPrincipal();
         tMenuCliente = new TelaMenuCliente();
         tMenuAnimal = new TelaMenuAnimal();
         tMenuFuncionario = new TelaMenuFuncionario();
-        tMenuServico = new TelaMenuServico();
+        tMenuServico = new TelaMenuAtendimento();
         tAddAnimal = new TelaAddAnimal();
         tAddAtendimento = new TelaAddServico();
         tAddCliente = new TelaAddCliente();
@@ -52,13 +53,34 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tBuscaResultado = new TelaBuscaResultado1();
     }
 
+    public void setTipoMenu(TelaLoginControl.EnumLogin tipo) {
+        tPrincipal.setTipoMenu(tipo);
+        
+    }
+    
+    public void habilitaBarra(){
+        mAnimais.setEnabled(true);
+        mClientes.setEnabled(true);
+        mAtendimento.setEnabled(true);
+        mCadastro.setEnabled(true);
+    }
+    
+    public void desabilitaBarra(){
+        mAnimais.setEnabled(false);
+        mClientes.setEnabled(false);
+        mAtendimento.setEnabled(false);
+        mCadastro.setEnabled(false);
+    }
+
     public void showView(EnumView view) {
         switch (view) {
             case TELALOGIN:
                 setPanel(tLogin);
+                desabilitaBarra();
                 break;
             case TELAPRINCIPAL:
                 setPanel(tPrincipal);
+                habilitaBarra();
                 break;
             case TELACLIENTE:
                 setPanel(tMenuCliente);
@@ -96,7 +118,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
             case TELABUSCARFUNCIONARIO:
                 setPanel(tBuscarFuncionario);
                 break;
-           
+
         }
     }
 

@@ -3,16 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
-import br.edu.uesb.petshop.dao.ConexaoPostgreSQL;
-import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.control.TelaLoginControl;
 import br.edu.uesb.petshop.model.PetShop;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -23,8 +17,11 @@ public class TelaLogin extends javax.swing.JPanel {
     /**
      * Creates new form TelaLogin
      */
+    TelaLoginControl loginControl;
+
     public TelaLogin() {
         initComponents();
+        loginControl = new TelaLoginControl();
     }
 
     /**
@@ -151,55 +148,25 @@ public class TelaLogin extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtLoginMenuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginMenuLoginActionPerformed
-        txtSenhaMenuLogin.requestFocus();        // TODO add your handling code here:
+        txtSenhaMenuLogin.requestFocus();
     }//GEN-LAST:event_txtLoginMenuLoginActionPerformed
 
     private void bEntrarMenuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEntrarMenuLoginActionPerformed
-        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
-        int cont = 0;
-
-        try {
-
-            ResultSet rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
-                    + "WHERE login = '" + txtLoginMenuLogin.getText() + "' ");
-
-            while (rs.next()) {
-                cont++;
-                rs = query.executeQuery("SELECT id, login, senha, nivel FROM \"Admin\""
-                        + "WHERE senha = '" + txtSenhaMenuLogin.getText() + "' ");
-
-                while (rs.next()) {
-                    if (rs.getString("login").equals(txtLoginMenuLogin.getText())) {
-                        if (rs.getInt("nivel") == 1) {
-//                            lbTituloMenuPrincipal.setText("FUNCIONARIO");
-//                            bFuncionarioMenuPrincipal.setEnabled(false);
-                        } else {
-//                            lbTituloMenuPrincipal.setText("ADMIN");
-//                            bFuncionarioMenuPrincipal.setEnabled(true);
-                        }
-                        pLoginIncorretoMenuLogin.setVisible(false);
-                        cont++;
-                        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
-//                        mAnimais.setEnabled(true);
-//                        mClientes.setEnabled(true);
-//                        mAtendimento.setEnabled(true);
-//                        mCadastro.setEnabled(true);
-                    }
-                }
-            }
-
-            if (cont == 0) {
-                pLoginIncorretoMenuLogin.setVisible(true);
-                lbLoginIncorretoMenuLogin.setText("Login invalido, por favor tente novamente");
-            } else if (cont == 1) {
-                pLoginIncorretoMenuLogin.setVisible(true);
-                lbLoginIncorretoMenuLogin.setText("Senha invalida, por favor tente novamente");
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            lbLoginIncorretoMenuLogin.setVisible(true);
+       TelaLoginControl.EnumLogin login = loginControl.EntrarActionPerformed(txtLoginMenuLogin, txtSenhaMenuLogin);
+       switch (login){
+           case LOGIN_ERRADO:
+               pLoginIncorretoMenuLogin.setVisible(true);
+               lbLoginIncorretoMenuLogin.setText("Login invalido, por favor tente novamente");
+               break;
+           case SENHA_ERRADA:
+               pLoginIncorretoMenuLogin.setVisible(true);
+                lbLoginIncorretoMenuLogin.setText("Senha invalido, por favor tente novamente");
+               break;
+           default:
+           PetShop.tela.setTipoMenu(login);
+               pLoginIncorretoMenuLogin.setVisible(false);
         }
+       
     }//GEN-LAST:event_bEntrarMenuLoginActionPerformed
 
     private void bSairMenuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSairMenuLoginActionPerformed

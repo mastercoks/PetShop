@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
-import br.edu.uesb.petshop.gui.Login;
+import br.edu.uesb.petshop.view.Login;
 import java.awt.Color;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;

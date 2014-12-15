@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaLoginControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
 import br.edu.uesb.petshop.model.PetShop;
 
@@ -12,12 +13,12 @@ import br.edu.uesb.petshop.model.PetShop;
  *
  * @author matheus
  */
-public class TelaPrincipal extends javax.swing.JPanel {
+public class TelaMenuPrincipal extends javax.swing.JPanel {
 
     /**
      * Creates new form TelaPrincipal
      */
-    public TelaPrincipal() {
+    public TelaMenuPrincipal() {
         initComponents();
     }
 
@@ -139,31 +140,42 @@ public class TelaPrincipal extends javax.swing.JPanel {
     private void bAnimaisMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnimaisMenuPrincipalActionPerformed
 
         PetShop.tela.showView(EnumView.TELAANIMAL);
-        
+
     }//GEN-LAST:event_bAnimaisMenuPrincipalActionPerformed
 
+    public void setTipoMenu(TelaLoginControl.EnumLogin tipo) {
+        if (tipo == TelaLoginControl.EnumLogin.LOGIN_FUNCIONARIO) {
+            lbTituloMenuPrincipal.setText("FUNCIONARIO");
+            bFuncionarioMenuPrincipal.setEnabled(false);
+        } else if (tipo == TelaLoginControl.EnumLogin.LOGIN_ADMIN) {
+            lbTituloMenuPrincipal.setText("ADMIN");
+            bFuncionarioMenuPrincipal.setEnabled(true);
+        }
+
+    }
+
     private void bClientesMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClientesMenuPrincipalActionPerformed
-//        pMenuPrincipal.setVisible(false);
-//        pMenuCliente.setVisible(true);
+       
         PetShop.tela.showView(EnumView.TELACLIENTE);
+        
     }//GEN-LAST:event_bClientesMenuPrincipalActionPerformed
 
     private void bFuncionarioMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bFuncionarioMenuPrincipalActionPerformed
 
         PetShop.tela.showView(EnumView.TELAFUNCIONARIO);
-        
+
     }//GEN-LAST:event_bFuncionarioMenuPrincipalActionPerformed
 
     private void bServicosMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bServicosMenuPrincipalActionPerformed
 
         PetShop.tela.showView(EnumView.TELASERVICO);
-        
+
     }//GEN-LAST:event_bServicosMenuPrincipalActionPerformed
 
     private void bLogoutMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogoutMenuPrincipalActionPerformed
-        
+
         PetShop.tela.showView(EnumView.TELALOGIN);
-        
+
     }//GEN-LAST:event_bLogoutMenuPrincipalActionPerformed
 
 

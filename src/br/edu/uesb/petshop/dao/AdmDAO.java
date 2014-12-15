@@ -22,7 +22,12 @@ public class AdmDAO extends AbstractDAO {
     }
     
     public ResultSet getByLogin(String login) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Admin\" WHERE login LIKE '%" + login + "%'" );
+        ResultSet rs = executeQuery("SELECT * FROM \"Admin\" WHERE \"login\" = '"+login+"';");
+        return rs;
+    }
+    
+    public ResultSet getBySenha(String senha){
+        ResultSet rs = executeQuery("SELECT * FROM \"Admin\" WHERE \"senha\" = '"+senha+"';");
         return rs;
     }
     

@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.uesb.petshop.gui;
+package br.edu.uesb.petshop.view;
 
-import br.edu.uesb.petshop.dao.ConexaoPostgreSQL;
+import br.edu.uesb.petshop.control.TelaAddClienteControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.Cliente;
 import br.edu.uesb.petshop.model.PetShop;
-import java.sql.Statement;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,11 +18,15 @@ import javax.swing.JOptionPane;
  */
 public class TelaAddCliente extends javax.swing.JPanel {
 
-    private Campovazio cp = new Campovazio();
-    
+    private Campovazio cp;
+    private Cliente cliente;
+    private TelaAddClienteControl clienteControl = new TelaAddClienteControl();
+
     public TelaAddCliente() {
         initComponents();
-        
+        cp = new Campovazio();
+//        cliente = new Cliente(null, null, null, null, null, null, null, null, null);
+
     }
 
     /**
@@ -282,35 +287,34 @@ public class TelaAddCliente extends javax.swing.JPanel {
         cp.formattedtextfield(txtDataNascAddCliente);
         cp.formattedtextfield(txtTelefone1AddCliente);
         cp.combobox(cbSexoAddCliente);
+        Date dataNasc;
 
-        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
+        if (txtDataNascAddCliente.getText().equals("  /  /    ")) {
+            dataNasc = null;
+        } else {
 
-        //se todos os campos estiverem preenchidos ele add ao banco de dados
-        if ((cp.textfield(txtNomeAddCliente) == false) && (cp.textfield(txtEnderecoAddCliente) == false)
-                && (cp.textfield(txtBairroAddCliente) == false)
-                && (cp.formattedtextfield(txtCpfAddCliente) == false) && (cp.formattedtextfield(txtDataNascAddCliente) == false)
-                && (cp.formattedtextfield(txtTelefone1AddCliente) == false) && (cp.combobox(cbSexoAddCliente) == false)) {
+            int ano = Integer.parseInt(txtDataNascAddCliente.getText().substring(8, 10));
+            int dia = Integer.parseInt(txtDataNascAddCliente.getText().substring(0, 2));
+            int mes = Integer.parseInt(txtDataNascAddCliente.getText().substring(3, 5)) - 1;
+            dataNasc = new Date(ano, mes, dia);
+        }
+        cliente = new Cliente(txtNomeAddCliente.getText(), txtEnderecoAddCliente.getText(),
+                txtBairroAddCliente.getText(), txtComplementoAddCliente.getText(),
+                txtTelefone2AddCliente.getText(), txtCpfAddCliente.getText(),
+                txtTelefone1AddCliente.getText(), dataNasc, cbSexoAddCliente.getSelectedItem().toString());
 
-            //add
-            try {
-                query.executeUpdate("INSERT INTO \"Cliente\"(\n"
-                        + "            nome, endereco, bairro, complemento, sexo, cpf, datanascimento, telefone1, \n"
-                        + "            telefone2)\n"
-                        + "    VALUES ('" + txtNomeAddCliente.getText() + "','" + txtEnderecoAddCliente.getText() + "','" + txtBairroAddCliente.getText()
-                        + "','" + txtComplementoAddCliente.getText() + "','" + cbSexoAddCliente.getSelectedItem() + "','" + txtCpfAddCliente.getText()
-                        + "', '" + txtDataNascAddCliente.getText() + "', '" + txtTelefone1AddCliente.getText() + "','" + txtTelefone2AddCliente.getText() + "');");
+        if ((cliente.getDataNasc() == null) || ("(  )     -    ".equals(cliente.getTelefone1()))
+                || ("".equals(cliente.getNome())) || ("".equals(cliente.getEndereco()))
+                || ("".equals(cliente.getBairro()))
+                || ("   .   .   -  ".equals(cliente.getCpf())) || ("Selecione...".equals(cliente.getSexo()))) {
 
-                JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
-                bLimparAddClienteActionPerformed(evt);//limparcampos
-
-            } catch (Exception e) {
-                System.out.println(e);
-                JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
-            }
+            JOptionPane.showMessageDialog(null, "Por favor preencha os campos restantes!", "Atenção", JOptionPane.WARNING_MESSAGE);
 
         } else {
-            JOptionPane.showMessageDialog(this, "Por favor preencha os campos restantes!", "Atenção", JOptionPane.WARNING_MESSAGE);
+            clienteControl.salvarCliente(cliente);
         }
+        
+        
     }//GEN-LAST:event_bSalvarCadastroAddClienteActionPerformed
 
     private void bVoltarAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarAddClienteActionPerformed
