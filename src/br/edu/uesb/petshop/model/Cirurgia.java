@@ -9,13 +9,13 @@ package br.edu.uesb.petshop.model;
  *
  * @author matheus
  */
-public class Servico extends ECS {
+public class Cirurgia extends ECS{
 
-    public Servico(String nome, String preco) {
+    public Cirurgia(String nome, String preco) {
         super(nome, preco);
     }
     
-      public Servico(int id, String nome, String preco) {
+    public Cirurgia(int id, String nome, String preco) {
         super(id, nome, preco);
     }
     
@@ -24,5 +24,6 @@ public class Servico extends ECS {
         return "Nome: " + getNome() + "\nPreço: R$" + getPreco();
         
     }
+    
     
 }

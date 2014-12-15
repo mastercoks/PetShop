@@ -9,20 +9,21 @@ package br.edu.uesb.petshop.model;
  *
  * @author matheus
  */
-public class Servico extends ECS {
+public class Exame extends ECS {
 
-    public Servico(String nome, String preco) {
+    //Construtor
+    public Exame(String nome, String preco) {
         super(nome, preco);
     }
-    
-      public Servico(int id, String nome, String preco) {
+
+    public Exame(int id, String nome, String preco) {
         super(id, nome, preco);
     }
-    
-        @Override
-    public String toString(){
+
+    @Override
+    public String toString() {
         return "Nome: " + getNome() + "\nPreço: R$" + getPreco();
-        
+
     }
-    
+
 }
