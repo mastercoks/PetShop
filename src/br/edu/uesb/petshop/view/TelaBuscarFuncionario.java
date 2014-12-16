@@ -5,12 +5,23 @@
  */
 package br.edu.uesb.petshop.view;
 
+
+import br.edu.uesb.petshop.dao.FuncionarioDAO;
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author matheus
  */
 public class TelaBuscarFuncionario extends javax.swing.JPanel {
 
+    private TelaBuscarResultado1 telaResultado1 = null;
     /**
      * Creates new form Buscar
      */
@@ -27,75 +38,157 @@ public class TelaBuscarFuncionario extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbTituloBuscarFuncionario = new javax.swing.JLabel();
-        lbBuscarPorNomeFuncionario = new javax.swing.JLabel();
-        lbBuscarPorCpfFuncionario = new javax.swing.JLabel();
-        txtBuscarPorNomeFuncionario = new javax.swing.JTextField();
-        txtBuscarPorCpfFuncionario = new javax.swing.JTextField();
-        bBuscarPorNomeFuncionario = new javax.swing.JButton();
+        txtCpfBuscarFuncionario = new javax.swing.JFormattedTextField();
+        lbNomeBuscarFuncionario = new javax.swing.JLabel();
+        lbCpfBuscarFuncionario = new javax.swing.JLabel();
+        lbTituloBuscarFunc = new javax.swing.JLabel();
         bBuscarPorCpfFuncionario = new javax.swing.JButton();
+        bVoltarBuscarFuncionario = new javax.swing.JButton();
+        txtNomeBuscarFuncionario = new javax.swing.JTextField();
+        bBuscarPorNomeFuncionario = new javax.swing.JButton();
 
-        lbTituloBuscarFuncionario.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        lbTituloBuscarFuncionario.setText("BUSCAR FUNCIONÁRIO");
+        try {
+            txtCpfBuscarFuncionario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
-        lbBuscarPorNomeFuncionario.setText("BUSCAR POR NOME:");
+        lbNomeBuscarFuncionario.setText("BUSCAR POR NOME:");
 
-        lbBuscarPorCpfFuncionario.setText("BUSCAR POR CPF:");
+        lbCpfBuscarFuncionario.setText("BUSCAR POR CPF:");
 
-        bBuscarPorNomeFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        lbTituloBuscarFunc.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        lbTituloBuscarFunc.setText("BUSCAR FUNCIONÁRIO");
 
         bBuscarPorCpfFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        bBuscarPorCpfFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarPorCpfFuncionarioActionPerformed(evt);
+            }
+        });
+
+        bVoltarBuscarFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
+        bVoltarBuscarFuncionario.setText("VOLTAR");
+        bVoltarBuscarFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bVoltarBuscarFuncionarioActionPerformed(evt);
+            }
+        });
+
+        bBuscarPorNomeFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        bBuscarPorNomeFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarPorNomeFuncionarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbBuscarPorCpfFuncionario)
-                    .addComponent(lbBuscarPorNomeFuncionario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtBuscarPorNomeFuncionario, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
-                    .addComponent(txtBuscarPorCpfFuncionario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bBuscarPorNomeFuncionario)
-                    .addComponent(bBuscarPorCpfFuncionario))
-                .addContainerGap(169, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(lbTituloBuscarFuncionario)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(142, Short.MAX_VALUE)
+                        .addComponent(bVoltarBuscarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(256, 256, 256))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbCpfBuscarFuncionario)
+                            .addComponent(lbNomeBuscarFuncionario))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtCpfBuscarFuncionario)
+                            .addComponent(txtNomeBuscarFuncionario))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bBuscarPorNomeFuncionario)
+                            .addComponent(bBuscarPorCpfFuncionario))))
+                .addContainerGap(159, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lbTituloBuscarFunc)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(lbTituloBuscarFuncionario)
-                .addGap(35, 35, 35)
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(lbTituloBuscarFunc)
+                .addGap(98, 98, 98)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbBuscarPorNomeFuncionario)
-                    .addComponent(txtBuscarPorNomeFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbNomeBuscarFuncionario)
+                    .addComponent(txtNomeBuscarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bBuscarPorNomeFuncionario))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbBuscarPorCpfFuncionario)
-                    .addComponent(txtBuscarPorCpfFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bBuscarPorCpfFuncionario))
-                .addContainerGap(132, Short.MAX_VALUE))
+                    .addComponent(lbCpfBuscarFuncionario)
+                    .addComponent(bBuscarPorCpfFuncionario)
+                    .addComponent(txtCpfBuscarFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(106, 106, 106)
+                .addComponent(bVoltarBuscarFuncionario)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bBuscarPorCpfFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarPorCpfFuncionarioActionPerformed
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+        int cont = 0;
+        ResultSet rs = funcionarioDAO.getByCpf(txtCpfBuscarFuncionario.getText());
+        try {
+            while (rs.next()) {
+                cont++;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaBuscarFuncionario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (cont > 0) {
+            telaResultado1 = new TelaBuscarResultado1();
+            telaResultado1.BuscarByCpf(txtCpfBuscarFuncionario.getText());
+            telaResultado1.setVisible(true);
+            PetShop.tela.setEnabled(false);
+        } else {
+            JOptionPane.showMessageDialog(this, "Nenhum Funcionário encontrado!", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bBuscarPorCpfFuncionarioActionPerformed
+
+    private void bVoltarBuscarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarBuscarFuncionarioActionPerformed
+
+        PetShop.tela.showView(EnumView.TELAFUNCIONARIO);
+
+    }//GEN-LAST:event_bVoltarBuscarFuncionarioActionPerformed
+
+    private void bBuscarPorNomeFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarPorNomeFuncionarioActionPerformed
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+        int cont = 0;
+        ResultSet rs = funcionarioDAO.getByNome(txtNomeBuscarFuncionario.getText());
+        try {
+            while (rs.next()) {
+                cont++;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaBuscarCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (cont > 0) {
+            telaResultado1 = new TelaBuscarResultado1();
+            telaResultado1.BuscarByNome(txtNomeBuscarFuncionario.getText());
+            telaResultado1.setVisible(true);
+            PetShop.tela.setEnabled(false);
+        } else {
+            JOptionPane.showMessageDialog(this, "Nenhum Funcionário encontrado!", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bBuscarPorNomeFuncionarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bBuscarPorCpfFuncionario;
     private javax.swing.JButton bBuscarPorNomeFuncionario;
-    private javax.swing.JLabel lbBuscarPorCpfFuncionario;
-    private javax.swing.JLabel lbBuscarPorNomeFuncionario;
-    private javax.swing.JLabel lbTituloBuscarFuncionario;
-    private javax.swing.JTextField txtBuscarPorCpfFuncionario;
-    private javax.swing.JTextField txtBuscarPorNomeFuncionario;
+    private javax.swing.JButton bVoltarBuscarFuncionario;
+    private javax.swing.JLabel lbCpfBuscarFuncionario;
+    private javax.swing.JLabel lbNomeBuscarFuncionario;
+    private javax.swing.JLabel lbTituloBuscarFunc;
+    private javax.swing.JFormattedTextField txtCpfBuscarFuncionario;
+    private javax.swing.JTextField txtNomeBuscarFuncionario;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,6 +21,51 @@ public class TelaAddFuncionarioControl {
 
     FuncionarioDAO funcionarioDAO;
 
+    public void excluirFuncionario(Funcionario funcionario) {
+        funcionarioDAO = new FuncionarioDAO();
+
+        funcionarioDAO.delete(funcionario);
+        JOptionPane.showMessageDialog(null, "Funcionário excluido com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+
+    }
+    
+    public void atualizarFuncionario(Funcionario funcionario){
+            funcionarioDAO = new FuncionarioDAO();
+        
+        funcionarioDAO.update(funcionario);
+        JOptionPane.showMessageDialog(null, "Funcionário atualizado com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+    }
+    public ResultSet bucarByCpf(String cpf){
+        
+        funcionarioDAO = new FuncionarioDAO();
+        return funcionarioDAO.getByCpf(cpf);
+    }
+
+    public void salvarFuncionario(Funcionario funcionario) {
+
+        funcionarioDAO = new FuncionarioDAO();
+//        se todos os campos estiverem preenchidos ele add ao banco de dados
+
+     
+            funcionarioDAO.insert(funcionario);
+            JOptionPane.showMessageDialog(null, "Salvo com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+//                bLimparAddFuncionarioActionPerformed(evt);//limparcampos
+    }
+    public boolean verificaCpfExistente(String cpf) {
+        funcionarioDAO = new FuncionarioDAO();
+
+        ResultSet rs = funcionarioDAO.getByCpf(cpf);
+
+        try {
+            if (rs.next()) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaAddFuncionarioControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
     public boolean loginExistente(javax.swing.JTextField txtLogin) {
         funcionarioDAO = new FuncionarioDAO();
         ResultSet rs = funcionarioDAO.getByLogin(txtLogin.getText());
@@ -35,19 +80,11 @@ public class TelaAddFuncionarioControl {
         return false;
     }
 
-    public void salvarFuncionario(Funcionario funcionario) {
-        funcionarioDAO = new FuncionarioDAO();
-//        se todos os campos estiverem preenchidos ele add ao banco de dados
+//    public ResultSet bucarByCpf(String text) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
-        try {
-            funcionarioDAO.insert(funcionario);
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
-//                bLimparAddClienteActionPerformed(evt);//limparcampos
-
-        } catch (Exception e) {
-            System.out.println(e);
-            JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
-        }
-    }
-
+//    public boolean verificaCpfExistente(String imprimeCPF) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }

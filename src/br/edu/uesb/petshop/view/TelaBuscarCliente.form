@@ -24,20 +24,20 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                      <EmptySpace pref="144" max="32767" attributes="0"/>
                       <Component id="bVoltarBuscarCliente" min="-2" pref="120" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbCpfBuscarCliente" min="-2" max="-2" attributes="0"/>
                           <Component id="lbNomeBuscarCliente" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtNomeBuscarCliente" min="-2" pref="164" max="-2" attributes="0"/>
                           <Component id="txtCpfBuscarCliente" max="32767" attributes="0"/>
+                          <Component id="txtNomeBuscarCliente" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -46,7 +46,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+              <EmptySpace pref="180" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -58,9 +58,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
               <Component id="lbTituloBuscarCliente" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="96" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lbNomeBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNomeBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -72,9 +72,9 @@
                   <Component id="bBuscarPorCpfCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCpfBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="105" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
               <Component id="bVoltarBuscarCliente" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace pref="25" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

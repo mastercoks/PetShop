@@ -58,7 +58,9 @@ public class FuncionarioDAO extends AbstractDAO{
     }
 
     public ResultSet getByCpf(String cpf) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE nome = " + cpf);
+        ResultSet rs = executeQuery("SELECT *\n"
+                + "  FROM \"Funcionario\"\n"
+                + "  WHERE \"cpf\" = \'"+cpf+"\';");
         return rs;
     }
 

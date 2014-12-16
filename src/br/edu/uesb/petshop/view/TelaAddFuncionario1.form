@@ -38,9 +38,9 @@
               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jButton1" max="32767" attributes="0"/>
+                      <Component id="bAtualizar" max="32767" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jButton2" max="32767" attributes="0"/>
+                      <Component id="bExcluir" max="32767" attributes="0"/>
                   </Group>
                   <Component id="txtEnderecoAddFuncionario" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
@@ -129,8 +129,8 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jButton2" alignment="3" max="32767" attributes="0"/>
+                  <Component id="bAtualizar" alignment="3" max="32767" attributes="0"/>
+                  <Component id="bExcluir" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -166,6 +166,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtEnderecoAddFuncionario">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEnderecoAddFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbEnderecoAddFuncionario">
       <Properties>
@@ -178,6 +181,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtBairroAddFuncionario">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBairroAddFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbComplementoAddFuncionario">
       <Properties>
@@ -185,6 +191,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtComplementoAddFuncionario">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtComplementoAddFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbSexoAddFuncionario">
       <Properties>
@@ -216,6 +225,9 @@
           <Format format="###.###.###-##" subtype="-1" type="5"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCpfAddFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbDataNascAddFuncionario">
       <Properties>
@@ -228,6 +240,9 @@
           <Format format="##/##/####" subtype="-1" type="5"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDataNascAddFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbTelefone1AddFuncionario">
       <Properties>
@@ -240,6 +255,9 @@
           <Format format="(##) ####-####" subtype="-1" type="5"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefone1AddFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbTelefone2AddFuncionario">
       <Properties>
@@ -252,6 +270,9 @@
           <Format format="(##) ####-####" subtype="-1" type="5"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefone2AddFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bLimparAddFuncionario">
       <Properties>
@@ -292,21 +313,33 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarAddFuncionarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="bAtualizar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/39.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="EDITAR"/>
+        <Property name="text" type="java.lang.String" value="ATUALIZAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAtualizarActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="bAtualizar.setEnabled(false);&#xd;&#xa;"/>
+      </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="bExcluir">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/51.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="EXCLUIR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bExcluirActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="bExcluir.setEnabled(false);&#xd;&#xa;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

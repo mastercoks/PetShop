@@ -8,6 +8,7 @@ package br.edu.uesb.petshop.view;
 import br.edu.uesb.petshop.control.TelaLoginControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
 import br.edu.uesb.petshop.model.Cliente;
+import br.edu.uesb.petshop.model.Funcionario;
 
 /**
  *
@@ -29,7 +30,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaBuscarFuncionario tBuscarFuncionario;
     TelaAddAtendimento tAddAtendimento;
     TelaBuscarAtendimento tBuscarAtendimento;
-    TelaBuscaResultado1 tBuscaResultado;
+    TelaBuscarResultado1 tBuscaResultado;
     TelaAddFuncionario1 tAddFuncionario1;
 
     /**
@@ -51,7 +52,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tBuscarAtendimento = new TelaBuscarAtendimento();
         tBuscarCliente = new TelaBuscarCliente();
         tAddFuncionario = new TelaAddFuncionario();
-        tBuscaResultado = new TelaBuscaResultado1();
+        tBuscaResultado = new TelaBuscarResultado1();
         tAddFuncionario1 = new TelaAddFuncionario1();
         tBuscarFuncionario = new TelaBuscarFuncionario();
     }
@@ -77,6 +78,30 @@ public class BarraDeMenu extends javax.swing.JFrame {
 
     public void habilitaEdicao() {
 //        tAddCliente.
+    }
+
+        public void viewFuncionario(Funcionario funcionario) {
+
+        String data = funcionario.getDataNasc().toString().substring(8, 10) + "/"
+                + funcionario.getDataNasc().toString().substring(5, 7) + "/"
+                + funcionario.getDataNasc().toString().substring(0, 4);
+        tAddFuncionario1 = new TelaAddFuncionario1();
+        tAddFuncionario1.setTxtNomeAddFuncionario(funcionario.getNome());
+        tAddFuncionario1.setTxtCpfAddFuncionario(funcionario.getCpf());
+        tAddFuncionario1.setTxtEnderecoAddFuncionario(funcionario.getEndereco());
+        tAddFuncionario1.setTxtComplementoAddFuncionario(funcionario.getComplemento());
+        tAddFuncionario1.setTxtBairroAddFuncionario(funcionario.getBairro());
+        tAddFuncionario1.setTxtDataNascAddFuncionario(data);
+        tAddFuncionario1.setTxtTelefone1AddFuncionario(funcionario.getTelefone1());
+        tAddFuncionario1.setTxtTelefone2AddFuncionario(funcionario.getTelefone2());
+        tAddFuncionario1.setCbSexoAddFuncionario(funcionario.getSexo());
+
+        tAddFuncionario1.setNoEditCPf(false);
+
+        tAddFuncionario1.setbEnableExcluir(true);
+        tAddFuncionario1.setbEnableAtualizar(true);
+        tAddFuncionario1.setbEnableSalvar(false);
+
     }
 
     public void viewCliente(Cliente cliente) {
@@ -155,11 +180,19 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 setPanel(tBuscarFuncionario);
                 break;
             case TELAADDFUNCIONARIO1:
+                
+                tAddFuncionario1.setNoEditCPf(true);
+                tAddFuncionario1.setbEnableSalvar(true);
+                tAddFuncionario1.setbEnableExcluir(false);
+                tAddFuncionario1.setbEnableAtualizar(false);
                 setPanel(tAddFuncionario1);
                 break;
             case TELAVIEWCLIENTE:
 //                viewCliente();
                 setPanel(tAddCliente);
+                break;
+            case TELAVIEWFUNCIONARIO:
+                setPanel(tAddFuncionario1);
                 break;
         }
     }
