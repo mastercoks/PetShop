@@ -30,7 +30,7 @@ public class TelaAddClienteControl {
     }
     
     public void atualizarCliente(Cliente cliente){
-        clienteDAO = new ClienteDAO();
+            clienteDAO = new ClienteDAO();
         
         clienteDAO.update(cliente);
         JOptionPane.showMessageDialog(null, "Cliente atualizado com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
