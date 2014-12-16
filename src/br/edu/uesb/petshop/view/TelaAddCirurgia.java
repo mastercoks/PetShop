@@ -5,6 +5,8 @@
  */
 package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaAddCirurgiaControl;
+import br.edu.uesb.petshop.model.Cirurgia;
 import br.edu.uesb.petshop.model.PetShop;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
@@ -19,7 +21,11 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
      * Creates new form TelaAddCirurgia
      */
     ArrayList<JCheckBox> checkboxes;
- 
+    private TelaAdicionarNaListaCirurgia telaaddnalista = null; 
+    private TelaAddCirurgiaControl cirurgiaControl = new TelaAddCirurgiaControl();
+    JCheckBox checkb;
+    
+    
     public TelaAddCirurgia() {
         initComponents();
         checkboxes = new ArrayList<>();
@@ -79,6 +85,7 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 32767));
         jPanel1.setMinimumSize(new java.awt.Dimension(14, 150));
         pCirurgias.setLayout(new javax.swing.BoxLayout(pCirurgias, javax.swing.BoxLayout.Y_AXIS));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout pCirurgiasLayout = new javax.swing.GroupLayout(pCirurgias);
@@ -143,19 +150,25 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void bAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdicionarActionPerformed
-        adicionarListaExames();
+        telaaddnalista = new TelaAdicionarNaListaCirurgia();
+        telaaddnalista.setVisible(true);
+        PetShop.tela.setEnabled(false);
     }//GEN-LAST:event_bAdicionarActionPerformed
 
-    private void adicionarListaExames() {
-        JCheckBox exame = new JCheckBox();
-        exame.setText("teste ");
-        jPanel1.add(exame);
-        checkboxes.add(exame);
+    private void adicionarListaCirurgias() {
+        
+        ArrayList<Cirurgia> cirurgias = cirurgiaControl.listarCirurgias();
+        
+        for(Cirurgia cirurgia : cirurgias){
+        checkb = new JCheckBox();
+        checkb.setText(cirurgia.getNome() + "   R$ " + cirurgia.getPreco());
+        jPanel1.add(checkb);
+        checkboxes.add(checkb);
         jPanel1.updateUI();
-
+        }
 //        for (int i=0; i <= checkboxes.size();i++){
-        for(JCheckBox cbx : checkboxes){
-        System.out.println(cbx.getText());
+        for (JCheckBox cbx : checkboxes) {
+            System.out.println(cbx.getText());
         }
     }
 

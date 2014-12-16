@@ -5,7 +5,10 @@
  */
 package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaAddCirurgiaControl;
+import br.edu.uesb.petshop.control.TelaAddServicoControl;
 import br.edu.uesb.petshop.model.PetShop;
+import br.edu.uesb.petshop.model.Servico;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
 
@@ -18,9 +21,11 @@ public class TelaAddServico extends javax.swing.JFrame {
     /**
      * Creates new form TelaAddServico
      */
-    
+    JCheckBox checkb;
     ArrayList<JCheckBox> checkboxes;
- 
+    private TelaAdicionarNaListaServico telaaddnalista;
+    private TelaAddServicoControl servicoControl = new TelaAddServicoControl();
+    
     public TelaAddServico() {
         initComponents();
         checkboxes = new ArrayList<>();
@@ -80,6 +85,7 @@ public class TelaAddServico extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 32767));
         jPanel1.setMinimumSize(new java.awt.Dimension(14, 150));
         pServicos.setLayout(new javax.swing.BoxLayout(pServicos, javax.swing.BoxLayout.Y_AXIS));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout pServicosLayout = new javax.swing.GroupLayout(pServicos);
@@ -144,19 +150,24 @@ public class TelaAddServico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void bAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdicionarActionPerformed
-        adicionarListaExames();
+        telaaddnalista = new TelaAdicionarNaListaServico();
+        telaaddnalista.setVisible(true);
+        PetShop.tela.setEnabled(false);
     }//GEN-LAST:event_bAdicionarActionPerformed
 
-    private void adicionarListaExames() {
-        JCheckBox exame = new JCheckBox();
-        exame.setText("teste ");
-        jPanel1.add(exame);
-        checkboxes.add(exame);
+    private void adicionarListaServicos() {
+        ArrayList<Servico> servicos = servicoControl.listarServicos();
+        
+        for(Servico servico : servicos){
+        checkb = new JCheckBox();
+        checkb.setText(servico.getNome() + "   R$ " + servico.getPreco());
+        jPanel1.add(checkb);
+        checkboxes.add(checkb);
         jPanel1.updateUI();
-
+        }
 //        for (int i=0; i <= checkboxes.size();i++){
-        for(JCheckBox cbx : checkboxes){
-        System.out.println(cbx.getText());
+        for (JCheckBox cbx : checkboxes) {
+            System.out.println(cbx.getText());
         }
     }
 

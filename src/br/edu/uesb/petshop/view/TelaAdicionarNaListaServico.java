@@ -6,25 +6,27 @@
 package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.control.TelaAddExameControl;
+import br.edu.uesb.petshop.control.TelaAddServicoControl;
 import br.edu.uesb.petshop.model.Exame;
 import br.edu.uesb.petshop.model.PetShop;
+import br.edu.uesb.petshop.model.Servico;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author matheus
  */
-public class TelaAdicionarNaLista extends javax.swing.JFrame {
+public class TelaAdicionarNaListaServico extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaAdicionarNaListaFrame
      */
     private Campovazio 
         cp = new Campovazio();
-    private Exame exame;
-    private TelaAddExameControl exameControl = new TelaAddExameControl();
+    private Servico servico;
+    private TelaAddServicoControl servicoControl = new TelaAddServicoControl();
 
-    public TelaAdicionarNaLista() {
+    public TelaAdicionarNaListaServico() {
         initComponents();
 //        cp = new Campovazio();
 
@@ -149,16 +151,16 @@ public class TelaAdicionarNaLista extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void bOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOKActionPerformed
-        System.out.print(txtPreco.getText());
+//        System.out.print(txtPreco.getText());
         cp.textfield(txtNome);
         cp.textfield(txtPreco);
-        exame = new Exame(txtNome.getText(), txtPreco.getText());
+        servico = new Servico(txtNome.getText(), txtPreco.getText());
 
-        if (("".equals(exame.getNome())) || ("".equals(exame.getPreco()))) {
+        if (("".equals(servico.getNome())) || ("".equals(servico.getPreco()))) {
             JOptionPane.showMessageDialog(null, "Por favor preencha os campos restantes!",
                     "Atenção", JOptionPane.WARNING_MESSAGE);
         } else {
-            exameControl.salvarExame(exame);
+            servicoControl.salvarServico(servico);
         }
     }//GEN-LAST:event_bOKActionPerformed
 
