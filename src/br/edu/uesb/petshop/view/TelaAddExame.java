@@ -21,7 +21,8 @@ public class TelaAddExame extends javax.swing.JFrame {
     ArrayList<JCheckBox> checkboxes;
 
     JCheckBox exame;
-
+    private TelaAdicionarNaLista telaaddnalista = null;
+    
     public TelaAddExame() {
         initComponents();
         checkboxes = new ArrayList<>();
@@ -80,7 +81,8 @@ public class TelaAddExame extends javax.swing.JFrame {
         jPanel1.setFocusable(false);
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 32767));
         jPanel1.setMinimumSize(new java.awt.Dimension(14, 150));
-        pExame.setLayout(new javax.swing.BoxLayout(pExame, javax.swing.BoxLayout.Y_AXIS));
+        jPanel1.setLayout(new javax.swing.BoxLayout(pExame, javax.swing.BoxLayout.Y_AXIS));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout pExameLayout = new javax.swing.GroupLayout(pExame);
@@ -145,7 +147,12 @@ public class TelaAddExame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarExamesActionPerformed
 
     private void bAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdicionarActionPerformed
-        adicionarListaExames();
+      telaaddnalista = new TelaAdicionarNaLista();
+        telaaddnalista.setVisible(true);
+        PetShop.tela.setEnabled(false);
+        
+        //teste
+//        teste.tela.setEnabled(false);
     }//GEN-LAST:event_bAdicionarActionPerformed
 
     private void adicionarListaExames() {
