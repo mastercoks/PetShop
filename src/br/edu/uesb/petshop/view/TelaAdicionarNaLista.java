@@ -19,14 +19,21 @@ public class TelaAdicionarNaLista extends javax.swing.JFrame {
     /**
      * Creates new form TelaAdicionarNaListaFrame
      */
+<<<<<<< HEAD
     private Campovazio 
         cp = new Campovazio();
+=======
+    private Campovazio cp = new Campovazio();
+>>>>>>> origin/novaRamificacao
     private Exame exame;
     private TelaAddExameControl exameControl = new TelaAddExameControl();
 
     public TelaAdicionarNaLista() {
         initComponents();
+<<<<<<< HEAD
 //        cp = new Campovazio();
+=======
+>>>>>>> origin/novaRamificacao
 
     }
 
