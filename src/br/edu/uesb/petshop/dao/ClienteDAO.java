@@ -85,12 +85,12 @@ public class ClienteDAO extends AbstractDAO {
 
     public void update(Cliente cliente) {
         String sql = "UPDATE \"Cliente\""
-                + "   SET nome=" + cliente.getNome() + ", datanascimento="
-                + cliente.getDataNasc() + ", sexo=" + cliente.getSexo()
-                + ", endereco=" + cliente.getEndereco() + ", bairro="
-                + cliente.getBairro() + ", " + "complemento=" + cliente.getComplemento()
-                + ", cpf=" + cliente.getCpf() + ", telefone1=" + cliente.getTelefone1()
-                + ", telefone2=" + cliente.getTelefone2() + " WHERE id = " + cliente.getId() + ";";
+                + "   SET nome='" + cliente.getNome() + "', datanascimento='"
+                + cliente.getDataNasc() + "', sexo='" + cliente.getSexo()
+                + "', endereco='" + cliente.getEndereco() + "', bairro='"
+                + cliente.getBairro() + "', complemento='" + cliente.getComplemento()
+                + "', cpf='" + cliente.getCpf() + "', telefone1='" + cliente.getTelefone1()
+                + "', telefone2='" + cliente.getTelefone2() + "' WHERE id = " + cliente.getId() + ";";
         executeUpdate(sql);
     }
 

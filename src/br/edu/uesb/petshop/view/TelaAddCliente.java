@@ -488,7 +488,22 @@ public class TelaAddCliente extends javax.swing.JPanel {
     }//GEN-LAST:event_bExcluirActionPerformed
 
     private void bAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAtualizarActionPerformed
+        ResultSet rs = clienteControl.bucarByCpf(txtCpfAddCliente.getText());
+        cliente = null;
+        try {
+            if (rs.next()) {
+                cliente = new Cliente(rs.getInt("id"), txtNomeAddCliente.getText(), txtEnderecoAddCliente.getText(), txtBairroAddCliente.getText(), txtComplementoAddCliente.getText(), txtTelefone2AddCliente.getText(), txtCpfAddCliente.getText(), txtTelefone1AddCliente.getText(), rs.getDate("datanascimento"), cbSexoAddCliente.getSelectedItem().toString());
+//                cliente = new Cliente(rs.getInt("id"), txtNomeAddCliente.getText(),
+//                        txtEnderecoAddCliente.getText(), txtBairroAddCliente.getText(),
+//                        txtComplementoAddCliente.getText(), txtTelefone2AddCliente.getText(),
+//                        rs.getString("cpf"), txtTelefone1AddCliente.getText(),
+//                        rs.getDate("datanascimento"), cbSexoAddCliente.getSelectedItem());
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaAddCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
+        clienteControl.atualizarCliente(cliente);
     }//GEN-LAST:event_bAtualizarActionPerformed
 
 
@@ -530,6 +545,10 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
     public void setTxtCpfAddCliente(String txtCpfAddCliente) {
         this.txtCpfAddCliente.setText(txtCpfAddCliente);
+    }
+    
+    public void setNoEditCPf(boolean estado) {
+        this.txtCpfAddCliente.setEditable(estado);
     }
 
     public void setTxtDataNascAddCliente(String txtDataNascAddCliente) {

@@ -163,7 +163,7 @@ public class TelaBuscaResultado extends javax.swing.JFrame {
         ResultSet rs = clienteDAO.getByCpf(cpf);
         try {
             while (rs.next()) {
-                cbResultadoBusca.addItem("Nome: " + rs.getString("nome") + " - CPF: " + rs.getString("cpf"));
+                cbResultadoBusca.addItem("CPF: " + rs.getString("cpf")+" - Nome: " + rs.getString("nome"));
             }
         } catch (SQLException ex) {
             Logger.getLogger(TelaBuscaResultado.class.getName()).log(Level.SEVERE, null, ex);

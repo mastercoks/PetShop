@@ -95,6 +95,8 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tAddCliente.setTxtTelefone2AddCliente(cliente.getTelefone2());
         tAddCliente.setCbSexoAddCliente(cliente.getSexo());
 
+        tAddCliente.setNoEditCPf(false);
+
         tAddCliente.setbEnableExcluir(true);
         tAddCliente.setbEnableAtualizar(true);
         tAddCliente.setbEnableSalvar(false);
@@ -130,6 +132,8 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 setPanel(tAddAtendimento);
                 break;
             case TELAADDCLIENTE:
+
+                tAddCliente.setNoEditCPf(true);
                 tAddCliente.setbEnableSalvar(true);
                 tAddCliente.setbEnableExcluir(false);
                 tAddCliente.setbEnableAtualizar(false);

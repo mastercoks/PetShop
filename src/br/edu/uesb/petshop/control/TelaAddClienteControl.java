@@ -25,8 +25,15 @@ public class TelaAddClienteControl {
         clienteDAO = new ClienteDAO();
 
         clienteDAO.delete(cliente);
-        JOptionPane.showMessageDialog(null, "Salvo com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+        JOptionPane.showMessageDialog(null, "Cliente excluido com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
 
+    }
+    
+    public void atualizarCliente(Cliente cliente){
+        clienteDAO = new ClienteDAO();
+        
+        clienteDAO.update(cliente);
+        JOptionPane.showMessageDialog(null, "Cliente atualizado com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
     }
     
     public ResultSet bucarByCpf(String cpf){
