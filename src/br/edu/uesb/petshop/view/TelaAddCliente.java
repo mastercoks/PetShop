@@ -68,6 +68,12 @@ public class TelaAddCliente extends javax.swing.JPanel {
         lbTituloAddCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloAddCliente.setText("ADICIONAR CLIENTE");
 
+        txtNomeAddCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeAddClienteActionPerformed(evt);
+            }
+        });
+
         lbNomeAddCdiente.setText("Nome:");
 
         lbEnderecoAddCliente.setText("Endereço:");
@@ -323,6 +329,10 @@ public class TelaAddCliente extends javax.swing.JPanel {
         bLimparAddClienteActionPerformed(evt);
 
     }//GEN-LAST:event_bVoltarAddClienteActionPerformed
+
+    private void txtNomeAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeAddClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeAddClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

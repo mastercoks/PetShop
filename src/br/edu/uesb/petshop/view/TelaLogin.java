@@ -153,6 +153,7 @@ public class TelaLogin extends javax.swing.JPanel {
 
     private void bEntrarMenuLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEntrarMenuLoginActionPerformed
        TelaLoginControl.EnumLogin login = loginControl.EntrarActionPerformed(txtLoginMenuLogin, txtSenhaMenuLogin);
+       
        switch (login){
            case LOGIN_ERRADO:
                pLoginIncorretoMenuLogin.setVisible(true);
