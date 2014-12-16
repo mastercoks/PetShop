@@ -6,6 +6,7 @@
 package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.control.TelaAddExameControl;
+import br.edu.uesb.petshop.enumerado.EnumView;
 import br.edu.uesb.petshop.model.Exame;
 import br.edu.uesb.petshop.model.PetShop;
 import javax.swing.JOptionPane;
@@ -159,6 +160,8 @@ public class TelaAdicionarNaListaExame extends javax.swing.JFrame {
                     "Atenção", JOptionPane.WARNING_MESSAGE);
         } else {
             exameControl.salvarExame(exame);
+            this.dispose();
+            
         }
     }//GEN-LAST:event_bOKActionPerformed
 

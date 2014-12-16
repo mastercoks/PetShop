@@ -5,6 +5,8 @@
  */
 package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaAddCirurgiaControl;
+import br.edu.uesb.petshop.model.Cirurgia;
 import br.edu.uesb.petshop.model.PetShop;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
@@ -19,8 +21,11 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
      * Creates new form TelaAddCirurgia
      */
     ArrayList<JCheckBox> checkboxes;
-    TelaAdicionarNaListaCirurgia telaaddnalista = null; 
- 
+    private TelaAdicionarNaListaCirurgia telaaddnalista = null; 
+    private TelaAddCirurgiaControl cirurgiaControl = new TelaAddCirurgiaControl();
+    JCheckBox checkb;
+    
+    
     public TelaAddCirurgia() {
         initComponents();
         checkboxes = new ArrayList<>();
@@ -150,16 +155,20 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
         PetShop.tela.setEnabled(false);
     }//GEN-LAST:event_bAdicionarActionPerformed
 
-    private void adicionarListaExames() {
-        JCheckBox exame = new JCheckBox();
-        exame.setText("teste ");
-        jPanel1.add(exame);
-        checkboxes.add(exame);
+    private void adicionarListaCirurgias() {
+        
+        ArrayList<Cirurgia> cirurgias = cirurgiaControl.listarCirurgias();
+        
+        for(Cirurgia cirurgia : cirurgias){
+        checkb = new JCheckBox();
+        checkb.setText(cirurgia.getNome() + "   R$ " + cirurgia.getPreco());
+        jPanel1.add(checkb);
+        checkboxes.add(checkb);
         jPanel1.updateUI();
-
+        }
 //        for (int i=0; i <= checkboxes.size();i++){
-        for(JCheckBox cbx : checkboxes){
-        System.out.println(cbx.getText());
+        for (JCheckBox cbx : checkboxes) {
+            System.out.println(cbx.getText());
         }
     }
 

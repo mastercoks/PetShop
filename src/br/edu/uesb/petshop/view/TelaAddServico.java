@@ -5,7 +5,10 @@
  */
 package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaAddCirurgiaControl;
+import br.edu.uesb.petshop.control.TelaAddServicoControl;
 import br.edu.uesb.petshop.model.PetShop;
+import br.edu.uesb.petshop.model.Servico;
 import java.util.ArrayList;
 import javax.swing.JCheckBox;
 
@@ -18,9 +21,10 @@ public class TelaAddServico extends javax.swing.JFrame {
     /**
      * Creates new form TelaAddServico
      */
-    
+    JCheckBox checkb;
     ArrayList<JCheckBox> checkboxes;
-    TelaAdicionarNaListaServico telaaddnalista;
+    private TelaAdicionarNaListaServico telaaddnalista;
+    private TelaAddServicoControl servicoControl = new TelaAddServicoControl();
     
     public TelaAddServico() {
         initComponents();
@@ -151,16 +155,19 @@ public class TelaAddServico extends javax.swing.JFrame {
         PetShop.tela.setEnabled(false);
     }//GEN-LAST:event_bAdicionarActionPerformed
 
-    private void adicionarListaExames() {
-        JCheckBox exame = new JCheckBox();
-        exame.setText("teste ");
-        jPanel1.add(exame);
-        checkboxes.add(exame);
+    private void adicionarListaServicos() {
+        ArrayList<Servico> servicos = servicoControl.listarServicos();
+        
+        for(Servico servico : servicos){
+        checkb = new JCheckBox();
+        checkb.setText(servico.getNome() + "   R$ " + servico.getPreco());
+        jPanel1.add(checkb);
+        checkboxes.add(checkb);
         jPanel1.updateUI();
-
+        }
 //        for (int i=0; i <= checkboxes.size();i++){
-        for(JCheckBox cbx : checkboxes){
-        System.out.println(cbx.getText());
+        for (JCheckBox cbx : checkboxes) {
+            System.out.println(cbx.getText());
         }
     }
 
