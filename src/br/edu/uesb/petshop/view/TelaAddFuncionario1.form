@@ -23,17 +23,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="lbTituloAddCliente" min="-2" max="-2" attributes="0"/>
+              <Component id="lbTituloAddFuncionario" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace pref="60" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbNomeAddCdiente" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbEnderecoAddCliente" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbComplementoAddCliente" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbSexoAddCliente" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbTelefone1AddCliente" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNomeAddFuncionario" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbEnderecoAddFuncionario" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbComplementoAddFuncionario" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbSexoAddFuncionario" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbTelefone1AddFuncionario" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -42,47 +42,47 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButton2" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="txtEnderecoAddCliente" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtEnderecoAddFuncionario" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="bLimparAddCliente" max="32767" attributes="0"/>
-                          <Component id="bVoltarAddCliente" max="32767" attributes="0"/>
+                          <Component id="bLimparAddFuncionario" max="32767" attributes="0"/>
+                          <Component id="bVoltarAddFuncionario" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="bSalvarCadastroAddCliente" pref="284" max="32767" attributes="0"/>
+                      <Component id="bSalvarCadastroAddFuncionario" pref="284" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="cbSexoAddCliente" pref="117" max="32767" attributes="0"/>
-                          <Component id="txtTelefone1AddCliente" max="32767" attributes="0"/>
+                          <Component id="cbSexoAddFuncionario" pref="117" max="32767" attributes="0"/>
+                          <Component id="txtTelefone1AddFuncionario" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="lbDataNascAddCliente" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbDataNascAddFuncionario" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txtDataNascAddCliente" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txtDataNascAddFuncionario" min="-2" pref="80" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="lbTelefone2AddCliente" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbTelefone2AddFuncionario" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="txtTelefone2AddCliente" min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="txtTelefone2AddFuncionario" min="-2" pref="118" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="txtComplementoAddCliente" max="32767" attributes="0"/>
+                      <Component id="txtComplementoAddFuncionario" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbBairroAddCliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbBairroAddFuncionario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtBairroAddCliente" max="32767" attributes="0"/>
+                      <Component id="txtBairroAddFuncionario" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="txtNomeAddCliente" max="32767" attributes="0"/>
+                      <Component id="txtNomeAddFuncionario" max="32767" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbcpfAddCliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbcpfAddFuncionario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCpfAddCliente" min="-2" pref="110" max="-2" attributes="0"/>
+                      <Component id="txtCpfAddFuncionario" min="-2" pref="110" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="110" max="32767" attributes="0"/>
@@ -93,39 +93,39 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="lbTituloAddCliente" min="-2" max="-2" attributes="0"/>
+              <Component id="lbTituloAddFuncionario" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtNomeAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbNomeAddCdiente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbcpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtCpfAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNomeAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNomeAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbcpfAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCpfAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtEnderecoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbEnderecoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEnderecoAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbEnderecoAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbComplementoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtComplementoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbBairroAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBairroAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbComplementoAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtComplementoAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbBairroAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBairroAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtDataNascAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbSexoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbSexoAddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbDataNascAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDataNascAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cbSexoAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbSexoAddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbTelefone1AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtTelefone1AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbTelefone2AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtTelefone2AddCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbTelefone1AddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTelefone1AddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbTelefone2AddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTelefone2AddFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -135,11 +135,11 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="bLimparAddCliente" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="bLimparAddFuncionario" min="-2" pref="26" max="-2" attributes="0"/>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Component id="bVoltarAddCliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="bVoltarAddFuncionario" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="bSalvarCadastroAddCliente" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="bSalvarCadastroAddFuncionario" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -147,51 +147,51 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbTituloAddCliente">
+    <Component class="javax.swing.JLabel" name="lbTituloAddFuncionario">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ADICIONAR CLIENTE"/>
+        <Property name="text" type="java.lang.String" value="ADICIONAR FUNCION&#xc1;RIO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNomeAddCliente">
+    <Component class="javax.swing.JTextField" name="txtNomeAddFuncionario">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeAddClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeAddFuncionarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbNomeAddCdiente">
+    <Component class="javax.swing.JLabel" name="lbNomeAddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nome:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtEnderecoAddCliente">
+    <Component class="javax.swing.JTextField" name="txtEnderecoAddFuncionario">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbEnderecoAddCliente">
+    <Component class="javax.swing.JLabel" name="lbEnderecoAddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Endere&#xe7;o:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbBairroAddCliente">
+    <Component class="javax.swing.JLabel" name="lbBairroAddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Bairro:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBairroAddCliente">
+    <Component class="javax.swing.JTextField" name="txtBairroAddFuncionario">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbComplementoAddCliente">
+    <Component class="javax.swing.JLabel" name="lbComplementoAddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Complemento:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtComplementoAddCliente">
+    <Component class="javax.swing.JTextField" name="txtComplementoAddFuncionario">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbSexoAddCliente">
+    <Component class="javax.swing.JLabel" name="lbSexoAddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sexo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cbSexoAddCliente">
+    <Component class="javax.swing.JComboBox" name="cbSexoAddFuncionario">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
@@ -202,58 +202,58 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbSexoAddClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbSexoAddFuncionarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbcpfAddCliente">
+    <Component class="javax.swing.JLabel" name="lbcpfAddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="CPF:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="txtCpfAddCliente">
+    <Component class="javax.swing.JFormattedTextField" name="txtCpfAddFuncionario">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="###.###.###-##" subtype="-1" type="5"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbDataNascAddCliente">
+    <Component class="javax.swing.JLabel" name="lbDataNascAddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Data Nascimento:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="txtDataNascAddCliente">
+    <Component class="javax.swing.JFormattedTextField" name="txtDataNascAddFuncionario">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="##/##/####" subtype="-1" type="5"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbTelefone1AddCliente">
+    <Component class="javax.swing.JLabel" name="lbTelefone1AddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telefone 1:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="txtTelefone1AddCliente">
+    <Component class="javax.swing.JFormattedTextField" name="txtTelefone1AddFuncionario">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="(##) ####-####" subtype="-1" type="5"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbTelefone2AddCliente">
+    <Component class="javax.swing.JLabel" name="lbTelefone2AddFuncionario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Telefone 2:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="txtTelefone2AddCliente">
+    <Component class="javax.swing.JFormattedTextField" name="txtTelefone2AddFuncionario">
       <Properties>
         <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
           <Format format="(##) ####-####" subtype="-1" type="5"/>
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="bLimparAddCliente">
+    <Component class="javax.swing.JButton" name="bLimparAddFuncionario">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/51.png"/>
@@ -264,10 +264,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bLimparAddClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bLimparAddFuncionarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bSalvarCadastroAddCliente">
+    <Component class="javax.swing.JButton" name="bSalvarCadastroAddFuncionario">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/4.png"/>
@@ -278,10 +278,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSalvarCadastroAddClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSalvarCadastroAddFuncionarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bVoltarAddCliente">
+    <Component class="javax.swing.JButton" name="bVoltarAddFuncionario">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/15.png"/>
@@ -289,7 +289,7 @@
         <Property name="text" type="java.lang.String" value="VOLTAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarAddClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarAddFuncionarioActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">

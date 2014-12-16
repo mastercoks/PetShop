@@ -94,7 +94,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
 
         //capslock(txtNomeAddAnimal);
 
-        cbEspecieAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-", "CACHORRO", "GATO", "CAVALO", "PASSARO", "VEADO(KURAS)", "POKÉMON(PEDRO)" }));
+        cbEspecieAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-", "CACHORRO", "GATO" }));
 
         cbDonoAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-" }));
 

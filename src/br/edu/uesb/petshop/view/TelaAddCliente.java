@@ -9,12 +9,7 @@ import br.edu.uesb.petshop.control.TelaAddClienteControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
 import br.edu.uesb.petshop.model.Cliente;
 import br.edu.uesb.petshop.model.PetShop;
-import br.edu.uesb.petshop.model.ValidarCpf;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -65,8 +60,8 @@ public class TelaAddCliente extends javax.swing.JPanel {
         bLimparAddCliente = new javax.swing.JButton();
         bSalvarCadastroAddCliente = new javax.swing.JButton();
         bVoltarAddCliente = new javax.swing.JButton();
-        bAtualizar = new javax.swing.JButton();
-        bExcluir = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(700, 400));
 
@@ -81,29 +76,11 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
         lbNomeAddCdiente.setText("Nome:");
 
-        txtEnderecoAddCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEnderecoAddClienteActionPerformed(evt);
-            }
-        });
-
         lbEnderecoAddCliente.setText("Endereço:");
 
         lbBairroAddCliente.setText("Bairro:");
 
-        txtBairroAddCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBairroAddClienteActionPerformed(evt);
-            }
-        });
-
         lbComplementoAddCliente.setText("Complemento:");
-
-        txtComplementoAddCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtComplementoAddClienteActionPerformed(evt);
-            }
-        });
 
         lbSexoAddCliente.setText("Sexo:");
 
@@ -121,11 +98,6 @@ public class TelaAddCliente extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtCpfAddCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCpfAddClienteActionPerformed(evt);
-            }
-        });
 
         lbDataNascAddCliente.setText("Data Nascimento:");
 
@@ -134,11 +106,6 @@ public class TelaAddCliente extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtDataNascAddCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDataNascAddClienteActionPerformed(evt);
-            }
-        });
 
         lbTelefone1AddCliente.setText("Telefone 1:");
 
@@ -147,11 +114,6 @@ public class TelaAddCliente extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtTelefone1AddCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTelefone1AddClienteActionPerformed(evt);
-            }
-        });
 
         lbTelefone2AddCliente.setText("Telefone 2:");
 
@@ -160,11 +122,6 @@ public class TelaAddCliente extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtTelefone2AddCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTelefone2AddClienteActionPerformed(evt);
-            }
-        });
 
         bLimparAddCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/51.png"))); // NOI18N
         bLimparAddCliente.setText("LIMPAR");
@@ -192,23 +149,11 @@ public class TelaAddCliente extends javax.swing.JPanel {
             }
         });
 
-        bAtualizar.setEnabled(false);
-        bAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/39.png"))); // NOI18N
-        bAtualizar.setText("ATUALIZAR");
-        bAtualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bAtualizarActionPerformed(evt);
-            }
-        });
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/39.png"))); // NOI18N
+        jButton1.setText("EDITAR");
 
-        bExcluir.setEnabled(false);
-        bExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/51.png"))); // NOI18N
-        bExcluir.setText("EXCLUIR");
-        bExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bExcluirActionPerformed(evt);
-            }
-        });
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/51.png"))); // NOI18N
+        jButton2.setText("EXCLUIR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -229,9 +174,9 @@ public class TelaAddCliente extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(txtEnderecoAddCliente)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,8 +247,8 @@ public class TelaAddCliente extends javax.swing.JPanel {
                     .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -316,7 +261,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbSexoAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSexoAddClienteActionPerformed
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_cbSexoAddClienteActionPerformed
 
     private void bLimparAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddClienteActionPerformed
@@ -329,7 +274,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
         txtDataNascAddCliente.setText("");
         txtTelefone1AddCliente.setText("");
         txtTelefone2AddCliente.setText("");
-        cbSexoAddCliente.setSelectedItem("Selecione...");
+        cbSexoAddCliente.setSelectedItem(0);
         cp.limparTextfield(txtNomeAddCliente);
         cp.limparTextfield(txtEnderecoAddCliente);
         cp.limparTextfield(txtBairroAddCliente);
@@ -348,36 +293,17 @@ public class TelaAddCliente extends javax.swing.JPanel {
         cp.formattedtextfield(txtDataNascAddCliente);
         cp.formattedtextfield(txtTelefone1AddCliente);
         cp.combobox(cbSexoAddCliente);
-        String cpf = txtCpfAddCliente.getText().substring(0, 3) + txtCpfAddCliente.getText().substring(4, 7) + txtCpfAddCliente.getText().substring(8, 11) + txtCpfAddCliente.getText().substring(12, 14);
-
-        Date dataNasc = null;
+        Date dataNasc;
 
         if (txtDataNascAddCliente.getText().equals("  /  /    ")) {
             dataNasc = null;
         } else {
 
+            int ano = Integer.parseInt(txtDataNascAddCliente.getText().substring(8, 10));
             int dia = Integer.parseInt(txtDataNascAddCliente.getText().substring(0, 2));
             int mes = Integer.parseInt(txtDataNascAddCliente.getText().substring(3, 5)) - 1;
-            int ano = Integer.parseInt(txtDataNascAddCliente.getText().substring(6, 10));
-
-            if (dia > 31 || mes > 11 || ano > 2100) {
-
-                JOptionPane.showMessageDialog(this, "Entre com um data válida!", "Atenção", JOptionPane.WARNING_MESSAGE);
-
-            } else {
-
-                if (Integer.parseInt(txtDataNascAddCliente.getText().substring(7, 10)) <= 100) {
-
-                    ano = Integer.parseInt(txtDataNascAddCliente.getText().substring(7, 10)) + 100;
-                } else {
-                    ano = Integer.parseInt(txtDataNascAddCliente.getText().substring(8, 10));
-                }
-
-                dataNasc = new Date(ano, mes, dia);
-
-            }
+            dataNasc = new Date(ano, mes, dia);
         }
-
         cliente = new Cliente(txtNomeAddCliente.getText(), txtEnderecoAddCliente.getText(),
                 txtBairroAddCliente.getText(), txtComplementoAddCliente.getText(),
                 txtTelefone2AddCliente.getText(), txtCpfAddCliente.getText(),
@@ -391,24 +317,10 @@ public class TelaAddCliente extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Por favor preencha os campos restantes!", "Atenção", JOptionPane.WARNING_MESSAGE);
 
         } else {
-            if (!ValidarCpf.isCPF(cpf)) {
-
-                JOptionPane.showMessageDialog(this, "Entre com um CPF válido!", "Atenção", JOptionPane.WARNING_MESSAGE);
-
-            } else if (clienteControl.verificaCpfExistente(ValidarCpf.imprimeCPF(cpf))) {
-
-                JOptionPane.showMessageDialog(this, "CPF já cadastrado!", "Atenção", JOptionPane.WARNING_MESSAGE);
-
-            } else {
-
-                clienteControl.salvarCliente(cliente);
-                bLimparAddClienteActionPerformed(evt);
-
-            }
-
+            clienteControl.salvarCliente(cliente);
         }
-
-
+        
+        
     }//GEN-LAST:event_bSalvarCadastroAddClienteActionPerformed
 
     private void bVoltarAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarAddClienteActionPerformed
@@ -419,101 +331,17 @@ public class TelaAddCliente extends javax.swing.JPanel {
     }//GEN-LAST:event_bVoltarAddClienteActionPerformed
 
     private void txtNomeAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeAddClienteActionPerformed
-
-        cp.capslock(txtNomeAddCliente);
-        txtCpfAddCliente.requestFocus();
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeAddClienteActionPerformed
-
-    private void txtCpfAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfAddClienteActionPerformed
-
-        txtEnderecoAddCliente.requestFocus();
-
-    }//GEN-LAST:event_txtCpfAddClienteActionPerformed
-
-    private void txtEnderecoAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnderecoAddClienteActionPerformed
-
-        cp.capslock(txtEnderecoAddCliente);
-        txtComplementoAddCliente.requestFocus();
-
-    }//GEN-LAST:event_txtEnderecoAddClienteActionPerformed
-
-    private void txtComplementoAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtComplementoAddClienteActionPerformed
-
-        cp.capslock(txtComplementoAddCliente);
-        txtBairroAddCliente.requestFocus();
-
-    }//GEN-LAST:event_txtComplementoAddClienteActionPerformed
-
-    private void txtBairroAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBairroAddClienteActionPerformed
-        cp.capslock(txtBairroAddCliente);
-        cbSexoAddCliente.requestFocus();
-    }//GEN-LAST:event_txtBairroAddClienteActionPerformed
-
-    private void txtDataNascAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataNascAddClienteActionPerformed
-
-        txtTelefone1AddCliente.requestFocus();
-
-    }//GEN-LAST:event_txtDataNascAddClienteActionPerformed
-
-    private void txtTelefone2AddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefone2AddClienteActionPerformed
-
-        bSalvarCadastroAddClienteActionPerformed(evt);
-
-    }//GEN-LAST:event_txtTelefone2AddClienteActionPerformed
-
-    private void txtTelefone1AddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefone1AddClienteActionPerformed
-        txtTelefone2AddCliente.requestFocus();
-    }//GEN-LAST:event_txtTelefone1AddClienteActionPerformed
-
-    private void bExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bExcluirActionPerformed
-
-        ResultSet rs = clienteControl.bucarByCpf(txtCpfAddCliente.getText());
-        cliente = null;
-        try {
-            if (rs.next()) {
-                cliente = new Cliente(rs.getInt("id"), rs.getString("nome"),
-                        rs.getString("endereco"), rs.getString("bairro"),
-                        rs.getString("complemento"), rs.getString("telefone2"),
-                        rs.getString("cpf"), rs.getString("telefone1"),
-                        rs.getDate("datanascimento"), rs.getString("sexo"));
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(TelaAddCliente.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        clienteControl.excluirCliente(cliente);
-
-
-    }//GEN-LAST:event_bExcluirActionPerformed
-
-    private void bAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAtualizarActionPerformed
-        ResultSet rs = clienteControl.bucarByCpf(txtCpfAddCliente.getText());
-        cliente = null;
-        try {
-            if (rs.next()) {
-                cliente = new Cliente(rs.getInt("id"), txtNomeAddCliente.getText(), txtEnderecoAddCliente.getText(), txtBairroAddCliente.getText(), txtComplementoAddCliente.getText(), txtTelefone2AddCliente.getText(), txtCpfAddCliente.getText(), txtTelefone1AddCliente.getText(), rs.getDate("datanascimento"), cbSexoAddCliente.getSelectedItem().toString());
-//                cliente = new Cliente(rs.getInt("id"), txtNomeAddCliente.getText(),
-//                        txtEnderecoAddCliente.getText(), txtBairroAddCliente.getText(),
-//                        txtComplementoAddCliente.getText(), txtTelefone2AddCliente.getText(),
-//                        rs.getString("cpf"), txtTelefone1AddCliente.getText(),
-//                        rs.getDate("datanascimento"), cbSexoAddCliente.getSelectedItem());
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(TelaAddCliente.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        clienteControl.atualizarCliente(cliente);
-    }//GEN-LAST:event_bAtualizarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bAtualizar;
-    private javax.swing.JButton bExcluir;
     private javax.swing.JButton bLimparAddCliente;
-    public javax.swing.JButton bSalvarCadastroAddCliente;
+    private javax.swing.JButton bSalvarCadastroAddCliente;
     private javax.swing.JButton bVoltarAddCliente;
     private javax.swing.JComboBox cbSexoAddCliente;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel lbBairroAddCliente;
     private javax.swing.JLabel lbComplementoAddCliente;
     private javax.swing.JLabel lbDataNascAddCliente;
@@ -533,58 +361,4 @@ public class TelaAddCliente extends javax.swing.JPanel {
     private javax.swing.JFormattedTextField txtTelefone1AddCliente;
     private javax.swing.JFormattedTextField txtTelefone2AddCliente;
     // End of variables declaration//GEN-END:variables
-
-    public void setTxtBairroAddCliente(String txtBairroAddCliente) {
-        this.txtBairroAddCliente.setText(txtBairroAddCliente);
-//        this.
-    }
-
-    public void setTxtComplementoAddCliente(String txtComplementoAddCliente) {
-        this.txtComplementoAddCliente.setText(txtComplementoAddCliente);
-    }
-
-    public void setTxtCpfAddCliente(String txtCpfAddCliente) {
-        this.txtCpfAddCliente.setText(txtCpfAddCliente);
-    }
-    
-    public void setNoEditCPf(boolean estado) {
-        this.txtCpfAddCliente.setEditable(estado);
-    }
-
-    public void setTxtDataNascAddCliente(String txtDataNascAddCliente) {
-        this.txtDataNascAddCliente.setText(txtDataNascAddCliente);
-    }
-
-    public void setTxtEnderecoAddCliente(String txtEnderecoAddCliente) {
-        this.txtEnderecoAddCliente.setText(txtEnderecoAddCliente);
-    }
-
-    public void setTxtNomeAddCliente(String txtNomeAddCliente) {
-        this.txtNomeAddCliente.setText(txtNomeAddCliente);
-    }
-
-    public void setTxtTelefone1AddCliente(String txtTelefone1AddCliente) {
-        this.txtTelefone1AddCliente.setText(txtTelefone1AddCliente);
-    }
-
-    public void setTxtTelefone2AddCliente(String txtTelefone2AddCliente) {
-        this.txtTelefone2AddCliente.setText(txtTelefone2AddCliente);
-    }
-
-    public void setCbSexoAddCliente(String cbSexoAddCliente) {
-        this.cbSexoAddCliente.setSelectedItem(cbSexoAddCliente);
-    }
-
-    public void setbEnableExcluir(boolean estado) {
-        this.bExcluir.setEnabled(estado);
-    }
-    
-    public void setbEnableAtualizar(boolean estado) {
-        this.bAtualizar.setEnabled(estado);
-    }
-    
-    public void setbEnableSalvar(boolean estado) {
-        this.bSalvarCadastroAddCliente.setEnabled(estado);
-    }
-    
 }

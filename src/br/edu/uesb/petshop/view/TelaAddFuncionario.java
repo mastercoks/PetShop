@@ -5,8 +5,13 @@
  */
 package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaAddFuncionarioControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.Funcionario;
 import br.edu.uesb.petshop.model.PetShop;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 
 /**
  *
@@ -14,13 +19,19 @@ import br.edu.uesb.petshop.model.PetShop;
  */
 public class TelaAddFuncionario extends javax.swing.JPanel {
 
+    private Campovazio cp;
+    private Funcionario funcionario;
+    private TelaAddFuncionarioControl funcionarioControl = new TelaAddFuncionarioControl();
+
     /**
      * Creates new form TelaFuncionario
      */
     public TelaAddFuncionario() {
         initComponents();
+        cp = new Campovazio();
     }
-
+    public static String senha;
+    public static String login;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,11 +45,11 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
         lbTituloTelaFunc = new javax.swing.JLabel();
         lbSenhaTelaFunc = new javax.swing.JLabel();
         lbConfirmaTelaFunc = new javax.swing.JLabel();
-        bCancelarTelaFunc = new javax.swing.JButton();
-        bSegunteTelaFunc = new javax.swing.JButton();
+        bVoltarTelaFunc = new javax.swing.JButton();
+        bProximoTelaFunc = new javax.swing.JButton();
         txtLoginTelaFunc = new javax.swing.JTextField();
         txtSenhaTelaFunc = new javax.swing.JPasswordField();
-        txtConfirmaTelaFunc = new javax.swing.JPasswordField();
+        txtConfirmaSenhaTelaFunc = new javax.swing.JPasswordField();
 
         lbLoginTelaFunc.setText("Login:");
 
@@ -49,19 +60,19 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
 
         lbConfirmaTelaFunc.setText("Confirmar Senha:");
 
-        bCancelarTelaFunc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
-        bCancelarTelaFunc.setText("VOLTAR");
-        bCancelarTelaFunc.addActionListener(new java.awt.event.ActionListener() {
+        bVoltarTelaFunc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
+        bVoltarTelaFunc.setText("VOLTAR");
+        bVoltarTelaFunc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bCancelarTelaFuncActionPerformed(evt);
+                bVoltarTelaFuncActionPerformed(evt);
             }
         });
 
-        bSegunteTelaFunc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/16.png"))); // NOI18N
-        bSegunteTelaFunc.setText("PROXIMO");
-        bSegunteTelaFunc.addActionListener(new java.awt.event.ActionListener() {
+        bProximoTelaFunc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/16.png"))); // NOI18N
+        bProximoTelaFunc.setText("PROXIMO");
+        bProximoTelaFunc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSegunteTelaFuncActionPerformed(evt);
+                bProximoTelaFuncActionPerformed(evt);
             }
         });
 
@@ -86,10 +97,10 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(bCancelarTelaFunc)
+                                .addComponent(bVoltarTelaFunc)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bSegunteTelaFunc))
-                            .addComponent(txtConfirmaTelaFunc)
+                                .addComponent(bProximoTelaFunc))
+                            .addComponent(txtConfirmaSenhaTelaFunc)
                             .addComponent(txtSenhaTelaFunc)
                             .addComponent(txtLoginTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -107,40 +118,71 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbSenhaTelaFunc)
                     .addComponent(txtSenhaTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbConfirmaTelaFunc)
-                    .addComponent(txtConfirmaTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(txtConfirmaSenhaTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bCancelarTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bSegunteTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(bVoltarTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bProximoTelaFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bCancelarTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarTelaFuncActionPerformed
-        
-        PetShop.tela.showView(EnumView.TELAFUNCIONARIO);
-        
-    }//GEN-LAST:event_bCancelarTelaFuncActionPerformed
+    private void bVoltarTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarTelaFuncActionPerformed
 
-    private void bSegunteTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSegunteTelaFuncActionPerformed
-        
-        PetShop.tela.showView(EnumView.TELAADDFUNCIONARIO2);
-        
-    }//GEN-LAST:event_bSegunteTelaFuncActionPerformed
+        PetShop.tela.showView(EnumView.TELAPRINCIPAL);
+
+    }//GEN-LAST:event_bVoltarTelaFuncActionPerformed
+
+    private void bProximoTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProximoTelaFuncActionPerformed
+
+        cp.textfield(txtLoginTelaFunc);
+        cp.textfield(txtConfirmaSenhaTelaFunc);
+        cp.textfield(txtSenhaTelaFunc);
+        setTxtLoginTelaFunc(txtLoginTelaFunc);
+        setTxtSenhaTelaFunc(txtSenhaTelaFunc);
+        if (("".equals(txtLoginTelaFunc.getText())) || ("".equals(txtSenhaTelaFunc.getText())) || ("".equals(txtConfirmaSenhaTelaFunc.getText()))) {
+            JOptionPane.showMessageDialog(null, "Por favor preencha os campos restantes!", "Atenção", JOptionPane.WARNING_MESSAGE);
+        } else {
+            if (funcionarioControl.loginExistente(txtLoginTelaFunc)) {
+                
+                JOptionPane.showMessageDialog(this, "Login já cadastrado, Tente novamente!", "Atenção", JOptionPane.WARNING_MESSAGE);
+                                
+            } else {
+                if (!txtSenhaTelaFunc.getText().equals(txtConfirmaSenhaTelaFunc.getText())) {
+                    
+                    JOptionPane.showMessageDialog(this, "Senhas não conferem, Tente novamente!", "Atenção", JOptionPane.WARNING_MESSAGE);
+                    
+                } else {
+
+                    PetShop.tela.showView(EnumView.TELAADDFUNCIONARIO1);
+
+                }
+            }
+        }
+    }//GEN-LAST:event_bProximoTelaFuncActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bCancelarTelaFunc;
-    private javax.swing.JButton bSegunteTelaFunc;
+    private javax.swing.JButton bProximoTelaFunc;
+    private javax.swing.JButton bVoltarTelaFunc;
     private javax.swing.JLabel lbConfirmaTelaFunc;
     private javax.swing.JLabel lbLoginTelaFunc;
     private javax.swing.JLabel lbSenhaTelaFunc;
     private javax.swing.JLabel lbTituloTelaFunc;
-    private javax.swing.JPasswordField txtConfirmaTelaFunc;
+    private javax.swing.JPasswordField txtConfirmaSenhaTelaFunc;
     private javax.swing.JTextField txtLoginTelaFunc;
     private javax.swing.JPasswordField txtSenhaTelaFunc;
     // End of variables declaration//GEN-END:variables
+
+    public void setTxtLoginTelaFunc(javax.swing.JTextField txtLoginTelaFunc) {
+        login = txtLoginTelaFunc.getText();
+    }
+    
+    public void setTxtSenhaTelaFunc(javax.swing.JTextField txtSenhaTelaFunc) {
+        senha = txtSenhaTelaFunc.getText();
+    }
+
 }
