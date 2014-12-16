@@ -65,7 +65,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
         bLimparAddCliente = new javax.swing.JButton();
         bSalvarCadastroAddCliente = new javax.swing.JButton();
         bVoltarAddCliente = new javax.swing.JButton();
-        bEditar = new javax.swing.JButton();
+        bAtualizar = new javax.swing.JButton();
         bExcluir = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(700, 400));
@@ -192,9 +192,14 @@ public class TelaAddCliente extends javax.swing.JPanel {
             }
         });
 
-        bEditar.setEnabled(false);
-        bEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/39.png"))); // NOI18N
-        bEditar.setText("EDITAR");
+        bAtualizar.setEnabled(false);
+        bAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/39.png"))); // NOI18N
+        bAtualizar.setText("ATUALIZAR");
+        bAtualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAtualizarActionPerformed(evt);
+            }
+        });
 
         bExcluir.setEnabled(false);
         bExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/51.png"))); // NOI18N
@@ -224,7 +229,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(bEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(txtEnderecoAddCliente)
@@ -297,7 +302,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
                     .addComponent(txtTelefone2AddCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -482,9 +487,13 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
     }//GEN-LAST:event_bExcluirActionPerformed
 
+    private void bAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAtualizarActionPerformed
+        
+    }//GEN-LAST:event_bAtualizarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bEditar;
+    private javax.swing.JButton bAtualizar;
     private javax.swing.JButton bExcluir;
     private javax.swing.JButton bLimparAddCliente;
     public javax.swing.JButton bSalvarCadastroAddCliente;
@@ -550,5 +559,13 @@ public class TelaAddCliente extends javax.swing.JPanel {
     public void setbEnableExcluir(boolean estado) {
         this.bExcluir.setEnabled(estado);
     }
-
+    
+    public void setbEnableAtualizar(boolean estado) {
+        this.bAtualizar.setEnabled(estado);
+    }
+    
+    public void setbEnableSalvar(boolean estado) {
+        this.bSalvarCadastroAddCliente.setEnabled(estado);
+    }
+    
 }

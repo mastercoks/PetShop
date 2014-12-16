@@ -38,7 +38,7 @@
               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="bEditar" max="32767" attributes="0"/>
+                      <Component id="bAtualizar" max="32767" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="bExcluir" max="32767" attributes="0"/>
                   </Group>
@@ -129,7 +129,7 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="bEditar" alignment="3" max="32767" attributes="0"/>
+                  <Component id="bAtualizar" alignment="3" max="32767" attributes="0"/>
                   <Component id="bExcluir" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -316,15 +316,18 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarAddClienteActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bEditar">
+    <Component class="javax.swing.JButton" name="bAtualizar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/39.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="EDITAR"/>
+        <Property name="text" type="java.lang.String" value="ATUALIZAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAtualizarActionPerformed"/>
+      </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="bEditar.setEnabled(false);&#xa;"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="bAtualizar.setEnabled(false);&#xa;"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="bExcluir">

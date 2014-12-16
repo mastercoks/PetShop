@@ -31,7 +31,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaBuscarAtendimento tBuscarAtendimento;
     TelaBuscaResultado1 tBuscaResultado;
     TelaAddFuncionario2 tAddFuncionario2;
-    
+
     /**
      * Creates new form BarraDeMenu
      */
@@ -74,16 +74,16 @@ public class BarraDeMenu extends javax.swing.JFrame {
         mAtendimento.setEnabled(false);
         mCadastro.setEnabled(false);
     }
-    
-    public void habilitaEdicao(){
+
+    public void habilitaEdicao() {
 //        tAddCliente.
     }
-    
+
     public void viewCliente(Cliente cliente) {
-        
-        String data = cliente.getDataNasc().toString().substring(8,10)+"/"+
-                cliente.getDataNasc().toString().substring(5,7)+ "/"+
-                cliente.getDataNasc().toString().substring(0,4);
+
+        String data = cliente.getDataNasc().toString().substring(8, 10) + "/"
+                + cliente.getDataNasc().toString().substring(5, 7) + "/"
+                + cliente.getDataNasc().toString().substring(0, 4);
         tAddCliente = new TelaAddCliente();
         tAddCliente.setTxtNomeAddCliente(cliente.getNome());
         tAddCliente.setTxtCpfAddCliente(cliente.getCpf());
@@ -94,9 +94,11 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tAddCliente.setTxtTelefone1AddCliente(cliente.getTelefone1());
         tAddCliente.setTxtTelefone2AddCliente(cliente.getTelefone2());
         tAddCliente.setCbSexoAddCliente(cliente.getSexo());
-        
+
         tAddCliente.setbEnableExcluir(true);
-        
+        tAddCliente.setbEnableAtualizar(true);
+        tAddCliente.setbEnableSalvar(false);
+
     }
 
     public void showView(EnumView view) {
@@ -128,7 +130,9 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 setPanel(tAddAtendimento);
                 break;
             case TELAADDCLIENTE:
+                tAddCliente.setbEnableSalvar(true);
                 tAddCliente.setbEnableExcluir(false);
+                tAddCliente.setbEnableAtualizar(false);
                 setPanel(tAddCliente);
                 break;
             case TELAADDFUNCIONARIO:
