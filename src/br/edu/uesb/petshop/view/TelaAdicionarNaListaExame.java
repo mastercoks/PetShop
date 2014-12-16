@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author matheus
  */
-public class TelaAdicionarNaLista extends javax.swing.JFrame {
+public class TelaAdicionarNaListaExame extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaAdicionarNaListaFrame
@@ -24,7 +24,7 @@ public class TelaAdicionarNaLista extends javax.swing.JFrame {
     private Exame exame;
     private TelaAddExameControl exameControl = new TelaAddExameControl();
 
-    public TelaAdicionarNaLista() {
+    public TelaAdicionarNaListaExame() {
         initComponents();
 //        cp = new Campovazio();
 
@@ -149,7 +149,7 @@ public class TelaAdicionarNaLista extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void bOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOKActionPerformed
-        System.out.print(txtPreco.getText());
+//        System.out.print(txtPreco.getText());
         cp.textfield(txtNome);
         cp.textfield(txtPreco);
         exame = new Exame(txtNome.getText(), txtPreco.getText());

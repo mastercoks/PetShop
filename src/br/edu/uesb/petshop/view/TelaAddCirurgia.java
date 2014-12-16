@@ -19,6 +19,7 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
      * Creates new form TelaAddCirurgia
      */
     ArrayList<JCheckBox> checkboxes;
+    TelaAdicionarNaListaCirurgia telaaddnalista = null; 
  
     public TelaAddCirurgia() {
         initComponents();
@@ -79,6 +80,7 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 32767));
         jPanel1.setMinimumSize(new java.awt.Dimension(14, 150));
         pCirurgias.setLayout(new javax.swing.BoxLayout(pCirurgias, javax.swing.BoxLayout.Y_AXIS));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout pCirurgiasLayout = new javax.swing.GroupLayout(pCirurgias);
@@ -143,7 +145,9 @@ public class TelaAddCirurgia extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void bAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdicionarActionPerformed
-        adicionarListaExames();
+        telaaddnalista = new TelaAdicionarNaListaCirurgia();
+        telaaddnalista.setVisible(true);
+        PetShop.tela.setEnabled(false);
     }//GEN-LAST:event_bAdicionarActionPerformed
 
     private void adicionarListaExames() {

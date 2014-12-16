@@ -20,7 +20,8 @@ public class TelaAddServico1 extends javax.swing.JPanel {
      * Creates new form TelaAddExame
      */
     ArrayList<JCheckBox> checkboxes;
- 
+    
+    
     public TelaAddServico1() {
         initComponents();
         checkboxes = new ArrayList<>();
@@ -127,7 +128,7 @@ public class TelaAddServico1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButtonOkActionPerformed
 
     private void bAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdicionarActionPerformed
-        adicionarListaExames();
+        
     }//GEN-LAST:event_bAdicionarActionPerformed
 
     private void adicionarListaExames() {

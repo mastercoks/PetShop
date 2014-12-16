@@ -21,7 +21,7 @@ public class TelaAddExame extends javax.swing.JFrame {
     ArrayList<JCheckBox> checkboxes;
 
     JCheckBox exame;
-    private TelaAdicionarNaLista telaaddnalista = null;
+    private TelaAdicionarNaListaExame telaaddnalista = null;
     
     public TelaAddExame() {
         initComponents();
@@ -147,7 +147,7 @@ public class TelaAddExame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarExamesActionPerformed
 
     private void bAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdicionarActionPerformed
-      telaaddnalista = new TelaAdicionarNaLista();
+      telaaddnalista = new TelaAdicionarNaListaExame();
         telaaddnalista.setVisible(true);
         PetShop.tela.setEnabled(false);
         

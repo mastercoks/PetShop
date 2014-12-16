@@ -20,7 +20,8 @@ public class TelaAddServico extends javax.swing.JFrame {
      */
     
     ArrayList<JCheckBox> checkboxes;
- 
+    TelaAdicionarNaListaServico telaaddnalista;
+    
     public TelaAddServico() {
         initComponents();
         checkboxes = new ArrayList<>();
@@ -80,6 +81,7 @@ public class TelaAddServico extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 32767));
         jPanel1.setMinimumSize(new java.awt.Dimension(14, 150));
         pServicos.setLayout(new javax.swing.BoxLayout(pServicos, javax.swing.BoxLayout.Y_AXIS));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout pServicosLayout = new javax.swing.GroupLayout(pServicos);
@@ -144,7 +146,9 @@ public class TelaAddServico extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void bAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdicionarActionPerformed
-        adicionarListaExames();
+        telaaddnalista = new TelaAdicionarNaListaServico();
+        telaaddnalista.setVisible(true);
+        PetShop.tela.setEnabled(false);
     }//GEN-LAST:event_bAdicionarActionPerformed
 
     private void adicionarListaExames() {
