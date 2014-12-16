@@ -7,6 +7,7 @@ package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.control.TelaLoginControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.Cliente;
 
 /**
  *
@@ -30,7 +31,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaBuscarAtendimento tBuscarAtendimento;
     TelaBuscaResultado1 tBuscaResultado;
     TelaAddFuncionario1 tAddFuncionario1;
-    
+
     /**
      * Creates new form BarraDeMenu
      */
@@ -74,6 +75,34 @@ public class BarraDeMenu extends javax.swing.JFrame {
         mCadastro.setEnabled(false);
     }
 
+    public void habilitaEdicao() {
+//        tAddCliente.
+    }
+
+    public void viewCliente(Cliente cliente) {
+
+        String data = cliente.getDataNasc().toString().substring(8, 10) + "/"
+                + cliente.getDataNasc().toString().substring(5, 7) + "/"
+                + cliente.getDataNasc().toString().substring(0, 4);
+        tAddCliente = new TelaAddCliente();
+        tAddCliente.setTxtNomeAddCliente(cliente.getNome());
+        tAddCliente.setTxtCpfAddCliente(cliente.getCpf());
+        tAddCliente.setTxtEnderecoAddCliente(cliente.getEndereco());
+        tAddCliente.setTxtComplementoAddCliente(cliente.getComplemento());
+        tAddCliente.setTxtBairroAddCliente(cliente.getBairro());
+        tAddCliente.setTxtDataNascAddCliente(data);
+        tAddCliente.setTxtTelefone1AddCliente(cliente.getTelefone1());
+        tAddCliente.setTxtTelefone2AddCliente(cliente.getTelefone2());
+        tAddCliente.setCbSexoAddCliente(cliente.getSexo());
+
+        tAddCliente.setNoEditCPf(false);
+
+        tAddCliente.setbEnableExcluir(true);
+        tAddCliente.setbEnableAtualizar(true);
+        tAddCliente.setbEnableSalvar(false);
+
+    }
+
     public void showView(EnumView view) {
         switch (view) {
             case TELALOGIN:
@@ -103,6 +132,11 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 setPanel(tAddAtendimento);
                 break;
             case TELAADDCLIENTE:
+
+                tAddCliente.setNoEditCPf(true);
+                tAddCliente.setbEnableSalvar(true);
+                tAddCliente.setbEnableExcluir(false);
+                tAddCliente.setbEnableAtualizar(false);
                 setPanel(tAddCliente);
                 break;
             case TELAADDFUNCIONARIO:
@@ -122,6 +156,10 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 break;
             case TELAADDFUNCIONARIO1:
                 setPanel(tAddFuncionario1);
+                break;
+            case TELAVIEWCLIENTE:
+//                viewCliente();
+                setPanel(tAddCliente);
                 break;
         }
     }
