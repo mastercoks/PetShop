@@ -15,34 +15,34 @@ import br.edu.uesb.petshop.model.Cirurgia;
 public class CirurgiaDAO extends AbstractDAO {
 
     public ResultSet getById(int id) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Cirurgia\" WHERE id = " + id);
+        ResultSet rs = executeQuery("SELECT * FROM cirurgia WHERE id = " + id);
         return rs;
     }
 
     public ResultSet getByNome(String nome) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Cirurgia\" WHERE nome  ILIKE '%" + nome + "%'");
+        ResultSet rs = executeQuery("SELECT * FROM cirurgia WHERE nome  ILIKE '%" + nome + "%'");
         return rs;
     }
 
     public ResultSet getByPreco(String preco) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Cirurgia\" WHERE preco = \'%" + preco + "%\'");
+        ResultSet rs = executeQuery("SELECT * FROM cirurgia WHERE preco = \'%" + preco + "%\'");
         return rs;
     }
 
     public void insert(Cirurgia cirurgia) {
-        String sql = "INSERT INTO \"Cirurgia\"(\n"
+        String sql = "INSERT INTO cirurgia(\n"
                 + "            nome, preco)\n"
                 + "    VALUES ('" + cirurgia.getNome() + "','" + cirurgia.getPreco() + "');";
         executeUpdate(sql);
     }
 
     public void delete(Cirurgia cirurgia) {
-        String sql = "DELETE FROM \"Cirurgia\" WHERE id = " + cirurgia.getId();
+        String sql = "DELETE FROM cirurgia WHERE id = " + cirurgia.getId();
         executeUpdate(sql);
     }
 
     public void update(Cirurgia cirurgia) {
-        String sql = "UPDATE \"Cirurgia\""
+        String sql = "UPDATE cirurgia"
                 + "   SET nome=" + cirurgia.getNome() + ", preco="
                 + cirurgia.getPreco() + " WHERE id = " + cirurgia.getId() + ";";
         executeUpdate(sql);

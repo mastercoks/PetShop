@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
  */
 public class TelaBuscarFuncionario extends javax.swing.JPanel {
 
-    private TelaBuscarResultado1 telaResultado1 = null;
+    private TelaResultadoBuscaFuncionario telaResultado1 = null;
     /**
      * Creates new form Buscar
      */
@@ -144,7 +144,7 @@ public class TelaBuscarFuncionario extends javax.swing.JPanel {
             Logger.getLogger(TelaBuscarFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (cont > 0) {
-            telaResultado1 = new TelaBuscarResultado1();
+            telaResultado1 = new TelaResultadoBuscaFuncionario();
             telaResultado1.BuscarByCpf(txtCpfBuscarFuncionario.getText());
             telaResultado1.setVisible(true);
             PetShop.tela.setEnabled(false);
@@ -171,7 +171,7 @@ public class TelaBuscarFuncionario extends javax.swing.JPanel {
             Logger.getLogger(TelaBuscarCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (cont > 0) {
-            telaResultado1 = new TelaBuscarResultado1();
+            telaResultado1 = new TelaResultadoBuscaFuncionario();
             telaResultado1.BuscarByNome(txtNomeBuscarFuncionario.getText());
             telaResultado1.setVisible(true);
             PetShop.tela.setEnabled(false);

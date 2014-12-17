@@ -26,7 +26,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+              <EmptySpace pref="75" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="lbNomeAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="lbSexoAddAnimal" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -45,17 +45,22 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="bLimparAddAnimal" alignment="0" max="32767" attributes="0"/>
-                          <Component id="bVoltarAddAnimal" alignment="0" max="32767" attributes="0"/>
+                          <Component id="bLimparAddAnimal" max="32767" attributes="0"/>
+                          <Component id="bVoltarAddAnimal" pref="120" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="bSalvarCadastroAddAnimal" pref="232" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bSalvarCadastroAddAnimal" pref="345" max="32767" attributes="0"/>
                   </Group>
                   <Component id="txtNomeAddAnimal" alignment="0" max="32767" attributes="0"/>
-                  <Component id="cbDonoAddAnimal" alignment="0" max="32767" attributes="0"/>
                   <Component id="txtRacaAddAnimal" alignment="0" max="32767" attributes="0"/>
+                  <Component id="cbDonoAddAnimal" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="bAtualizar" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="bExcluir" max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
@@ -69,7 +74,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="lbTituloAddAnimal" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtNomeAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbNomeAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -95,7 +100,12 @@
                   <Component id="cbDonoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbDonoAddAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bAtualizar" alignment="3" max="32767" attributes="0"/>
+                  <Component id="bExcluir" alignment="3" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="bLimparAddAnimal" min="-2" pref="28" max="-2" attributes="0"/>
@@ -104,7 +114,7 @@
                   </Group>
                   <Component id="bSalvarCadastroAddAnimal" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -112,6 +122,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="bVoltarAddAnimal">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/15.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;VOLTAR&lt;/body&gt;&lt;/html&gt;"/>
       </Properties>
       <Events>
@@ -129,6 +142,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="bLimparAddAnimal">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/51.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="LIMPAR"/>
       </Properties>
       <Events>
@@ -137,6 +153,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="bSalvarCadastroAddAnimal">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/4.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;body&gt;SALVAR CADASTRO&lt;/body&gt;&lt;/html&gt;"/>
       </Properties>
       <Events>
@@ -173,28 +192,24 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtNomeAddAnimal">
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//capslock(txtNomeAddAnimal);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtNomeAddAnimal);"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JComboBox" name="cbEspecieAddAnimal">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
-            <StringItem index="0" value="-"/>
-            <StringItem index="1" value="CACHORRO"/>
-            <StringItem index="2" value="GATO"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;Selecione...&quot;, &quot;CACHORRO&quot;, &quot;GATO&quot; })" type="code"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="cbDonoAddAnimal">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;-&quot; })" type="code"/>
+          <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;Selecione...&quot; })" type="code"/>
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();&#xa;//try{&#xa;//ResultSet rs = query.executeQuery(&quot;SELECT nome FROM \&quot;Cliente\&quot;&quot;);&#xa;//&#xa;//while(rs.next()){&#xa;//cbDonoAddAnimal.addItem(rs.getString(&quot;nome&quot;));&#xa;//}&#xa;//&#xa;//}catch (SQLException ex) {&#xa;//            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);&#xa;//            lbLoginIncorretoMenuLogin.setVisible(true);&#xa;//            }"/>
+        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="BuscarByNome();&#xa;//Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();&#xa;//try{&#xa;//ResultSet rs = query.executeQuery(&quot;SELECT nome FROM \&quot;Cliente\&quot;&quot;);&#xa;//&#xa;//while(rs.next()){&#xa;//cbDonoAddAnimal.addItem(rs.getString(&quot;nome&quot;));&#xa;//}&#xa;//&#xa;//}catch (SQLException ex) {&#xa;//            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);&#xa;//            lbLoginIncorretoMenuLogin.setVisible(true);&#xa;//            }"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbNomeAddAnimal">
@@ -224,7 +239,35 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtRacaAddAnimal">
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//capslock(txtRacaAddAnimal);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtRacaAddAnimal);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="bAtualizar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/39.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="ATUALIZAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAtualizarActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="bAtualizar.setEnabled(false);&#xa;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="bExcluir">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/51.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="EXCLUIR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bExcluirActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="bExcluir.setEnabled(false);&#xa;"/>
       </AuxValues>
     </Component>
   </SubComponents>

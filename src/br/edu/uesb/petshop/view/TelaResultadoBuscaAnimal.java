@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.edu.uesb.petshop.view;
 
-import br.edu.uesb.petshop.dao.FuncionarioDAO;
+import br.edu.uesb.petshop.dao.AnimalDAO;
+import br.edu.uesb.petshop.dao.ClienteDAO;
 import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.Animal;
+import br.edu.uesb.petshop.model.Cliente;
 import br.edu.uesb.petshop.model.Funcionario;
 import br.edu.uesb.petshop.model.PetShop;
 import java.sql.ResultSet;
@@ -19,15 +21,16 @@ import java.util.logging.Logger;
  *
  * @author Laherce Gomes
  */
-public class TelaBuscarResultado1 extends javax.swing.JFrame {
+public class TelaResultadoBuscaAnimal extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaBuscarResultado2
      */
-    
-    FuncionarioDAO funcionarioDAO;
-    
-    public TelaBuscarResultado1() {
+    private AnimalDAO animalDAO = new AnimalDAO();
+    private ClienteDAO clienteDAO = new ClienteDAO();
+    private Cliente cliente = null;
+
+    public TelaResultadoBuscaAnimal() {
         initComponents();
     }
 
@@ -128,50 +131,82 @@ public class TelaBuscarResultado1 extends javax.swing.JFrame {
 
     private void bSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSelecionarActionPerformed
         //        cbResultadoBusca.setSelectedItem(evt);
-        Funcionario funcionario = null;
+        Animal animal = null;
         String cpf = cbResultadoBusca.getSelectedItem().toString().substring(5, 16) + "-" + cbResultadoBusca.getSelectedItem().toString().substring(17, 19);
 
         try {
-            ResultSet rs = funcionarioDAO.getByCpf(cpf);
+            ResultSet rs = clienteDAO.getByCpf(cpf);
             if (rs.next()) {
-                funcionario = new Funcionario(rs.getInt("id"), rs.getString("login"),
-                    rs.getString("senha"), rs.getString("nome"),
-                    rs.getString("endereco"), rs.getString("bairro"),
-                    rs.getString("complemento"), rs.getString("telefone2"),
-                    rs.getString("cpf"), rs.getString("telefone1"),
-                    rs.getDate("datanascimento"), rs.getString("sexo"));
+                cliente = new Cliente(rs.getInt("id"), rs.getString("nome"),
+                        rs.getString("endereco"), rs.getString("bairro"),
+                        rs.getString("complemento"), rs.getString("telefone2"),
+                        rs.getString("cpf"), rs.getString("telefone1"),
+                        rs.getDate("datanascimento"), rs.getString("sexo"));
+
+                rs = animalDAO.getByIdDono(cliente.getId());
+                while (rs.next()) {
+                    animal = new Animal(rs.getInt("id"), rs.getString("nome"),
+                            rs.getString("sexo"), rs.getString("raca"),
+                            rs.getString("especie"), cliente);
+                }
+
             }
+
         } catch (SQLException ex) {
-            Logger.getLogger(TelaBuscaResultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaResultadoBuscaCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        PetShop.tela.viewFuncionario(funcionario);
-        PetShop.tela.showView(EnumView.TELAVIEWFUNCIONARIO);
+        PetShop.tela.viewAnimal(animal);
+        PetShop.tela.showView(EnumView.TELAVIEWANIMAL);
         PetShop.tela.setEnabled(true);
         this.dispose();
     }//GEN-LAST:event_bSelecionarActionPerformed
 
+        
     public void BuscarByNome(String nome) {
-        funcionarioDAO = new FuncionarioDAO();
-        ResultSet rs = funcionarioDAO.getByNome(nome);
+        animalDAO = new AnimalDAO();
+        ResultSet rs = animalDAO.getByNomeAll(nome);
         try {
             while (rs.next()) {
-                cbResultadoBusca.addItem("CPF: " + rs.getString("cpf")+" - Nome: " + rs.getString("nome"));
+                ResultSet rs2 = animalDAO.getByIdDono(rs.getInt("id_dono"));
+                
+                if(rs.next()){
+                    
+                }
+                cbResultadoBusca.addItem("CPF: " + rs.getString("cpf")
+                        + " - Nome Animal: " + rs.getString("nome")
+                        + "- Nome Dono: ");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(TelaBuscaResultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaResultadoBuscaCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public void BuscarByCpf(String cpf) {
-        funcionarioDAO = new FuncionarioDAO();
-        ResultSet rs = funcionarioDAO.getByCpf(cpf);
+        clienteDAO = new ClienteDAO();
+
+        ResultSet rs = clienteDAO.getByCpf(cpf);
         try {
-            while (rs.next()) {
-                cbResultadoBusca.addItem("CPF: " + rs.getString("cpf")+" - Nome: " + rs.getString("nome"));
+            if (rs.next()) {
+                cliente = new Cliente(rs.getInt("id"), rs.getString("nome"),
+                        rs.getString("endereco"), rs.getString("bairro"),
+                        rs.getString("complemento"), rs.getString("telefone2"),
+                        rs.getString("cpf"), rs.getString("telefone1"),
+                        rs.getDate("datanascimento"), rs.getString("sexo"));
+                rs = animalDAO.getByIdDono(cliente.getId());
+
+                while (rs.next()) {
+
+                    cbResultadoBusca.addItem("CPF: " + cliente.getCpf()
+                            + " - Nome Animal: " + rs.getString("nome")
+                            + " - Nome Dono: " + cliente.getNome());
+
+                }
+
             }
+
         } catch (SQLException ex) {
-            Logger.getLogger(TelaBuscaResultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaResultadoBuscaCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed

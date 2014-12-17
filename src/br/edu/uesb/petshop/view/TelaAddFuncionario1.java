@@ -23,16 +23,14 @@ import javax.swing.JOptionPane;
  */
 public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
-    private Campovazio cp;
+    private Campovazio cp = new Campovazio();
     private Funcionario funcionario;
-    private TelaAddFuncionarioControl funcionarioControl = new TelaAddFuncionarioControl();
-    private String login = TelaAddFuncionario.login;
-    private String senha = TelaAddFuncionario.senha;
+    private TelaAddFuncionarioControl funcionarioControl;
 
     public TelaAddFuncionario1() {
+
         initComponents();
-        cp = new Campovazio();
-//        cliente = new Cliente(null, null, null, null, null, null, null, null, null);
+        funcionarioControl = new TelaAddFuncionarioControl();
 
     }
 
@@ -75,6 +73,7 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
         lbTituloAddFuncionario.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloAddFuncionario.setText("ADICIONAR FUNCIONÁRIO");
 
+        cp.capslock(txtNomeAddFuncionario);
         txtNomeAddFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeAddFuncionarioActionPerformed(evt);
@@ -83,6 +82,7 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
         lbNomeAddFuncionario.setText("Nome:");
 
+        cp.capslock(txtEnderecoAddFuncionario);
         txtEnderecoAddFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEnderecoAddFuncionarioActionPerformed(evt);
@@ -93,6 +93,7 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
         lbBairroAddFuncionario.setText("Bairro:");
 
+        cp.capslock(txtBairroAddFuncionario);
         txtBairroAddFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBairroAddFuncionarioActionPerformed(evt);
@@ -101,6 +102,7 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
         lbComplementoAddFuncionario.setText("Complemento:");
 
+        cp.capslock(txtComplementoAddFuncionario);
         txtComplementoAddFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtComplementoAddFuncionarioActionPerformed(evt);
@@ -318,7 +320,7 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbSexoAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSexoAddFuncionarioActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_cbSexoAddFuncionarioActionPerformed
 
     private void bLimparAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddFuncionarioActionPerformed
@@ -344,8 +346,8 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
     private void bSalvarCadastroAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarCadastroAddFuncionarioActionPerformed
 
-//        String login = Fun.getTxtLoginTelaFunc();
-//        String senha = func.getTxtSenhaTelaFunc();
+        String login = TelaAddFuncionario.login;
+        String senha = TelaAddFuncionario.senha;
         cp.textfield(txtNomeAddFuncionario);
         cp.textfield(txtEnderecoAddFuncionario);
         cp.textfield(txtBairroAddFuncionario);
@@ -407,6 +409,7 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
                 funcionarioControl.salvarFuncionario(funcionario);
                 bLimparAddFuncionarioActionPerformed(evt);
+                PetShop.tela.showView(EnumView.TELAFUNCIONARIO);
 
             }
         }
@@ -423,8 +426,8 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
     private void txtNomeAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeAddFuncionarioActionPerformed
 
-        cp.capslock(txtNomeAddFuncionario);
         txtCpfAddFuncionario.requestFocus();
+
     }//GEN-LAST:event_txtNomeAddFuncionarioActionPerformed
 
     private void txtCpfAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfAddFuncionarioActionPerformed
@@ -434,40 +437,43 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
 
     private void txtEnderecoAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnderecoAddFuncionarioActionPerformed
 
-        cp.capslock(txtEnderecoAddFuncionario);
         txtComplementoAddFuncionario.requestFocus();
+
     }//GEN-LAST:event_txtEnderecoAddFuncionarioActionPerformed
 
     private void txtComplementoAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtComplementoAddFuncionarioActionPerformed
 
-        cp.capslock(txtComplementoAddFuncionario);
         txtBairroAddFuncionario.requestFocus();
+
     }//GEN-LAST:event_txtComplementoAddFuncionarioActionPerformed
 
     private void txtBairroAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBairroAddFuncionarioActionPerformed
 
-        cp.capslock(txtBairroAddFuncionario);
         cbSexoAddFuncionario.requestFocus();
+
     }//GEN-LAST:event_txtBairroAddFuncionarioActionPerformed
 
     private void txtDataNascAddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataNascAddFuncionarioActionPerformed
 
         txtTelefone1AddFuncionario.requestFocus();
+
     }//GEN-LAST:event_txtDataNascAddFuncionarioActionPerformed
 
     private void txtTelefone2AddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefone2AddFuncionarioActionPerformed
 
         bSalvarCadastroAddFuncionarioActionPerformed(evt);
+
     }//GEN-LAST:event_txtTelefone2AddFuncionarioActionPerformed
 
     private void txtTelefone1AddFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefone1AddFuncionarioActionPerformed
 
         txtTelefone2AddFuncionario.requestFocus();
+
     }//GEN-LAST:event_txtTelefone1AddFuncionarioActionPerformed
 
     private void bExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bExcluirActionPerformed
 
-        ResultSet rs = funcionarioControl.bucarByCpf(txtCpfAddFuncionario.getText());
+        ResultSet rs = funcionarioControl.buscarByCpf(txtCpfAddFuncionario.getText());
         funcionario = null;
         try {
             if (rs.next()) {
@@ -483,31 +489,31 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
         }
 
         funcionarioControl.excluirFuncionario(funcionario);
+        bLimparAddFuncionarioActionPerformed(evt);
+        PetShop.tela.showView(EnumView.TELAFUNCIONARIO);
+
     }//GEN-LAST:event_bExcluirActionPerformed
 
     private void bAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAtualizarActionPerformed
 
-        ResultSet rs = funcionarioControl.bucarByCpf(txtCpfAddFuncionario.getText());
+        ResultSet rs = funcionarioControl.buscarByCpf(txtCpfAddFuncionario.getText());
         funcionario = null;
         try {
             if (rs.next()) {
-                funcionario = new Funcionario(rs.getInt("id"), login, senha, txtNomeAddFuncionario.getText(),
+                funcionario = new Funcionario(rs.getInt("id"), rs.getString("login"),
+                        rs.getString("senha"), txtNomeAddFuncionario.getText(),
                         txtEnderecoAddFuncionario.getText(), txtBairroAddFuncionario.getText(),
                         txtComplementoAddFuncionario.getText(), txtTelefone2AddFuncionario.getText(),
                         txtCpfAddFuncionario.getText(), txtTelefone1AddFuncionario.getText(),
                         rs.getDate("datanascimento"), cbSexoAddFuncionario.getSelectedItem().toString());
-//                cliente = new Cliente(rs.getInt("id"), txtNomeAddCliente.getText(),
-//                        txtEnderecoAddCliente.getText(), txtBairroAddCliente.getText(),
-//                        txtComplementoAddCliente.getText(), txtTelefone2AddCliente.getText(),
-//                        rs.getString("cpf"), txtTelefone1AddCliente.getText(),
-//                        rs.getDate("datanascimento"), cbSexoAddCliente.getSelectedItem());
             }
         } catch (SQLException ex) {
             Logger.getLogger(TelaAddFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         funcionarioControl.atualizarFuncionario(funcionario);
-    
+        bLimparAddFuncionarioActionPerformed(evt);
+        PetShop.tela.showView(EnumView.TELAFUNCIONARIO);
 
     }//GEN-LAST:event_bAtualizarActionPerformed
 
@@ -538,9 +544,9 @@ public class TelaAddFuncionario1 extends javax.swing.JPanel {
     private javax.swing.JFormattedTextField txtTelefone1AddFuncionario;
     private javax.swing.JFormattedTextField txtTelefone2AddFuncionario;
     // End of variables declaration//GEN-END:variables
+
     public void setTxtBairroAddFuncionario(String txtBairroAddFuncionario) {
         this.txtBairroAddFuncionario.setText(txtBairroAddFuncionario);
-//        this.
     }
 
     public void setTxtComplementoAddFuncionario(String txtComplementoAddFuncionario) {

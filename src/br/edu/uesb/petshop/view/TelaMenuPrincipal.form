@@ -54,7 +54,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="lbTituloMenuPrincipal" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <EmptySpace pref="47" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="bAnimaisMenuPrincipal" pref="80" max="32767" attributes="0"/>
                   <Component id="bClientesMenuPrincipal" max="32767" attributes="0"/>
@@ -64,7 +64,7 @@
                   <Component id="bServicosMenuPrincipal" pref="80" max="32767" attributes="0"/>
                   <Component id="bFuncionarioMenuPrincipal" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
               <Component id="bLogoutMenuPrincipal" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
           </Group>

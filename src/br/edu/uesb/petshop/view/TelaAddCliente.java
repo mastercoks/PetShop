@@ -23,14 +23,12 @@ import javax.swing.JOptionPane;
  */
 public class TelaAddCliente extends javax.swing.JPanel {
 
-    private Campovazio cp;
+    private Campovazio cp = new Campovazio();;
     private Cliente cliente;
     private TelaAddClienteControl clienteControl = new TelaAddClienteControl();
 
     public TelaAddCliente() {
         initComponents();
-        cp = new Campovazio();
-//        cliente = new Cliente(null, null, null, null, null, null, null, null, null);
 
     }
 
@@ -73,6 +71,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
         lbTituloAddCliente.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         lbTituloAddCliente.setText("ADICIONAR CLIENTE");
 
+        cp.capslock(txtNomeAddCliente);
         txtNomeAddCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeAddClienteActionPerformed(evt);
@@ -81,6 +80,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
         lbNomeAddCdiente.setText("Nome:");
 
+        cp.capslock(txtEnderecoAddCliente);
         txtEnderecoAddCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEnderecoAddClienteActionPerformed(evt);
@@ -91,6 +91,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
         lbBairroAddCliente.setText("Bairro:");
 
+        cp.capslock(txtBairroAddCliente);
         txtBairroAddCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBairroAddClienteActionPerformed(evt);
@@ -99,6 +100,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
         lbComplementoAddCliente.setText("Complemento:");
 
+        cp.capslock(txtComplementoAddCliente);
         txtComplementoAddCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtComplementoAddClienteActionPerformed(evt);
@@ -403,7 +405,8 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
                 clienteControl.salvarCliente(cliente);
                 bLimparAddClienteActionPerformed(evt);
-
+                
+                PetShop.tela.showView(EnumView.TELACLIENTE);
             }
 
         }
@@ -420,7 +423,6 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
     private void txtNomeAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeAddClienteActionPerformed
 
-        cp.capslock(txtNomeAddCliente);
         txtCpfAddCliente.requestFocus();
 
     }//GEN-LAST:event_txtNomeAddClienteActionPerformed
@@ -433,21 +435,20 @@ public class TelaAddCliente extends javax.swing.JPanel {
 
     private void txtEnderecoAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnderecoAddClienteActionPerformed
 
-        cp.capslock(txtEnderecoAddCliente);
         txtComplementoAddCliente.requestFocus();
 
     }//GEN-LAST:event_txtEnderecoAddClienteActionPerformed
 
     private void txtComplementoAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtComplementoAddClienteActionPerformed
 
-        cp.capslock(txtComplementoAddCliente);
         txtBairroAddCliente.requestFocus();
 
     }//GEN-LAST:event_txtComplementoAddClienteActionPerformed
 
     private void txtBairroAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBairroAddClienteActionPerformed
-        cp.capslock(txtBairroAddCliente);
+
         cbSexoAddCliente.requestFocus();
+        
     }//GEN-LAST:event_txtBairroAddClienteActionPerformed
 
     private void txtDataNascAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataNascAddClienteActionPerformed
@@ -463,7 +464,9 @@ public class TelaAddCliente extends javax.swing.JPanel {
     }//GEN-LAST:event_txtTelefone2AddClienteActionPerformed
 
     private void txtTelefone1AddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefone1AddClienteActionPerformed
+    
         txtTelefone2AddCliente.requestFocus();
+        
     }//GEN-LAST:event_txtTelefone1AddClienteActionPerformed
 
     private void bExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bExcluirActionPerformed
@@ -483,7 +486,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
         }
         
         clienteControl.excluirCliente(cliente);
-
+        PetShop.tela.showView(EnumView.TELACLIENTE);
 
     }//GEN-LAST:event_bExcluirActionPerformed
 
@@ -504,6 +507,7 @@ public class TelaAddCliente extends javax.swing.JPanel {
         }
         
         clienteControl.atualizarCliente(cliente);
+        PetShop.tela.showView(EnumView.TELACLIENTE);
     }//GEN-LAST:event_bAtualizarActionPerformed
 
 

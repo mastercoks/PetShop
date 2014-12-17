@@ -16,66 +16,66 @@ import java.sql.ResultSet;
 public class FuncionarioDAO extends AbstractDAO{
     
     public ResultSet getById(int id) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE id = " + id);
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE id = " + id);
         return rs;
     }
     
     public ResultSet getByLogin(String login){
         ResultSet rs = executeQuery("SELECT *\n" +
-"  FROM \"Funcionario\"\n" +
+"  FROM funcionario\n" +
 "  WHERE login = '"+login+"';");
         return rs;
     }
 
     public ResultSet getByNome(String nome) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE nome  ILIKE '%" + nome + "%'");
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE nome  ILIKE '%" + nome + "%'");
         return rs;
     }
 
     public ResultSet getByDataNasc(Date data) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE datanascimento = " + data);
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE datanascimento = " + data);
         return rs;
     }
 
     public ResultSet getBySexo(String sexo) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE sexo ILIKE" + sexo);
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE sexo ILIKE" + sexo);
         return rs;
     }
 
     public ResultSet getByEndereco(String endereco) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE endereco ILIKE '%" + endereco + "%'");
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE endereco ILIKE '%" + endereco + "%'");
         return rs;
     }
 
     public ResultSet getByBairro(String bairro) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE bairro ILIKE '%" + bairro + "%'");
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE bairro ILIKE '%" + bairro + "%'");
         return rs;
     }
 
     public ResultSet getByComplemento(String complemento) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE complemento = \'%" + complemento + "%\'");
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE complemento = \'%" + complemento + "%\'");
         return rs;
     }
 
     public ResultSet getByCpf(String cpf) {
         ResultSet rs = executeQuery("SELECT *\n"
-                + "  FROM \"Funcionario\"\n"
+                + "  FROM funcionario\n"
                 + "  WHERE \"cpf\" = \'"+cpf+"\';");
         return rs;
     }
 
     public ResultSet getByTelefone1(String telefone1) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE telefone1 = " + telefone1);
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE telefone1 = " + telefone1);
         return rs;
     }
 
     public ResultSet getByTelefone2(String telefone2) {
-        ResultSet rs = executeQuery("SELECT * FROM \"Funcionario\" WHERE telefone2 = " + telefone2);
+        ResultSet rs = executeQuery("SELECT * FROM funcionario WHERE telefone2 = " + telefone2);
         return rs;
     }
 
     public void insert(Funcionario funcionario) {
-        String sql = "INSERT INTO \"Funcionario\"(\n"
+        String sql = "INSERT INTO funcionario(\n"
                 + "            nome, endereco, bairro, complemento, sexo, cpf, datanascimento, telefone1, \n"
                 + "            telefone2, login, senha)\n"
                 + "    VALUES ('" + funcionario.getNome() + "','" + funcionario.getEndereco() 
@@ -88,20 +88,20 @@ public class FuncionarioDAO extends AbstractDAO{
     }
 
     public void delete(Funcionario funcionario) {
-        String sql = "DELETE FROM \"Funcionario\" WHERE id = " + funcionario.getId();
+        String sql = "DELETE FROM funcionario WHERE id = " + funcionario.getId();
         executeUpdate(sql);
     }
 
     public void update(Funcionario funcionario) {
-        String sql = "UPDATE \"Funcionario\""
-                + "   SET nome=" + funcionario.getNome() + ", datanascimento="
-                + funcionario.getDataNasc() + ", sexo=" + funcionario.getSexo()
-                + ", endereco=" + funcionario.getEndereco() + ", bairro="
-                + funcionario.getBairro() + ", " + "complemento=" + funcionario.getComplemento() 
-                + ", cpf=" + funcionario.getCpf() + ", telefone1=" + funcionario.getTelefone1()
-                + ", telefone2=" + funcionario.getTelefone2() + ", login="
-                + funcionario.getLogin()+ ", senha = "+ funcionario.getSenha() 
-                + " WHERE id = " + funcionario.getId() + ";";
+        String sql = "UPDATE funcionario"
+                + "   SET nome='" + funcionario.getNome() + "', datanascimento='"
+                + funcionario.getDataNasc() + "', sexo='" + funcionario.getSexo()
+                + "', endereco='" + funcionario.getEndereco() + "', bairro='"
+                + funcionario.getBairro() + "', complemento='" + funcionario.getComplemento() 
+                + "', cpf='" + funcionario.getCpf() + "', telefone1='" + funcionario.getTelefone1()
+                + "', telefone2='" + funcionario.getTelefone2() + "', login='"
+                + funcionario.getLogin()+ "', senha =' "+ funcionario.getSenha() 
+                + "' WHERE id = " + funcionario.getId() + ";";
         executeUpdate(sql);
     }
 }

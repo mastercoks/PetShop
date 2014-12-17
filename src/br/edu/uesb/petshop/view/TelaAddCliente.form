@@ -159,6 +159,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeAddClienteActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtNomeAddCliente);&#xa;"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbNomeAddCdiente">
       <Properties>
@@ -169,6 +172,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEnderecoAddClienteActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtEnderecoAddCliente);&#xa;"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbEnderecoAddCliente">
       <Properties>
@@ -184,6 +190,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBairroAddClienteActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtBairroAddCliente);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbComplementoAddCliente">
       <Properties>
@@ -194,6 +203,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtComplementoAddClienteActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtComplementoAddCliente);&#xa;"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbSexoAddCliente">
       <Properties>

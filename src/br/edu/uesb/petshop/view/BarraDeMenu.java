@@ -7,6 +7,7 @@ package br.edu.uesb.petshop.view;
 
 import br.edu.uesb.petshop.control.TelaLoginControl;
 import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.Animal;
 import br.edu.uesb.petshop.model.Cliente;
 import br.edu.uesb.petshop.model.Funcionario;
 
@@ -30,7 +31,6 @@ public class BarraDeMenu extends javax.swing.JFrame {
     TelaBuscarFuncionario tBuscarFuncionario;
     TelaAddAtendimento tAddAtendimento;
     TelaBuscarAtendimento tBuscarAtendimento;
-    TelaBuscarResultado1 tBuscaResultado;
     TelaAddFuncionario1 tAddFuncionario1;
 
     /**
@@ -52,7 +52,6 @@ public class BarraDeMenu extends javax.swing.JFrame {
         tBuscarAtendimento = new TelaBuscarAtendimento();
         tBuscarCliente = new TelaBuscarCliente();
         tAddFuncionario = new TelaAddFuncionario();
-        tBuscaResultado = new TelaBuscarResultado1();
         tAddFuncionario1 = new TelaAddFuncionario1();
         tBuscarFuncionario = new TelaBuscarFuncionario();
     }
@@ -79,8 +78,23 @@ public class BarraDeMenu extends javax.swing.JFrame {
     public void habilitaEdicao() {
 //        tAddCliente.
     }
+    
+    public void viewAnimal(Animal animal){
+        
+        tAddAnimal = new TelaAddAnimal();
+        tAddAnimal.setTxtNome(animal.getNome());
+        tAddAnimal.setTxtRaca(animal.getRaca());
+        tAddAnimal.setCbEspecie(animal.getEspecie());
+        tAddAnimal.setCbDono("CPF: " + animal.getDono().getCpf()
+                            + " - Nome: " + animal.getDono().getNome());
 
-        public void viewFuncionario(Funcionario funcionario) {
+        tAddAnimal.setbEnableExcluir(true);
+        tAddAnimal.setbEnableAtualizar(true);
+        tAddAnimal.setbEnableSalvar(false);
+        
+    }
+
+    public void viewFuncionario(Funcionario funcionario) {
 
         String data = funcionario.getDataNasc().toString().substring(8, 10) + "/"
                 + funcionario.getDataNasc().toString().substring(5, 7) + "/"
@@ -180,7 +194,7 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 setPanel(tBuscarFuncionario);
                 break;
             case TELAADDFUNCIONARIO1:
-                
+
                 tAddFuncionario1.setNoEditCPf(true);
                 tAddFuncionario1.setbEnableSalvar(true);
                 tAddFuncionario1.setbEnableExcluir(false);
@@ -188,11 +202,13 @@ public class BarraDeMenu extends javax.swing.JFrame {
                 setPanel(tAddFuncionario1);
                 break;
             case TELAVIEWCLIENTE:
-//                viewCliente();
                 setPanel(tAddCliente);
                 break;
             case TELAVIEWFUNCIONARIO:
                 setPanel(tAddFuncionario1);
+                break;
+            case TELAVIEWANIMAL:
+                setPanel(tAddAnimal);
                 break;
         }
     }

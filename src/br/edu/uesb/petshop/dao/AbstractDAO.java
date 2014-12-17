@@ -13,7 +13,7 @@ import java.sql.ResultSet;
  */
 public abstract class AbstractDAO {
 //    protected Connection con;
-    private Conexao conexao = new Conexao("localhost", "5432", "PetShop", "postgres", "210693");
+    private Conexao conexao = new Conexao("localhost", "5432", "PetShop","postgres", "123");
     
     
     public void startConexao(){
@@ -36,5 +36,9 @@ public abstract class AbstractDAO {
         int rs = conexao.queryUpdate(sql);
         closeConexao();
         return rs;
+    }
+
+    public void setConexao(Conexao conexao) {
+        this.conexao = conexao;
     }
 }

@@ -159,6 +159,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeAddFuncionarioActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtNomeAddFuncionario); "/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbNomeAddFuncionario">
       <Properties>
@@ -169,6 +172,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEnderecoAddFuncionarioActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtEnderecoAddFuncionario); "/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbEnderecoAddFuncionario">
       <Properties>
@@ -184,6 +190,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBairroAddFuncionarioActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtBairroAddFuncionario); "/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbComplementoAddFuncionario">
       <Properties>
@@ -194,6 +203,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtComplementoAddFuncionarioActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="cp.capslock(txtComplementoAddFuncionario); "/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbSexoAddFuncionario">
       <Properties>

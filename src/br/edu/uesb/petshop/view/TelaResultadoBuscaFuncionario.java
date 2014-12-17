@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package br.edu.uesb.petshop.view;
 
-import br.edu.uesb.petshop.dao.ClienteDAO;
+import br.edu.uesb.petshop.dao.FuncionarioDAO;
 import br.edu.uesb.petshop.enumerado.EnumView;
-import br.edu.uesb.petshop.model.Cliente;
+import br.edu.uesb.petshop.model.Funcionario;
 import br.edu.uesb.petshop.model.PetShop;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,16 +17,17 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author matheus
+ * @author Laherce Gomes
  */
-public class TelaBuscaResultado extends javax.swing.JFrame {
+public class TelaResultadoBuscaFuncionario extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaBuscaResultado
+     * Creates new form TelaBuscarResultado2
      */
-    ClienteDAO clienteDAO;
-
-    public TelaBuscaResultado() {
+    
+    FuncionarioDAO funcionarioDAO;
+    
+    public TelaResultadoBuscaFuncionario() {
         initComponents();
     }
 
@@ -45,9 +47,6 @@ public class TelaBuscaResultado extends javax.swing.JFrame {
         bCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(365, 161, 161, 161));
-        setMaximizedBounds(new java.awt.Rectangle(577, 161, 577, 161));
-        setMinimumSize(new java.awt.Dimension(577, 161));
 
         pTelaBuscaResultado.setMaximumSize(new java.awt.Dimension(577, 161));
         pTelaBuscaResultado.setMinimumSize(new java.awt.Dimension(577, 161));
@@ -56,6 +55,11 @@ public class TelaBuscaResultado extends javax.swing.JFrame {
         lbTituloBuscaResultado.setText("RESULTADOS ENCONTRADOS");
 
         cbResultadoBusca.setModel(new javax.swing.DefaultComboBoxModel(new String[] { }));
+        cbResultadoBusca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbResultadoBuscaActionPerformed(evt);
+            }
+        });
 
         bSelecionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/54.png"))); // NOI18N
         bSelecionar.setText("Selecionar");
@@ -91,7 +95,7 @@ public class TelaBuscaResultado extends javax.swing.JFrame {
         pTelaBuscaResultadoLayout.setVerticalGroup(
             pTelaBuscaResultadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pTelaBuscaResultadoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbTituloBuscaResultado)
                 .addGap(28, 28, 28)
                 .addComponent(cbResultadoBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -118,57 +122,63 @@ public class TelaBuscaResultado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
-        PetShop.tela.setEnabled(true);
-        this.dispose();
-    }//GEN-LAST:event_bCancelarActionPerformed
+    private void cbResultadoBuscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbResultadoBuscaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbResultadoBuscaActionPerformed
 
     private void bSelecionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSelecionarActionPerformed
-//        cbResultadoBusca.setSelectedItem(evt);
-        Cliente cliente = null;
-        String cpf = cbResultadoBusca.getSelectedItem().toString().substring(5,16)+"-"+cbResultadoBusca.getSelectedItem().toString().substring(17,19);
-        
+        //        cbResultadoBusca.setSelectedItem(evt);
+        Funcionario funcionario = null;
+        String cpf = cbResultadoBusca.getSelectedItem().toString().substring(5, 16) + "-" + cbResultadoBusca.getSelectedItem().toString().substring(17, 19);
+
         try {
-            ResultSet rs = clienteDAO.getByCpf(cpf);
-            if(rs.next()){ cliente = new Cliente(rs.getInt("id"), rs.getString("nome"),
-                        rs.getString("endereco"), rs.getString("bairro"),
-                        rs.getString("complemento"), rs.getString("telefone2"), 
-                        rs.getString("cpf"), rs.getString("telefone1"),
-                        rs.getDate("datanascimento"), rs.getString("sexo"));
+            ResultSet rs = funcionarioDAO.getByCpf(cpf);
+            if (rs.next()) {
+                funcionario = new Funcionario(rs.getInt("id"), rs.getString("login"),
+                    rs.getString("senha"), rs.getString("nome"),
+                    rs.getString("endereco"), rs.getString("bairro"),
+                    rs.getString("complemento"), rs.getString("telefone2"),
+                    rs.getString("cpf"), rs.getString("telefone1"),
+                    rs.getDate("datanascimento"), rs.getString("sexo"));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(TelaBuscaResultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaResultadoBuscaCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        PetShop.tela.viewCliente(cliente);
-        PetShop.tela.showView(EnumView.TELAVIEWCLIENTE);
+
+        PetShop.tela.viewFuncionario(funcionario);
+        PetShop.tela.showView(EnumView.TELAVIEWFUNCIONARIO);
         PetShop.tela.setEnabled(true);
         this.dispose();
     }//GEN-LAST:event_bSelecionarActionPerformed
 
     public void BuscarByNome(String nome) {
-        clienteDAO = new ClienteDAO();
-        ResultSet rs = clienteDAO.getByNome(nome);
+        funcionarioDAO = new FuncionarioDAO();
+        ResultSet rs = funcionarioDAO.getByNome(nome);
         try {
             while (rs.next()) {
                 cbResultadoBusca.addItem("CPF: " + rs.getString("cpf")+" - Nome: " + rs.getString("nome"));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(TelaBuscaResultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaResultadoBuscaCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public void BuscarByCpf(String cpf) {
-        clienteDAO = new ClienteDAO();
-        ResultSet rs = clienteDAO.getByCpf(cpf);
+        funcionarioDAO = new FuncionarioDAO();
+        ResultSet rs = funcionarioDAO.getByCpf(cpf);
         try {
             while (rs.next()) {
                 cbResultadoBusca.addItem("CPF: " + rs.getString("cpf")+" - Nome: " + rs.getString("nome"));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(TelaBuscaResultado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaResultadoBuscaCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    private void bCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelarActionPerformed
+        PetShop.tela.setEnabled(true);
+        this.dispose();
+    }//GEN-LAST:event_bCancelarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bCancelar;

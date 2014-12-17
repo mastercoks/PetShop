@@ -128,10 +128,19 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtLoginTelaFunc">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLoginTelaFuncActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtSenhaTelaFunc">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSenhaTelaFuncActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtConfirmaSenhaTelaFunc">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtConfirmaSenhaTelaFuncActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

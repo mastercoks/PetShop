@@ -5,10 +5,8 @@
  */
 package br.edu.uesb.petshop.control;
 
-import br.edu.uesb.petshop.dao.AdmDAO;
 import br.edu.uesb.petshop.dao.FuncionarioDAO;
 import br.edu.uesb.petshop.enumerado.EnumView;
-import br.edu.uesb.petshop.view.Login;
 import br.edu.uesb.petshop.model.PetShop;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -48,7 +46,7 @@ public class TelaLoginControl {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TelaLoginControl.class.getName()).log(Level.SEVERE, null, ex);
 
         }
         return EnumLogin.LOGIN_ERRADO;

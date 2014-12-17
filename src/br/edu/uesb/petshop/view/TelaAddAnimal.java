@@ -5,8 +5,18 @@
  */
 package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.control.TelaAddAnimalControl;
+import br.edu.uesb.petshop.control.TelaAddClienteControl;
+import br.edu.uesb.petshop.dao.ClienteDAO;
 import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.Animal;
+import br.edu.uesb.petshop.model.Cliente;
 import br.edu.uesb.petshop.model.PetShop;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,8 +27,16 @@ public class TelaAddAnimal extends javax.swing.JPanel {
     /**
      * Creates new form TelaAddAnimal
      */
+    Campovazio cp = new Campovazio();
+    Animal animal;
+    ClienteDAO clienteDAO;
+    TelaAddClienteControl clienteControl;
+    Cliente cliente;
+    TelaAddAnimalControl animalControl = new TelaAddAnimalControl();
+
     public TelaAddAnimal() {
         initComponents();
+        animalControl = new TelaAddAnimalControl();
     }
 
     /**
@@ -46,9 +64,12 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         lbRacaAddAnimal = new javax.swing.JLabel();
         lbDonoAddAnimal = new javax.swing.JLabel();
         txtRacaAddAnimal = new javax.swing.JTextField();
+        bAtualizar = new javax.swing.JButton();
+        bExcluir = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(700, 400));
 
+        bVoltarAddAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
         bVoltarAddAnimal.setText("<html><body>VOLTAR</body></html>");
         bVoltarAddAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +81,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         lbTituloAddAnimal.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbTituloAddAnimal.setText("Animal");
 
+        bLimparAddAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/51.png"))); // NOI18N
         bLimparAddAnimal.setText("LIMPAR");
         bLimparAddAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +89,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
             }
         });
 
+        bSalvarCadastroAddAnimal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/4.png"))); // NOI18N
         bSalvarCadastroAddAnimal.setText("<html><body>SALVAR CADASTRO</body></html>");
         bSalvarCadastroAddAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,11 +115,11 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         });
         rbFemeaAddAnimal.setActionCommand("FÊMEA");
 
-        //capslock(txtNomeAddAnimal);
+        cp.capslock(txtNomeAddAnimal);
 
-        cbEspecieAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-", "CACHORRO", "GATO" }));
+        cbEspecieAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione...", "CACHORRO", "GATO" }));
 
-        cbDonoAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "-" }));
+        cbDonoAddAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione..." }));
 
         lbNomeAddAnimal.setText("NOME:");
 
@@ -108,14 +131,32 @@ public class TelaAddAnimal extends javax.swing.JPanel {
 
         lbDonoAddAnimal.setText("DONO:");
 
-        //capslock(txtRacaAddAnimal);
+        cp.capslock(txtRacaAddAnimal);
+
+        bAtualizar.setEnabled(false);
+        bAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/39.png"))); // NOI18N
+        bAtualizar.setText("ATUALIZAR");
+        bAtualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAtualizarActionPerformed(evt);
+            }
+        });
+
+        bExcluir.setEnabled(false);
+        bExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/51.png"))); // NOI18N
+        bExcluir.setText("EXCLUIR");
+        bExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bExcluirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(142, 142, 142)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lbNomeAddAnimal)
                     .addComponent(lbSexoAddAnimal)
@@ -133,13 +174,17 @@ public class TelaAddAnimal extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(bLimparAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bVoltarAddAnimal))
-                        .addGap(18, 18, 18)
-                        .addComponent(bSalvarCadastroAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE))
+                            .addComponent(bVoltarAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bSalvarCadastroAddAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 345, Short.MAX_VALUE))
                     .addComponent(txtNomeAddAnimal)
-                    .addComponent(cbDonoAddAnimal, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtRacaAddAnimal))
-                .addGap(142, 142, 142))
+                    .addComponent(txtRacaAddAnimal)
+                    .addComponent(cbDonoAddAnimal, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(bAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(76, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lbTituloAddAnimal)
@@ -150,7 +195,7 @@ public class TelaAddAnimal extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(lbTituloAddAnimal)
-                .addGap(38, 38, 38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNomeAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbNomeAddAnimal))
@@ -171,16 +216,21 @@ public class TelaAddAnimal extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbDonoAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbDonoAddAnimal))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(bLimparAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bVoltarAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(bSalvarCadastroAddAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
+        BuscarByNome();
         //Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
         //try{
             //ResultSet rs = query.executeQuery("SELECT nome FROM \"Cliente\"");
@@ -196,10 +246,10 @@ public class TelaAddAnimal extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bVoltarAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarAddAnimalActionPerformed
-        
+
         PetShop.tela.showView(EnumView.TELAANIMAL);
         bLimparAddAnimalActionPerformed(evt);
-        
+
     }//GEN-LAST:event_bVoltarAddAnimalActionPerformed
 
     private void bLimparAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLimparAddAnimalActionPerformed
@@ -210,23 +260,111 @@ public class TelaAddAnimal extends javax.swing.JPanel {
         bgSexo.clearSelection();
     }//GEN-LAST:event_bLimparAddAnimalActionPerformed
 
+    public void BuscarByNome() {
+        clienteDAO = new ClienteDAO();
+        ResultSet rs = clienteDAO.getByNome("");
+        try {
+            while (rs.next()) {
+                cbDonoAddAnimal.addItem("CPF: " + rs.getString("cpf") + " - Nome: " + rs.getString("nome"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaResultadoBuscaCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void setTxtNome(String txtNome) {
+        this.txtNomeAddAnimal.setText(txtNome);
+    }
+    
+    public void setTxtRaca(String txtRaca) {
+        this.txtRacaAddAnimal.setText(txtRaca);
+    }
+    
+    public void setCbDono(String cbDono) {
+        this.cbDonoAddAnimal.setSelectedItem(cbDono);
+    }
+    
+    public void setCbEspecie(String cbEspecie) {
+        this.cbEspecieAddAnimal.setSelectedItem(cbEspecie);
+    }
+
+    public void setbEnableExcluir(boolean estado) {
+        this.bExcluir.setEnabled(estado);
+    }
+    
+    public void setbEnableAtualizar(boolean estado) {
+        this.bAtualizar.setEnabled(estado);
+    }
+    
+    public void setbEnableSalvar(boolean estado) {
+        this.bSalvarCadastroAddAnimal.setEnabled(estado);
+    }
+    
     private void bSalvarCadastroAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvarCadastroAddAnimalActionPerformed
-        //        Statement query = ConexaoPostgreSQL.openConnectionPostgreSQL();
-        //
-        //        //add
-        //        try {
-            //            query.executeUpdate("INSERT INTO \"Animal\"(\n"
-                //                    + "            nome, sexo, especie, raca, dono)\n"
-                //                    + "    VALUES ('" + txtNomeAddAnimal.getText() + "','" + bgSexo.getSelection().getActionCommand() + "','" + cbEspecie.getSelectedItem()
-                //                    + "','" + txtRacaAddAnimal.getText() + "','" + cbDono.getSelectedItem() + "');");
-            //
-            //            JOptionPane.showMessageDialog(null, "Salvo com sucesso!", null, JOptionPane.PLAIN_MESSAGE, null);
-            //            bLimparAddAnimalActionPerformed(evt);//limparcampos
-            //
-            //        } catch (Exception e) {
-            //            System.out.println(e);
-            //            JOptionPane.showMessageDialog(null, "Erro na conexão com o banco de dados ", "ERRO", JOptionPane.ERROR_MESSAGE, null);
-            //        }
+        animalControl = new TelaAddAnimalControl();
+        cp.textfield(txtNomeAddAnimal);
+        cp.textfield(txtRacaAddAnimal);
+        cp.combobox(cbDonoAddAnimal);
+        cp.combobox(cbEspecieAddAnimal);
+
+        String sexo = "";
+
+        if ((!"".equals(txtNomeAddAnimal.getText())) && (!"".equals(txtRacaAddAnimal.getText()))
+                && !cbDonoAddAnimal.getSelectedItem().equals("Selecione...")
+                && !cbEspecieAddAnimal.getSelectedItem().equals("Selecione...")) {
+            String cpf = cbDonoAddAnimal.getSelectedItem().toString().substring(5, 16) + "-" + cbDonoAddAnimal.getSelectedItem().toString().substring(17, 19);
+
+            try {
+                ResultSet rs = clienteDAO.getByCpf(cpf);
+                if (rs.next()) {
+                    cliente = new Cliente(rs.getInt("id"), rs.getString("nome"),
+                            rs.getString("endereco"), rs.getString("bairro"),
+                            rs.getString("complemento"), rs.getString("telefone2"),
+                            rs.getString("cpf"), rs.getString("telefone1"),
+                            rs.getDate("datanascimento"), rs.getString("sexo"));
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(TelaAddAnimal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            if (bgSexo.isSelected(rbFemeaAddAnimal.getModel())) {
+
+                sexo = rbFemeaAddAnimal.getText();
+
+            } else if (bgSexo.isSelected(rbMachoAddAnimal.getModel())) {
+
+                sexo = rbMachoAddAnimal.getText();
+
+            }
+
+            if (!sexo.equals("")) {
+
+                if (animalControl.verificaNomeExistente(txtNomeAddAnimal.getText())) {
+
+                    JOptionPane.showMessageDialog(this, "Nome do animal já cadastrado!", "Atenção", JOptionPane.WARNING_MESSAGE);
+
+                } else {
+
+                    animal = new Animal(txtNomeAddAnimal.getText(), sexo, txtRacaAddAnimal.getText(), cbEspecieAddAnimal.getSelectedItem().toString(), cliente);
+                    animalControl.salvarAnimal(animal);
+                    bLimparAddAnimalActionPerformed(evt);
+
+                    PetShop.tela.showView(EnumView.TELAANIMAL);
+
+                }
+                
+            } else {
+
+                JOptionPane.showMessageDialog(this, "Selecione um sexo!", "Atenção", JOptionPane.WARNING_MESSAGE);
+
+            }
+
+        } else {
+
+            JOptionPane.showMessageDialog(null, "Por favor preencha os campos restantes!", "Atenção", JOptionPane.WARNING_MESSAGE);
+
+        }
+
     }//GEN-LAST:event_bSalvarCadastroAddAnimalActionPerformed
 
     private void rbMachoAddAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMachoAddAnimalActionPerformed
@@ -237,8 +375,68 @@ public class TelaAddAnimal extends javax.swing.JPanel {
 
     }//GEN-LAST:event_rbFemeaAddAnimalActionPerformed
 
+    private void bAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAtualizarActionPerformed
+        ResultSet rs = animalControl.bucarByNome(txtNomeAddAnimal.getText());
+        cliente = null;
+        animal = null;
+        try {
+            if (rs.next()) {
+                cliente = new Cliente(rs.getInt("id"), rs.getString("nome"),
+                        rs.getString("endereco"), rs.getString("bairro"),
+                        rs.getString("complemento"), rs.getString("telefone2"),
+                        rs.getString("cpf"), rs.getString("telefone1"),
+                        rs.getDate("datanascimento"), rs.getString("sexo"));
+
+                rs = animalControl.bucarByIdDono(cliente.getId());
+                while (rs.next()) {
+                    animal = new Animal(rs.getInt("id"), rs.getString("nome"),
+                            rs.getString("sexo"), rs.getString("raca"),
+                            rs.getString("especie"), cliente);
+                }
+
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaAddCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        animalControl.atualizarAnimal(animal);
+        PetShop.tela.showView(EnumView.TELAANIMAL);
+    }//GEN-LAST:event_bAtualizarActionPerformed
+
+    private void bExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bExcluirActionPerformed
+
+        ResultSet rs = animalControl.bucarByNome(txtNomeAddAnimal.getText());
+        cliente = null;
+        try {
+            if (rs.next()) {
+                cliente = new Cliente(rs.getInt("id"), rs.getString("nome"),
+                        rs.getString("endereco"), rs.getString("bairro"),
+                        rs.getString("complemento"), rs.getString("telefone2"),
+                        rs.getString("cpf"), rs.getString("telefone1"),
+                        rs.getDate("datanascimento"), rs.getString("sexo"));
+
+                rs = animalControl.bucarByIdDono(cliente.getId());
+                while (rs.next()) {
+                    animal = new Animal(rs.getInt("id"), rs.getString("nome"),
+                            rs.getString("sexo"), rs.getString("raca"),
+                            rs.getString("especie"), cliente);
+                }
+
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaAddCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        animalControl.excluirAnimal(animal);
+        PetShop.tela.showView(EnumView.TELAANIMAL);
+    }//GEN-LAST:event_bExcluirActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bAtualizar;
+    private javax.swing.JButton bExcluir;
     private javax.swing.JButton bLimparAddAnimal;
     private javax.swing.JButton bSalvarCadastroAddAnimal;
     private javax.swing.JButton bVoltarAddAnimal;

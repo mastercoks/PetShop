@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[700, 400]"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -17,26 +22,43 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="bVoltar" min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbBuscarPorCpf" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbBuscarPorNome" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbCpf" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbNomeDono" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbNome" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtBuscarPorNome" pref="164" max="32767" attributes="0"/>
-                          <Component id="txtBuscarPorCpf" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="bBuscarPorNome" min="-2" max="-2" attributes="0"/>
-                          <Component id="bBuscarPorCpf" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="txtCpf" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="bBuscarPorCpf" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="txtNomeDono" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="bBuscarPorNomeDono" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="txtNome" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="bBuscarPorNome" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="lbTituloBuscar" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="lbTitulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -45,53 +67,62 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="lbTituloBuscar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="lbTitulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="78" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbBuscarPorNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBuscarPorNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="bBuscarPorNome" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbBuscarPorCpf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtBuscarPorCpf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="bBuscarPorCpf" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNomeDono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNomeDono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bBuscarPorNomeDono" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="132" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbCpf" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bBuscarPorCpf" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCpf" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="78" max="32767" attributes="0"/>
+              <Component id="bVoltar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbTituloBuscar">
+    <Component class="javax.swing.JLabel" name="lbTitulo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="BUSCAR #######"/>
+        <Property name="text" type="java.lang.String" value="BUSCAR ANIMAL"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbBuscarPorNome">
+    <Component class="javax.swing.JLabel" name="lbNomeDono">
       <Properties>
-        <Property name="text" type="java.lang.String" value="BUSCAR POR NOME:"/>
+        <Property name="text" type="java.lang.String" value="BUSCAR POR NOME-DONO:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbBuscarPorCpf">
+    <Component class="javax.swing.JLabel" name="lbCpf">
       <Properties>
-        <Property name="text" type="java.lang.String" value="BUSCAR POR CPF:"/>
+        <Property name="text" type="java.lang.String" value="BUSCAR POR CPF-DONO:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBuscarPorNome">
+    <Component class="javax.swing.JTextField" name="txtNomeDono">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtBuscarPorCpf">
-    </Component>
-    <Component class="javax.swing.JButton" name="bBuscarPorNome">
+    <Component class="javax.swing.JButton" name="bBuscarPorNomeDono">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/resources/7.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bBuscarPorNomeDonoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bBuscarPorCpf">
       <Properties>
@@ -99,6 +130,44 @@
           <Image iconType="3" name="/resources/7.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bBuscarPorCpfActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bVoltar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/15.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="VOLTAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVoltarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="txtCpf">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+          <Format format="###.###.###-##" subtype="-1" type="5"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbNome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="BUSCAR POR NOME:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNome">
+    </Component>
+    <Component class="javax.swing.JButton" name="bBuscarPorNome">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/7.png"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bBuscarPorNomeActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

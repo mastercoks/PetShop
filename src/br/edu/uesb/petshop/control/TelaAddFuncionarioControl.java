@@ -6,7 +6,9 @@
 package br.edu.uesb.petshop.control;
 
 import br.edu.uesb.petshop.dao.FuncionarioDAO;
+import br.edu.uesb.petshop.enumerado.EnumView;
 import br.edu.uesb.petshop.model.Funcionario;
+import br.edu.uesb.petshop.model.PetShop;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -28,15 +30,18 @@ public class TelaAddFuncionarioControl {
         JOptionPane.showMessageDialog(null, "Funcionário excluido com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
 
     }
-    
-    public void atualizarFuncionario(Funcionario funcionario){
-            funcionarioDAO = new FuncionarioDAO();
+
+    public void atualizarFuncionario(Funcionario funcionario) {
         
+        funcionarioDAO = new FuncionarioDAO();
         funcionarioDAO.update(funcionario);
-        JOptionPane.showMessageDialog(null, "Funcionário atualizado com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+        JOptionPane.showMessageDialog(null, "Funcionário atualizado com sucesso!", 
+                "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+    
     }
-    public ResultSet bucarByCpf(String cpf){
-        
+
+    public ResultSet buscarByCpf(String cpf) {
+
         funcionarioDAO = new FuncionarioDAO();
         return funcionarioDAO.getByCpf(cpf);
     }
@@ -46,11 +51,12 @@ public class TelaAddFuncionarioControl {
         funcionarioDAO = new FuncionarioDAO();
 //        se todos os campos estiverem preenchidos ele add ao banco de dados
 
-     
-            funcionarioDAO.insert(funcionario);
-            JOptionPane.showMessageDialog(null, "Salvo com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+        funcionarioDAO.insert(funcionario);
+        JOptionPane.showMessageDialog(null, "Salvo com sucesso!", "Atenção", JOptionPane.PLAIN_MESSAGE, null);
+        
 //                bLimparAddFuncionarioActionPerformed(evt);//limparcampos
     }
+
     public boolean verificaCpfExistente(String cpf) {
         funcionarioDAO = new FuncionarioDAO();
 
@@ -65,7 +71,7 @@ public class TelaAddFuncionarioControl {
         }
         return false;
     }
-    
+
     public boolean loginExistente(javax.swing.JTextField txtLogin) {
         funcionarioDAO = new FuncionarioDAO();
         ResultSet rs = funcionarioDAO.getByLogin(txtLogin.getText());
@@ -80,10 +86,9 @@ public class TelaAddFuncionarioControl {
         return false;
     }
 
-//    public ResultSet bucarByCpf(String text) {
+//    public ResultSet buscarByCpf(String text) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
 //    public boolean verificaCpfExistente(String imprimeCPF) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }

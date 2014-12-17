@@ -5,15 +5,24 @@
  */
 package br.edu.uesb.petshop.view;
 
+import br.edu.uesb.petshop.dao.AnimalDAO;
+import br.edu.uesb.petshop.dao.ClienteDAO;
+import br.edu.uesb.petshop.enumerado.EnumView;
+import br.edu.uesb.petshop.model.PetShop;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author matheus
  */
 public class TelaBuscarAnimal extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Buscar
-     */
+    private TelaResultadoBuscaAnimal telaResultado = null;
+    
     public TelaBuscarAnimal() {
         initComponents();
     }
@@ -27,74 +36,207 @@ public class TelaBuscarAnimal extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbTituloBuscar = new javax.swing.JLabel();
-        lbBuscarPorNome = new javax.swing.JLabel();
-        lbBuscarPorCpf = new javax.swing.JLabel();
-        txtBuscarPorNome = new javax.swing.JTextField();
-        txtBuscarPorCpf = new javax.swing.JTextField();
-        bBuscarPorNome = new javax.swing.JButton();
+        lbTitulo = new javax.swing.JLabel();
+        lbNomeDono = new javax.swing.JLabel();
+        lbCpf = new javax.swing.JLabel();
+        txtNomeDono = new javax.swing.JTextField();
+        bBuscarPorNomeDono = new javax.swing.JButton();
         bBuscarPorCpf = new javax.swing.JButton();
+        bVoltar = new javax.swing.JButton();
+        txtCpf = new javax.swing.JFormattedTextField();
+        lbNome = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
+        bBuscarPorNome = new javax.swing.JButton();
 
-        lbTituloBuscar.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        lbTituloBuscar.setText("BUSCAR #######");
+        setPreferredSize(new java.awt.Dimension(700, 400));
 
-        lbBuscarPorNome.setText("BUSCAR POR NOME:");
+        lbTitulo.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        lbTitulo.setText("BUSCAR ANIMAL");
 
-        lbBuscarPorCpf.setText("BUSCAR POR CPF:");
+        lbNomeDono.setText("BUSCAR POR NOME-DONO:");
 
-        bBuscarPorNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        lbCpf.setText("BUSCAR POR CPF-DONO:");
+
+        bBuscarPorNomeDono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        bBuscarPorNomeDono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarPorNomeDonoActionPerformed(evt);
+            }
+        });
 
         bBuscarPorCpf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        bBuscarPorCpf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarPorCpfActionPerformed(evt);
+            }
+        });
+
+        bVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/15.png"))); // NOI18N
+        bVoltar.setText("VOLTAR");
+        bVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bVoltarActionPerformed(evt);
+            }
+        });
+
+        try {
+            txtCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        lbNome.setText("BUSCAR POR NOME:");
+
+        bBuscarPorNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/7.png"))); // NOI18N
+        bBuscarPorNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBuscarPorNomeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(144, 144, 144)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(bVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(436, 436, 436))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbBuscarPorCpf)
-                            .addComponent(lbBuscarPorNome))
+                            .addComponent(lbCpf)
+                            .addComponent(lbNomeDono)
+                            .addComponent(lbNome))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtBuscarPorNome, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
-                            .addComponent(txtBuscarPorCpf))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bBuscarPorNome)
-                            .addComponent(bBuscarPorCpf)))
-                    .addComponent(lbTituloBuscar))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtCpf)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bBuscarPorCpf))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(txtNomeDono)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bBuscarPorNomeDono))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(txtNome)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bBuscarPorNome)))
+                        .addGap(112, 112, 112))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lbTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(lbTituloBuscar)
-                .addGap(38, 38, 38)
+                .addComponent(lbTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbBuscarPorNome)
-                    .addComponent(txtBuscarPorNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbNome)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bBuscarPorNome))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbBuscarPorCpf)
-                    .addComponent(txtBuscarPorCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bBuscarPorCpf))
-                .addContainerGap(132, Short.MAX_VALUE))
+                    .addComponent(lbNomeDono)
+                    .addComponent(txtNomeDono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bBuscarPorNomeDono))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbCpf)
+                    .addComponent(bBuscarPorCpf)
+                    .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addComponent(bVoltar)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bBuscarPorNomeDonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarPorNomeDonoActionPerformed
+//        ClienteDAO clienteDAO = new ClienteDAO();
+//        int cont = 0;
+//        ResultSet rs = clienteDAO.getByNome(txtNomeDono.getText());
+//        try {
+//            while (rs.next()) {
+//                cont++;
+//            }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(TelaBuscarAnimal.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        if (cont > 0) {
+//            telaResultado = new TelaResultadoBuscaAnimal();
+//            telaResultado.BuscarByNome(txtNomeDono.getText());
+//            telaResultado.setVisible(true);
+//            PetShop.tela.setEnabled(false);
+//        } else {
+//            JOptionPane.showMessageDialog(this, "Nenhum Cliente encontrado!", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+//        }
+
+    }//GEN-LAST:event_bBuscarPorNomeDonoActionPerformed
+
+    private void bBuscarPorCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarPorCpfActionPerformed
+        ClienteDAO clienteDAO = new ClienteDAO();
+        int cont = 0;
+        ResultSet rs = clienteDAO.getByCpf(txtCpf.getText());
+        try {
+            while (rs.next()) {
+                cont++;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaBuscarAnimal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (cont > 0) {
+            telaResultado = new TelaResultadoBuscaAnimal();
+            telaResultado.BuscarByCpf(txtCpf.getText());
+            telaResultado.setVisible(true);
+            PetShop.tela.setEnabled(false);
+        } else {
+            JOptionPane.showMessageDialog(this, "Nenhum Cliente encontrado!", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bBuscarPorCpfActionPerformed
+
+    private void bVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarActionPerformed
+
+        PetShop.tela.showView(EnumView.TELAANIMAL);
+        
+    }//GEN-LAST:event_bVoltarActionPerformed
+
+    private void bBuscarPorNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBuscarPorNomeActionPerformed
+        AnimalDAO animalDAO = new AnimalDAO();
+        int cont = 0;
+        ResultSet rs = animalDAO.getByNome(txtNome.getText());
+        try {
+            while (rs.next()) {
+                cont++;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaBuscarAnimal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (cont > 0) {
+            telaResultado = new TelaResultadoBuscaAnimal();
+            telaResultado.BuscarByNome(txtNome.getText());
+            telaResultado.setVisible(true);
+            PetShop.tela.setEnabled(false);
+        } else {
+            JOptionPane.showMessageDialog(this, "Nenhum Cliente encontrado!", "Atenção", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bBuscarPorNomeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bBuscarPorCpf;
     private javax.swing.JButton bBuscarPorNome;
-    private javax.swing.JLabel lbBuscarPorCpf;
-    private javax.swing.JLabel lbBuscarPorNome;
-    private javax.swing.JLabel lbTituloBuscar;
-    private javax.swing.JTextField txtBuscarPorCpf;
-    private javax.swing.JTextField txtBuscarPorNome;
+    private javax.swing.JButton bBuscarPorNomeDono;
+    private javax.swing.JButton bVoltar;
+    private javax.swing.JLabel lbCpf;
+    private javax.swing.JLabel lbNome;
+    private javax.swing.JLabel lbNomeDono;
+    private javax.swing.JLabel lbTitulo;
+    private javax.swing.JFormattedTextField txtCpf;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtNomeDono;
     // End of variables declaration//GEN-END:variables
 }

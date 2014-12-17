@@ -76,6 +76,24 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
             }
         });
 
+        txtLoginTelaFunc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLoginTelaFuncActionPerformed(evt);
+            }
+        });
+
+        txtSenhaTelaFunc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSenhaTelaFuncActionPerformed(evt);
+            }
+        });
+
+        txtConfirmaSenhaTelaFunc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtConfirmaSenhaTelaFuncActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -132,6 +150,7 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
 
     private void bVoltarTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVoltarTelaFuncActionPerformed
 
+        limparCampos();
         PetShop.tela.showView(EnumView.TELAPRINCIPAL);
 
     }//GEN-LAST:event_bVoltarTelaFuncActionPerformed
@@ -141,8 +160,8 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
         cp.textfield(txtLoginTelaFunc);
         cp.textfield(txtConfirmaSenhaTelaFunc);
         cp.textfield(txtSenhaTelaFunc);
-        setTxtLoginTelaFunc(txtLoginTelaFunc);
-        setTxtSenhaTelaFunc(txtSenhaTelaFunc);
+        setLogin(txtLoginTelaFunc);
+        setSenha(txtSenhaTelaFunc);
         if (("".equals(txtLoginTelaFunc.getText())) || ("".equals(txtSenhaTelaFunc.getText())) || ("".equals(txtConfirmaSenhaTelaFunc.getText()))) {
             JOptionPane.showMessageDialog(null, "Por favor preencha os campos restantes!", "Atenção", JOptionPane.WARNING_MESSAGE);
         } else {
@@ -156,13 +175,37 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
                     JOptionPane.showMessageDialog(this, "Senhas não conferem, Tente novamente!", "Atenção", JOptionPane.WARNING_MESSAGE);
                     
                 } else {
-
+                    
+                    limparCampos();
                     PetShop.tela.showView(EnumView.TELAADDFUNCIONARIO1);
 
                 }
             }
         }
     }//GEN-LAST:event_bProximoTelaFuncActionPerformed
+
+    private void limparCampos() {                                                  
+
+        txtLoginTelaFunc.setText("");
+        txtConfirmaSenhaTelaFunc.setText("");
+        txtSenhaTelaFunc.setText("");
+        cp.limparTextfield(txtSenhaTelaFunc);
+        cp.limparTextfield(txtConfirmaSenhaTelaFunc);
+        cp.limparTextfield(txtSenhaTelaFunc);
+
+    }
+    
+    private void txtLoginTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginTelaFuncActionPerformed
+        txtSenhaTelaFunc.requestFocus();
+    }//GEN-LAST:event_txtLoginTelaFuncActionPerformed
+
+    private void txtSenhaTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaTelaFuncActionPerformed
+        txtConfirmaSenhaTelaFunc.requestFocus();
+    }//GEN-LAST:event_txtSenhaTelaFuncActionPerformed
+
+    private void txtConfirmaSenhaTelaFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmaSenhaTelaFuncActionPerformed
+        bProximoTelaFuncActionPerformed(evt);
+    }//GEN-LAST:event_txtConfirmaSenhaTelaFuncActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -177,12 +220,12 @@ public class TelaAddFuncionario extends javax.swing.JPanel {
     private javax.swing.JPasswordField txtSenhaTelaFunc;
     // End of variables declaration//GEN-END:variables
 
-    public void setTxtLoginTelaFunc(javax.swing.JTextField txtLoginTelaFunc) {
+    public void setLogin(javax.swing.JTextField txtLoginTelaFunc) {
         login = txtLoginTelaFunc.getText();
     }
     
-    public void setTxtSenhaTelaFunc(javax.swing.JTextField txtSenhaTelaFunc) {
+    public void setSenha(javax.swing.JTextField txtSenhaTelaFunc) {
         senha = txtSenhaTelaFunc.getText();
     }
-
+    
 }

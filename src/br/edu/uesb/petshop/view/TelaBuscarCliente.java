@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
  */
 public class TelaBuscarCliente extends javax.swing.JPanel {
 
-    private TelaBuscaResultado telaResultado = null;
+    private TelaResultadoBuscaCliente telaResultado = null;
     
     public TelaBuscarCliente() {
         initComponents();
@@ -143,7 +143,7 @@ public class TelaBuscarCliente extends javax.swing.JPanel {
             Logger.getLogger(TelaBuscarCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (cont > 0) {
-            telaResultado = new TelaBuscaResultado();
+            telaResultado = new TelaResultadoBuscaCliente();
             telaResultado.BuscarByNome(txtNomeBuscarCliente.getText());
             telaResultado.setVisible(true);
             PetShop.tela.setEnabled(false);
@@ -165,7 +165,7 @@ public class TelaBuscarCliente extends javax.swing.JPanel {
             Logger.getLogger(TelaBuscarCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (cont > 0) {
-            telaResultado = new TelaBuscaResultado();
+            telaResultado = new TelaResultadoBuscaCliente();
             telaResultado.BuscarByCpf(txtCpfBuscarCliente.getText());
             telaResultado.setVisible(true);
             PetShop.tela.setEnabled(false);
